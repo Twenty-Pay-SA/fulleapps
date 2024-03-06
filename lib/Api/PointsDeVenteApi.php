@@ -702,7 +702,7 @@ class PointsDeVenteApi
      */
     protected function getPointsOfSaleRequest($base64)
     {
-        $resourcePath = '/points_of_sale/{base64}';
+        $resourcePath = '/points_of_sale{base64}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -712,7 +712,7 @@ class PointsDeVenteApi
         // path params
         $resourcePath = str_replace(
             '{' . 'base64' . '}',
-            $base64 !== null ? ObjectSerializer::toPathValue($base64) : '',
+            $base64 !== null ? '/' . ObjectSerializer::toPathValue($base64) : '',
             $resourcePath
         );
 

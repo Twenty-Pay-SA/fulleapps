@@ -258,7 +258,7 @@ class PlanDeSalleApi
             );
         }
 
-        $resourcePath = '/rooms';
+        $resourcePath = '/rooms/{id_point_of_sale}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -267,13 +267,11 @@ class PlanDeSalleApi
 
 
         // path params
-        if ($id_point_of_sale !== null) {
-            $resourcePath = str_replace(
-                '{' . 'id_point_of_sale' . '}',
-                ObjectSerializer::toPathValue($id_point_of_sale),
-                $resourcePath
-            );
-        }
+        $resourcePath = str_replace(
+            '{' . 'id_point_of_sale' . '}',
+            ObjectSerializer::toPathValue($id_point_of_sale),
+            $resourcePath
+        );
 
         // body params
         $_tempBody = null;
