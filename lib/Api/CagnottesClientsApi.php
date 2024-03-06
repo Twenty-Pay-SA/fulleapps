@@ -87,7 +87,7 @@ class CagnottesClientsApi
     }
 
     /**
-     * Operation 87681cf49d617ea061dbd208e90838fb
+     * Operation update
      *
      * Recharge cagnotte
      *
@@ -97,13 +97,13 @@ class CagnottesClientsApi
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function 87681cf49d617ea061dbd208e90838fb($body)
+    public function update($body)
     {
-        $this->87681cf49d617ea061dbd208e90838fbWithHttpInfo($body);
+        $this->updateWithHttpInfo($body);
     }
 
     /**
-     * Operation 87681cf49d617ea061dbd208e90838fbWithHttpInfo
+     * Operation updateWithHttpInfo
      *
      * Recharge cagnotte
      *
@@ -113,10 +113,10 @@ class CagnottesClientsApi
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function 87681cf49d617ea061dbd208e90838fbWithHttpInfo($body)
+    public function updateWithHttpInfo($body)
     {
         $returnType = '';
-        $request = $this->87681cf49d617ea061dbd208e90838fbRequest($body);
+        $request = $this->updateRequest($body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -156,7 +156,7 @@ class CagnottesClientsApi
     }
 
     /**
-     * Operation 87681cf49d617ea061dbd208e90838fbAsync
+     * Operation updateAsync
      *
      * Recharge cagnotte
      *
@@ -165,9 +165,9 @@ class CagnottesClientsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 87681cf49d617ea061dbd208e90838fbAsync($body)
+    public function updateAsync($body)
     {
-        return $this->87681cf49d617ea061dbd208e90838fbAsyncWithHttpInfo($body)
+        return $this->updateAsyncWithHttpInfo($body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -176,7 +176,7 @@ class CagnottesClientsApi
     }
 
     /**
-     * Operation 87681cf49d617ea061dbd208e90838fbAsyncWithHttpInfo
+     * Operation updateAsyncWithHttpInfo
      *
      * Recharge cagnotte
      *
@@ -185,10 +185,10 @@ class CagnottesClientsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 87681cf49d617ea061dbd208e90838fbAsyncWithHttpInfo($body)
+    public function updateAsyncWithHttpInfo($body)
     {
         $returnType = '';
-        $request = $this->87681cf49d617ea061dbd208e90838fbRequest($body);
+        $request = $this->updateRequest($body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -214,19 +214,19 @@ class CagnottesClientsApi
     }
 
     /**
-     * Create request for operation '87681cf49d617ea061dbd208e90838fb'
+     * Create request for operation 'update'
      *
      * @param  \Qwenta\Fulleapps\Model\AdvancePayment $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 87681cf49d617ea061dbd208e90838fbRequest($body)
+    protected function updateRequest($body)
     {
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling 87681cf49d617ea061dbd208e90838fb'
+                'Missing the required parameter $body when calling update'
             );
         }
 
@@ -307,7 +307,7 @@ class CagnottesClientsApi
     }
 
     /**
-     * Operation 98cb6eb870668c4239b5e237bc74e75e
+     * Operation getMovements
      *
      * Historique mouvements
      *
@@ -319,14 +319,14 @@ class CagnottesClientsApi
      * @throws \InvalidArgumentException
      * @return \Qwenta\Fulleapps\Model\InlineResponse2003
      */
-    public function 98cb6eb870668c4239b5e237bc74e75e($id_client, $from_date, $to_date)
+    public function getMovements($id_client, $from_date, $to_date)
     {
-        list($response) = $this->98cb6eb870668c4239b5e237bc74e75eWithHttpInfo($id_client, $from_date, $to_date);
+        list($response) = $this->getMovementsWithHttpInfo($id_client, $from_date, $to_date);
         return $response;
     }
 
     /**
-     * Operation 98cb6eb870668c4239b5e237bc74e75eWithHttpInfo
+     * Operation getMovementsWithHttpInfo
      *
      * Historique mouvements
      *
@@ -338,10 +338,10 @@ class CagnottesClientsApi
      * @throws \InvalidArgumentException
      * @return array of \Qwenta\Fulleapps\Model\InlineResponse2003, HTTP status code, HTTP response headers (array of strings)
      */
-    public function 98cb6eb870668c4239b5e237bc74e75eWithHttpInfo($id_client, $from_date, $to_date)
+    public function getMovementsWithHttpInfo($id_client, $from_date, $to_date)
     {
         $returnType = '\Qwenta\Fulleapps\Model\InlineResponse2003';
-        $request = $this->98cb6eb870668c4239b5e237bc74e75eRequest($id_client, $from_date, $to_date);
+        $request = $this->getMovementsRequest($id_client, $from_date, $to_date);
 
         try {
             $options = $this->createHttpClientOption();
@@ -403,7 +403,7 @@ class CagnottesClientsApi
     }
 
     /**
-     * Operation 98cb6eb870668c4239b5e237bc74e75eAsync
+     * Operation getMovementsAsync
      *
      * Historique mouvements
      *
@@ -414,9 +414,9 @@ class CagnottesClientsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 98cb6eb870668c4239b5e237bc74e75eAsync($id_client, $from_date, $to_date)
+    public function getMovementsAsync($id_client, $from_date, $to_date)
     {
-        return $this->98cb6eb870668c4239b5e237bc74e75eAsyncWithHttpInfo($id_client, $from_date, $to_date)
+        return $this->getMovementsAsyncWithHttpInfo($id_client, $from_date, $to_date)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -425,7 +425,7 @@ class CagnottesClientsApi
     }
 
     /**
-     * Operation 98cb6eb870668c4239b5e237bc74e75eAsyncWithHttpInfo
+     * Operation getMovementsAsyncWithHttpInfo
      *
      * Historique mouvements
      *
@@ -436,10 +436,10 @@ class CagnottesClientsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 98cb6eb870668c4239b5e237bc74e75eAsyncWithHttpInfo($id_client, $from_date, $to_date)
+    public function getMovementsAsyncWithHttpInfo($id_client, $from_date, $to_date)
     {
         $returnType = '\Qwenta\Fulleapps\Model\InlineResponse2003';
-        $request = $this->98cb6eb870668c4239b5e237bc74e75eRequest($id_client, $from_date, $to_date);
+        $request = $this->getMovementsRequest($id_client, $from_date, $to_date);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -479,7 +479,7 @@ class CagnottesClientsApi
     }
 
     /**
-     * Create request for operation '98cb6eb870668c4239b5e237bc74e75e'
+     * Create request for operation 'getMovements'
      *
      * @param  Int $id_client Identifiant client associé (required)
      * @param  Datetime $from_date Date de début (required)
@@ -488,24 +488,24 @@ class CagnottesClientsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 98cb6eb870668c4239b5e237bc74e75eRequest($id_client, $from_date, $to_date)
+    protected function getMovementsRequest($id_client, $from_date, $to_date)
     {
         // verify the required parameter 'id_client' is set
         if ($id_client === null || (is_array($id_client) && count($id_client) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id_client when calling 98cb6eb870668c4239b5e237bc74e75e'
+                'Missing the required parameter $id_client when calling getMovements'
             );
         }
         // verify the required parameter 'from_date' is set
         if ($from_date === null || (is_array($from_date) && count($from_date) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $from_date when calling 98cb6eb870668c4239b5e237bc74e75e'
+                'Missing the required parameter $from_date when calling getMovements'
             );
         }
         // verify the required parameter 'to_date' is set
         if ($to_date === null || (is_array($to_date) && count($to_date) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $to_date when calling 98cb6eb870668c4239b5e237bc74e75e'
+                'Missing the required parameter $to_date when calling getMovements'
             );
         }
 

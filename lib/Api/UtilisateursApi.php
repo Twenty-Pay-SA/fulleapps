@@ -87,7 +87,7 @@ class UtilisateursApi
     }
 
     /**
-     * Operation 3b153f4a06610658383e686aeb956723
+     * Operation deleteOperator
      *
      * Suppression profil vendeur
      *
@@ -96,14 +96,14 @@ class UtilisateursApi
      * @throws \InvalidArgumentException
      * @return \Qwenta\Fulleapps\Model\SaleMethod
      */
-    public function 3b153f4a06610658383e686aeb956723()
+    public function deleteOperator()
     {
-        list($response) = $this->3b153f4a06610658383e686aeb956723WithHttpInfo();
+        list($response) = $this->deleteOperatorWithHttpInfo();
         return $response;
     }
 
     /**
-     * Operation 3b153f4a06610658383e686aeb956723WithHttpInfo
+     * Operation deleteOperatorWithHttpInfo
      *
      * Suppression profil vendeur
      *
@@ -112,10 +112,10 @@ class UtilisateursApi
      * @throws \InvalidArgumentException
      * @return array of \Qwenta\Fulleapps\Model\SaleMethod, HTTP status code, HTTP response headers (array of strings)
      */
-    public function 3b153f4a06610658383e686aeb956723WithHttpInfo()
+    public function deleteOperatorWithHttpInfo()
     {
         $returnType = '\Qwenta\Fulleapps\Model\SaleMethod';
-        $request = $this->3b153f4a06610658383e686aeb956723Request();
+        $request = $this->deleteOperatorRequest();
 
         try {
             $options = $this->createHttpClientOption();
@@ -177,7 +177,7 @@ class UtilisateursApi
     }
 
     /**
-     * Operation 3b153f4a06610658383e686aeb956723Async
+     * Operation deleteOperatorAsync
      *
      * Suppression profil vendeur
      *
@@ -185,9 +185,9 @@ class UtilisateursApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 3b153f4a06610658383e686aeb956723Async()
+    public function deleteOperatorAsync()
     {
-        return $this->3b153f4a06610658383e686aeb956723AsyncWithHttpInfo()
+        return $this->deleteOperatorAsyncWithHttpInfo()
             ->then(
                 function ($response) {
                     return $response[0];
@@ -196,7 +196,7 @@ class UtilisateursApi
     }
 
     /**
-     * Operation 3b153f4a06610658383e686aeb956723AsyncWithHttpInfo
+     * Operation deleteOperatorAsyncWithHttpInfo
      *
      * Suppression profil vendeur
      *
@@ -204,10 +204,10 @@ class UtilisateursApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 3b153f4a06610658383e686aeb956723AsyncWithHttpInfo()
+    public function deleteOperatorAsyncWithHttpInfo()
     {
         $returnType = '\Qwenta\Fulleapps\Model\SaleMethod';
-        $request = $this->3b153f4a06610658383e686aeb956723Request();
+        $request = $this->deleteOperatorRequest();
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -247,13 +247,13 @@ class UtilisateursApi
     }
 
     /**
-     * Create request for operation '3b153f4a06610658383e686aeb956723'
+     * Create request for operation 'deleteOperator'
      *
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 3b153f4a06610658383e686aeb956723Request()
+    protected function deleteOperatorRequest()
     {
 
         $resourcePath = '/profiles/delete/id';
@@ -330,7 +330,7 @@ class UtilisateursApi
     }
 
     /**
-     * Operation 8862165f5d640f4b8340d2cddcacf1f4
+     * Operation permissions
      *
      * Permissions vendeurs
      *
@@ -339,14 +339,14 @@ class UtilisateursApi
      * @throws \InvalidArgumentException
      * @return \Qwenta\Fulleapps\Model\Permission[]
      */
-    public function 8862165f5d640f4b8340d2cddcacf1f4()
+    public function permissions()
     {
-        list($response) = $this->8862165f5d640f4b8340d2cddcacf1f4WithHttpInfo();
+        list($response) = $this->permissionsWithHttpInfo();
         return $response;
     }
 
     /**
-     * Operation 8862165f5d640f4b8340d2cddcacf1f4WithHttpInfo
+     * Operation permissionsWithHttpInfo
      *
      * Permissions vendeurs
      *
@@ -355,10 +355,10 @@ class UtilisateursApi
      * @throws \InvalidArgumentException
      * @return array of \Qwenta\Fulleapps\Model\Permission[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function 8862165f5d640f4b8340d2cddcacf1f4WithHttpInfo()
+    public function permissionsWithHttpInfo()
     {
         $returnType = '\Qwenta\Fulleapps\Model\Permission[]';
-        $request = $this->8862165f5d640f4b8340d2cddcacf1f4Request();
+        $request = $this->permissionsRequest();
 
         try {
             $options = $this->createHttpClientOption();
@@ -420,7 +420,7 @@ class UtilisateursApi
     }
 
     /**
-     * Operation 8862165f5d640f4b8340d2cddcacf1f4Async
+     * Operation permissionsAsync
      *
      * Permissions vendeurs
      *
@@ -428,9 +428,9 @@ class UtilisateursApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 8862165f5d640f4b8340d2cddcacf1f4Async()
+    public function permissionsAsync()
     {
-        return $this->8862165f5d640f4b8340d2cddcacf1f4AsyncWithHttpInfo()
+        return $this->permissionsAsyncWithHttpInfo()
             ->then(
                 function ($response) {
                     return $response[0];
@@ -439,7 +439,7 @@ class UtilisateursApi
     }
 
     /**
-     * Operation 8862165f5d640f4b8340d2cddcacf1f4AsyncWithHttpInfo
+     * Operation permissionsAsyncWithHttpInfo
      *
      * Permissions vendeurs
      *
@@ -447,10 +447,10 @@ class UtilisateursApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 8862165f5d640f4b8340d2cddcacf1f4AsyncWithHttpInfo()
+    public function permissionsAsyncWithHttpInfo()
     {
         $returnType = '\Qwenta\Fulleapps\Model\Permission[]';
-        $request = $this->8862165f5d640f4b8340d2cddcacf1f4Request();
+        $request = $this->permissionsRequest();
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -490,13 +490,13 @@ class UtilisateursApi
     }
 
     /**
-     * Create request for operation '8862165f5d640f4b8340d2cddcacf1f4'
+     * Create request for operation 'permissions'
      *
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 8862165f5d640f4b8340d2cddcacf1f4Request()
+    protected function permissionsRequest()
     {
 
         $resourcePath = '/permissions';
@@ -573,7 +573,7 @@ class UtilisateursApi
     }
 
     /**
-     * Operation 98775cf5821f2b6b61f46aa66b9dee49
+     * Operation list
      *
      * Liste des profils vendeurs
      *
@@ -582,14 +582,14 @@ class UtilisateursApi
      * @throws \InvalidArgumentException
      * @return \Qwenta\Fulleapps\Model\Profile[]
      */
-    public function 98775cf5821f2b6b61f46aa66b9dee49()
+    public function list()
     {
-        list($response) = $this->98775cf5821f2b6b61f46aa66b9dee49WithHttpInfo();
+        list($response) = $this->listWithHttpInfo();
         return $response;
     }
 
     /**
-     * Operation 98775cf5821f2b6b61f46aa66b9dee49WithHttpInfo
+     * Operation listWithHttpInfo
      *
      * Liste des profils vendeurs
      *
@@ -598,10 +598,10 @@ class UtilisateursApi
      * @throws \InvalidArgumentException
      * @return array of \Qwenta\Fulleapps\Model\Profile[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function 98775cf5821f2b6b61f46aa66b9dee49WithHttpInfo()
+    public function listWithHttpInfo()
     {
         $returnType = '\Qwenta\Fulleapps\Model\Profile[]';
-        $request = $this->98775cf5821f2b6b61f46aa66b9dee49Request();
+        $request = $this->listRequest();
 
         try {
             $options = $this->createHttpClientOption();
@@ -663,7 +663,7 @@ class UtilisateursApi
     }
 
     /**
-     * Operation 98775cf5821f2b6b61f46aa66b9dee49Async
+     * Operation listAsync
      *
      * Liste des profils vendeurs
      *
@@ -671,9 +671,9 @@ class UtilisateursApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 98775cf5821f2b6b61f46aa66b9dee49Async()
+    public function listAsync()
     {
-        return $this->98775cf5821f2b6b61f46aa66b9dee49AsyncWithHttpInfo()
+        return $this->listAsyncWithHttpInfo()
             ->then(
                 function ($response) {
                     return $response[0];
@@ -682,7 +682,7 @@ class UtilisateursApi
     }
 
     /**
-     * Operation 98775cf5821f2b6b61f46aa66b9dee49AsyncWithHttpInfo
+     * Operation listAsyncWithHttpInfo
      *
      * Liste des profils vendeurs
      *
@@ -690,10 +690,10 @@ class UtilisateursApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 98775cf5821f2b6b61f46aa66b9dee49AsyncWithHttpInfo()
+    public function listAsyncWithHttpInfo()
     {
         $returnType = '\Qwenta\Fulleapps\Model\Profile[]';
-        $request = $this->98775cf5821f2b6b61f46aa66b9dee49Request();
+        $request = $this->listRequest();
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -733,13 +733,13 @@ class UtilisateursApi
     }
 
     /**
-     * Create request for operation '98775cf5821f2b6b61f46aa66b9dee49'
+     * Create request for operation 'list'
      *
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 98775cf5821f2b6b61f46aa66b9dee49Request()
+    protected function listRequest()
     {
 
         $resourcePath = '/profiles';

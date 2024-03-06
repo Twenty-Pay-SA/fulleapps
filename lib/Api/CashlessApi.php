@@ -87,7 +87,7 @@ class CashlessApi
     }
 
     /**
-     * Operation 0d4947138b3704065a961d5d0b25e105
+     * Operation update
      *
      * UPDATE PHONE - CLIENT CARD
      *
@@ -98,14 +98,14 @@ class CashlessApi
      * @throws \InvalidArgumentException
      * @return \Qwenta\Fulleapps\Model\InlineResponse2007
      */
-    public function 0d4947138b3704065a961d5d0b25e105($body, $id)
+    public function update($body, $id)
     {
-        list($response) = $this->0d4947138b3704065a961d5d0b25e105WithHttpInfo($body, $id);
+        list($response) = $this->updateWithHttpInfo($body, $id);
         return $response;
     }
 
     /**
-     * Operation 0d4947138b3704065a961d5d0b25e105WithHttpInfo
+     * Operation updateWithHttpInfo
      *
      * UPDATE PHONE - CLIENT CARD
      *
@@ -116,10 +116,10 @@ class CashlessApi
      * @throws \InvalidArgumentException
      * @return array of \Qwenta\Fulleapps\Model\InlineResponse2007, HTTP status code, HTTP response headers (array of strings)
      */
-    public function 0d4947138b3704065a961d5d0b25e105WithHttpInfo($body, $id)
+    public function updateWithHttpInfo($body, $id)
     {
         $returnType = '\Qwenta\Fulleapps\Model\InlineResponse2007';
-        $request = $this->0d4947138b3704065a961d5d0b25e105Request($body, $id);
+        $request = $this->updateRequest($body, $id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -181,7 +181,7 @@ class CashlessApi
     }
 
     /**
-     * Operation 0d4947138b3704065a961d5d0b25e105Async
+     * Operation updateAsync
      *
      * UPDATE PHONE - CLIENT CARD
      *
@@ -191,9 +191,9 @@ class CashlessApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 0d4947138b3704065a961d5d0b25e105Async($body, $id)
+    public function updateAsync($body, $id)
     {
-        return $this->0d4947138b3704065a961d5d0b25e105AsyncWithHttpInfo($body, $id)
+        return $this->updateAsyncWithHttpInfo($body, $id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -202,7 +202,7 @@ class CashlessApi
     }
 
     /**
-     * Operation 0d4947138b3704065a961d5d0b25e105AsyncWithHttpInfo
+     * Operation updateAsyncWithHttpInfo
      *
      * UPDATE PHONE - CLIENT CARD
      *
@@ -212,10 +212,10 @@ class CashlessApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 0d4947138b3704065a961d5d0b25e105AsyncWithHttpInfo($body, $id)
+    public function updateAsyncWithHttpInfo($body, $id)
     {
         $returnType = '\Qwenta\Fulleapps\Model\InlineResponse2007';
-        $request = $this->0d4947138b3704065a961d5d0b25e105Request($body, $id);
+        $request = $this->updateRequest($body, $id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -255,7 +255,7 @@ class CashlessApi
     }
 
     /**
-     * Create request for operation '0d4947138b3704065a961d5d0b25e105'
+     * Create request for operation 'update'
      *
      * @param  \Qwenta\Fulleapps\Model\PhoneIdBody $body (required)
      * @param  int $id ID of client card to update (required)
@@ -263,18 +263,18 @@ class CashlessApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 0d4947138b3704065a961d5d0b25e105Request($body, $id)
+    protected function updateRequest($body, $id)
     {
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling 0d4947138b3704065a961d5d0b25e105'
+                'Missing the required parameter $body when calling update'
             );
         }
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling 0d4947138b3704065a961d5d0b25e105'
+                'Missing the required parameter $id when calling update'
             );
         }
 
@@ -363,7 +363,7 @@ class CashlessApi
     }
 
     /**
-     * Operation 2a67b19e32ab09fe0443cf64a1dd512c
+     * Operation transfer
      *
      * TRANSFER - CLIENT CARD
      *
@@ -373,14 +373,14 @@ class CashlessApi
      * @throws \InvalidArgumentException
      * @return \Qwenta\Fulleapps\Model\InlineResponse2007
      */
-    public function 2a67b19e32ab09fe0443cf64a1dd512c($body)
+    public function transfer($body)
     {
-        list($response) = $this->2a67b19e32ab09fe0443cf64a1dd512cWithHttpInfo($body);
+        list($response) = $this->transferWithHttpInfo($body);
         return $response;
     }
 
     /**
-     * Operation 2a67b19e32ab09fe0443cf64a1dd512cWithHttpInfo
+     * Operation transferWithHttpInfo
      *
      * TRANSFER - CLIENT CARD
      *
@@ -390,10 +390,10 @@ class CashlessApi
      * @throws \InvalidArgumentException
      * @return array of \Qwenta\Fulleapps\Model\InlineResponse2007, HTTP status code, HTTP response headers (array of strings)
      */
-    public function 2a67b19e32ab09fe0443cf64a1dd512cWithHttpInfo($body)
+    public function transferWithHttpInfo($body)
     {
         $returnType = '\Qwenta\Fulleapps\Model\InlineResponse2007';
-        $request = $this->2a67b19e32ab09fe0443cf64a1dd512cRequest($body);
+        $request = $this->transferRequest($body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -455,7 +455,7 @@ class CashlessApi
     }
 
     /**
-     * Operation 2a67b19e32ab09fe0443cf64a1dd512cAsync
+     * Operation transferAsync
      *
      * TRANSFER - CLIENT CARD
      *
@@ -464,9 +464,9 @@ class CashlessApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 2a67b19e32ab09fe0443cf64a1dd512cAsync($body)
+    public function transferAsync($body)
     {
-        return $this->2a67b19e32ab09fe0443cf64a1dd512cAsyncWithHttpInfo($body)
+        return $this->transferAsyncWithHttpInfo($body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -475,7 +475,7 @@ class CashlessApi
     }
 
     /**
-     * Operation 2a67b19e32ab09fe0443cf64a1dd512cAsyncWithHttpInfo
+     * Operation transferAsyncWithHttpInfo
      *
      * TRANSFER - CLIENT CARD
      *
@@ -484,10 +484,10 @@ class CashlessApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 2a67b19e32ab09fe0443cf64a1dd512cAsyncWithHttpInfo($body)
+    public function transferAsyncWithHttpInfo($body)
     {
         $returnType = '\Qwenta\Fulleapps\Model\InlineResponse2007';
-        $request = $this->2a67b19e32ab09fe0443cf64a1dd512cRequest($body);
+        $request = $this->transferRequest($body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -527,19 +527,19 @@ class CashlessApi
     }
 
     /**
-     * Create request for operation '2a67b19e32ab09fe0443cf64a1dd512c'
+     * Create request for operation 'transfer'
      *
      * @param  \Qwenta\Fulleapps\Model\ClientCardsTransferBody $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 2a67b19e32ab09fe0443cf64a1dd512cRequest($body)
+    protected function transferRequest($body)
     {
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling 2a67b19e32ab09fe0443cf64a1dd512c'
+                'Missing the required parameter $body when calling transfer'
             );
         }
 
@@ -620,7 +620,7 @@ class CashlessApi
     }
 
     /**
-     * Operation a63b0c31970b2db556adb5a171d7f64d
+     * Operation create
      *
      * CREATE - CLIENT CARD
      *
@@ -630,13 +630,13 @@ class CashlessApi
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function a63b0c31970b2db556adb5a171d7f64d($body)
+    public function create($body)
     {
-        $this->a63b0c31970b2db556adb5a171d7f64dWithHttpInfo($body);
+        $this->createWithHttpInfo($body);
     }
 
     /**
-     * Operation a63b0c31970b2db556adb5a171d7f64dWithHttpInfo
+     * Operation createWithHttpInfo
      *
      * CREATE - CLIENT CARD
      *
@@ -646,10 +646,10 @@ class CashlessApi
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function a63b0c31970b2db556adb5a171d7f64dWithHttpInfo($body)
+    public function createWithHttpInfo($body)
     {
         $returnType = '';
-        $request = $this->a63b0c31970b2db556adb5a171d7f64dRequest($body);
+        $request = $this->createRequest($body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -689,7 +689,7 @@ class CashlessApi
     }
 
     /**
-     * Operation a63b0c31970b2db556adb5a171d7f64dAsync
+     * Operation createAsync
      *
      * CREATE - CLIENT CARD
      *
@@ -698,9 +698,9 @@ class CashlessApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function a63b0c31970b2db556adb5a171d7f64dAsync($body)
+    public function createAsync($body)
     {
-        return $this->a63b0c31970b2db556adb5a171d7f64dAsyncWithHttpInfo($body)
+        return $this->createAsyncWithHttpInfo($body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -709,7 +709,7 @@ class CashlessApi
     }
 
     /**
-     * Operation a63b0c31970b2db556adb5a171d7f64dAsyncWithHttpInfo
+     * Operation createAsyncWithHttpInfo
      *
      * CREATE - CLIENT CARD
      *
@@ -718,10 +718,10 @@ class CashlessApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function a63b0c31970b2db556adb5a171d7f64dAsyncWithHttpInfo($body)
+    public function createAsyncWithHttpInfo($body)
     {
         $returnType = '';
-        $request = $this->a63b0c31970b2db556adb5a171d7f64dRequest($body);
+        $request = $this->createRequest($body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -747,19 +747,19 @@ class CashlessApi
     }
 
     /**
-     * Create request for operation 'a63b0c31970b2db556adb5a171d7f64d'
+     * Create request for operation 'create'
      *
      * @param  \Qwenta\Fulleapps\Model\ClientCard $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function a63b0c31970b2db556adb5a171d7f64dRequest($body)
+    protected function createRequest($body)
     {
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling a63b0c31970b2db556adb5a171d7f64d'
+                'Missing the required parameter $body when calling create'
             );
         }
 
@@ -840,7 +840,7 @@ class CashlessApi
     }
 
     /**
-     * Operation c4b6936fb29d5d66a92df77013933a88
+     * Operation block
      *
      * BLOCK CARD - STEP 2/2
      *
@@ -850,14 +850,14 @@ class CashlessApi
      * @throws \InvalidArgumentException
      * @return \Qwenta\Fulleapps\Model\InlineResponse2009
      */
-    public function c4b6936fb29d5d66a92df77013933a88($body)
+    public function block($body)
     {
-        list($response) = $this->c4b6936fb29d5d66a92df77013933a88WithHttpInfo($body);
+        list($response) = $this->blockWithHttpInfo($body);
         return $response;
     }
 
     /**
-     * Operation c4b6936fb29d5d66a92df77013933a88WithHttpInfo
+     * Operation blockWithHttpInfo
      *
      * BLOCK CARD - STEP 2/2
      *
@@ -867,10 +867,10 @@ class CashlessApi
      * @throws \InvalidArgumentException
      * @return array of \Qwenta\Fulleapps\Model\InlineResponse2009, HTTP status code, HTTP response headers (array of strings)
      */
-    public function c4b6936fb29d5d66a92df77013933a88WithHttpInfo($body)
+    public function blockWithHttpInfo($body)
     {
         $returnType = '\Qwenta\Fulleapps\Model\InlineResponse2009';
-        $request = $this->c4b6936fb29d5d66a92df77013933a88Request($body);
+        $request = $this->blockRequest($body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -932,7 +932,7 @@ class CashlessApi
     }
 
     /**
-     * Operation c4b6936fb29d5d66a92df77013933a88Async
+     * Operation blockAsync
      *
      * BLOCK CARD - STEP 2/2
      *
@@ -941,9 +941,9 @@ class CashlessApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function c4b6936fb29d5d66a92df77013933a88Async($body)
+    public function blockAsync($body)
     {
-        return $this->c4b6936fb29d5d66a92df77013933a88AsyncWithHttpInfo($body)
+        return $this->blockAsyncWithHttpInfo($body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -952,7 +952,7 @@ class CashlessApi
     }
 
     /**
-     * Operation c4b6936fb29d5d66a92df77013933a88AsyncWithHttpInfo
+     * Operation blockAsyncWithHttpInfo
      *
      * BLOCK CARD - STEP 2/2
      *
@@ -961,10 +961,10 @@ class CashlessApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function c4b6936fb29d5d66a92df77013933a88AsyncWithHttpInfo($body)
+    public function blockAsyncWithHttpInfo($body)
     {
         $returnType = '\Qwenta\Fulleapps\Model\InlineResponse2009';
-        $request = $this->c4b6936fb29d5d66a92df77013933a88Request($body);
+        $request = $this->blockRequest($body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1004,19 +1004,19 @@ class CashlessApi
     }
 
     /**
-     * Create request for operation 'c4b6936fb29d5d66a92df77013933a88'
+     * Create request for operation 'block'
      *
      * @param  \Qwenta\Fulleapps\Model\ClientCardsBlockBody $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function c4b6936fb29d5d66a92df77013933a88Request($body)
+    protected function blockRequest($body)
     {
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling c4b6936fb29d5d66a92df77013933a88'
+                'Missing the required parameter $body when calling block'
             );
         }
 

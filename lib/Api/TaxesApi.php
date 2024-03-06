@@ -87,7 +87,7 @@ class TaxesApi
     }
 
     /**
-     * Operation 3ed36d90d12f63db8988d84aec903fcf
+     * Operation get
      *
      * Récupération des taxes
      *
@@ -97,14 +97,14 @@ class TaxesApi
      * @throws \InvalidArgumentException
      * @return \Qwenta\Fulleapps\Model\InlineResponse20026
      */
-    public function 3ed36d90d12f63db8988d84aec903fcf($id)
+    public function get($id)
     {
-        list($response) = $this->3ed36d90d12f63db8988d84aec903fcfWithHttpInfo($id);
+        list($response) = $this->getWithHttpInfo($id);
         return $response;
     }
 
     /**
-     * Operation 3ed36d90d12f63db8988d84aec903fcfWithHttpInfo
+     * Operation getWithHttpInfo
      *
      * Récupération des taxes
      *
@@ -114,10 +114,10 @@ class TaxesApi
      * @throws \InvalidArgumentException
      * @return array of \Qwenta\Fulleapps\Model\InlineResponse20026, HTTP status code, HTTP response headers (array of strings)
      */
-    public function 3ed36d90d12f63db8988d84aec903fcfWithHttpInfo($id)
+    public function getWithHttpInfo($id)
     {
         $returnType = '\Qwenta\Fulleapps\Model\InlineResponse20026';
-        $request = $this->3ed36d90d12f63db8988d84aec903fcfRequest($id);
+        $request = $this->getRequest($id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -179,7 +179,7 @@ class TaxesApi
     }
 
     /**
-     * Operation 3ed36d90d12f63db8988d84aec903fcfAsync
+     * Operation getAsync
      *
      * Récupération des taxes
      *
@@ -188,9 +188,9 @@ class TaxesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 3ed36d90d12f63db8988d84aec903fcfAsync($id)
+    public function getAsync($id)
     {
-        return $this->3ed36d90d12f63db8988d84aec903fcfAsyncWithHttpInfo($id)
+        return $this->getAsyncWithHttpInfo($id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -199,7 +199,7 @@ class TaxesApi
     }
 
     /**
-     * Operation 3ed36d90d12f63db8988d84aec903fcfAsyncWithHttpInfo
+     * Operation getAsyncWithHttpInfo
      *
      * Récupération des taxes
      *
@@ -208,10 +208,10 @@ class TaxesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 3ed36d90d12f63db8988d84aec903fcfAsyncWithHttpInfo($id)
+    public function getAsyncWithHttpInfo($id)
     {
         $returnType = '\Qwenta\Fulleapps\Model\InlineResponse20026';
-        $request = $this->3ed36d90d12f63db8988d84aec903fcfRequest($id);
+        $request = $this->getRequest($id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -251,19 +251,19 @@ class TaxesApi
     }
 
     /**
-     * Create request for operation '3ed36d90d12f63db8988d84aec903fcf'
+     * Create request for operation 'get'
      *
      * @param  int $id Identifiant du taux (pour récupérer un taux spécifique) (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 3ed36d90d12f63db8988d84aec903fcfRequest($id)
+    protected function getRequest($id)
     {
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling 3ed36d90d12f63db8988d84aec903fcf'
+                'Missing the required parameter $id when calling get'
             );
         }
 
@@ -349,7 +349,7 @@ class TaxesApi
     }
 
     /**
-     * Operation 48a71f1070a68bd74aa4885effeb9561
+     * Operation updateGroup
      *
      * Modification d'un regroupement
      *
@@ -359,13 +359,13 @@ class TaxesApi
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function 48a71f1070a68bd74aa4885effeb9561($body)
+    public function updateGroup($body)
     {
-        $this->48a71f1070a68bd74aa4885effeb9561WithHttpInfo($body);
+        $this->updateGroupWithHttpInfo($body);
     }
 
     /**
-     * Operation 48a71f1070a68bd74aa4885effeb9561WithHttpInfo
+     * Operation updateGroupWithHttpInfo
      *
      * Modification d'un regroupement
      *
@@ -375,10 +375,10 @@ class TaxesApi
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function 48a71f1070a68bd74aa4885effeb9561WithHttpInfo($body)
+    public function updateGroupWithHttpInfo($body)
     {
         $returnType = '';
-        $request = $this->48a71f1070a68bd74aa4885effeb9561Request($body);
+        $request = $this->updateGroupRequest($body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -418,7 +418,7 @@ class TaxesApi
     }
 
     /**
-     * Operation 48a71f1070a68bd74aa4885effeb9561Async
+     * Operation updateGroupAsync
      *
      * Modification d'un regroupement
      *
@@ -427,9 +427,9 @@ class TaxesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 48a71f1070a68bd74aa4885effeb9561Async($body)
+    public function updateGroupAsync($body)
     {
-        return $this->48a71f1070a68bd74aa4885effeb9561AsyncWithHttpInfo($body)
+        return $this->updateGroupAsyncWithHttpInfo($body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -438,7 +438,7 @@ class TaxesApi
     }
 
     /**
-     * Operation 48a71f1070a68bd74aa4885effeb9561AsyncWithHttpInfo
+     * Operation updateGroupAsyncWithHttpInfo
      *
      * Modification d'un regroupement
      *
@@ -447,10 +447,10 @@ class TaxesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 48a71f1070a68bd74aa4885effeb9561AsyncWithHttpInfo($body)
+    public function updateGroupAsyncWithHttpInfo($body)
     {
         $returnType = '';
-        $request = $this->48a71f1070a68bd74aa4885effeb9561Request($body);
+        $request = $this->updateGroupRequest($body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -476,19 +476,19 @@ class TaxesApi
     }
 
     /**
-     * Create request for operation '48a71f1070a68bd74aa4885effeb9561'
+     * Create request for operation 'updateGroup'
      *
      * @param  \Qwenta\Fulleapps\Model\TaxGrouping $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 48a71f1070a68bd74aa4885effeb9561Request($body)
+    protected function updateGroupRequest($body)
     {
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling 48a71f1070a68bd74aa4885effeb9561'
+                'Missing the required parameter $body when calling updateGroup'
             );
         }
 

@@ -87,7 +87,7 @@ class StatistiquesApi
     }
 
     /**
-     * Operation 03415b7dd9593feac9f44a4e42a80d84
+     * Operation sales
      *
      * Palmares des ventes
      *
@@ -104,14 +104,14 @@ class StatistiquesApi
      * @throws \InvalidArgumentException
      * @return \Qwenta\Fulleapps\Model\InlineResponse2004
      */
-    public function 03415b7dd9593feac9f44a4e42a80d84($from_date, $to_date, $id_point_of_sale, $id_device, $service_number, $id_operator, $id_sale_method, $id_client)
+    public function sales($from_date, $to_date, $id_point_of_sale, $id_device, $service_number, $id_operator, $id_sale_method, $id_client)
     {
-        list($response) = $this->03415b7dd9593feac9f44a4e42a80d84WithHttpInfo($from_date, $to_date, $id_point_of_sale, $id_device, $service_number, $id_operator, $id_sale_method, $id_client);
+        list($response) = $this->salesWithHttpInfo($from_date, $to_date, $id_point_of_sale, $id_device, $service_number, $id_operator, $id_sale_method, $id_client);
         return $response;
     }
 
     /**
-     * Operation 03415b7dd9593feac9f44a4e42a80d84WithHttpInfo
+     * Operation salesWithHttpInfo
      *
      * Palmares des ventes
      *
@@ -128,10 +128,10 @@ class StatistiquesApi
      * @throws \InvalidArgumentException
      * @return array of \Qwenta\Fulleapps\Model\InlineResponse2004, HTTP status code, HTTP response headers (array of strings)
      */
-    public function 03415b7dd9593feac9f44a4e42a80d84WithHttpInfo($from_date, $to_date, $id_point_of_sale, $id_device, $service_number, $id_operator, $id_sale_method, $id_client)
+    public function salesWithHttpInfo($from_date, $to_date, $id_point_of_sale, $id_device, $service_number, $id_operator, $id_sale_method, $id_client)
     {
         $returnType = '\Qwenta\Fulleapps\Model\InlineResponse2004';
-        $request = $this->03415b7dd9593feac9f44a4e42a80d84Request($from_date, $to_date, $id_point_of_sale, $id_device, $service_number, $id_operator, $id_sale_method, $id_client);
+        $request = $this->salesRequest($from_date, $to_date, $id_point_of_sale, $id_device, $service_number, $id_operator, $id_sale_method, $id_client);
 
         try {
             $options = $this->createHttpClientOption();
@@ -193,7 +193,7 @@ class StatistiquesApi
     }
 
     /**
-     * Operation 03415b7dd9593feac9f44a4e42a80d84Async
+     * Operation salesAsync
      *
      * Palmares des ventes
      *
@@ -209,9 +209,9 @@ class StatistiquesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 03415b7dd9593feac9f44a4e42a80d84Async($from_date, $to_date, $id_point_of_sale, $id_device, $service_number, $id_operator, $id_sale_method, $id_client)
+    public function salesAsync($from_date, $to_date, $id_point_of_sale, $id_device, $service_number, $id_operator, $id_sale_method, $id_client)
     {
-        return $this->03415b7dd9593feac9f44a4e42a80d84AsyncWithHttpInfo($from_date, $to_date, $id_point_of_sale, $id_device, $service_number, $id_operator, $id_sale_method, $id_client)
+        return $this->salesAsyncWithHttpInfo($from_date, $to_date, $id_point_of_sale, $id_device, $service_number, $id_operator, $id_sale_method, $id_client)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -220,7 +220,7 @@ class StatistiquesApi
     }
 
     /**
-     * Operation 03415b7dd9593feac9f44a4e42a80d84AsyncWithHttpInfo
+     * Operation salesAsyncWithHttpInfo
      *
      * Palmares des ventes
      *
@@ -236,10 +236,10 @@ class StatistiquesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 03415b7dd9593feac9f44a4e42a80d84AsyncWithHttpInfo($from_date, $to_date, $id_point_of_sale, $id_device, $service_number, $id_operator, $id_sale_method, $id_client)
+    public function salesAsyncWithHttpInfo($from_date, $to_date, $id_point_of_sale, $id_device, $service_number, $id_operator, $id_sale_method, $id_client)
     {
         $returnType = '\Qwenta\Fulleapps\Model\InlineResponse2004';
-        $request = $this->03415b7dd9593feac9f44a4e42a80d84Request($from_date, $to_date, $id_point_of_sale, $id_device, $service_number, $id_operator, $id_sale_method, $id_client);
+        $request = $this->salesRequest($from_date, $to_date, $id_point_of_sale, $id_device, $service_number, $id_operator, $id_sale_method, $id_client);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -279,7 +279,7 @@ class StatistiquesApi
     }
 
     /**
-     * Create request for operation '03415b7dd9593feac9f44a4e42a80d84'
+     * Create request for operation 'sales'
      *
      * @param  \DateTime $from_date Date de début de période (YYYY-MM-DD) (required)
      * @param  \DateTime $to_date Date de fin de période (YYYY-MM-DD) (required)
@@ -293,54 +293,54 @@ class StatistiquesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 03415b7dd9593feac9f44a4e42a80d84Request($from_date, $to_date, $id_point_of_sale, $id_device, $service_number, $id_operator, $id_sale_method, $id_client)
+    protected function salesRequest($from_date, $to_date, $id_point_of_sale, $id_device, $service_number, $id_operator, $id_sale_method, $id_client)
     {
         // verify the required parameter 'from_date' is set
         if ($from_date === null || (is_array($from_date) && count($from_date) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $from_date when calling 03415b7dd9593feac9f44a4e42a80d84'
+                'Missing the required parameter $from_date when calling sales'
             );
         }
         // verify the required parameter 'to_date' is set
         if ($to_date === null || (is_array($to_date) && count($to_date) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $to_date when calling 03415b7dd9593feac9f44a4e42a80d84'
+                'Missing the required parameter $to_date when calling sales'
             );
         }
         // verify the required parameter 'id_point_of_sale' is set
         if ($id_point_of_sale === null || (is_array($id_point_of_sale) && count($id_point_of_sale) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id_point_of_sale when calling 03415b7dd9593feac9f44a4e42a80d84'
+                'Missing the required parameter $id_point_of_sale when calling sales'
             );
         }
         // verify the required parameter 'id_device' is set
         if ($id_device === null || (is_array($id_device) && count($id_device) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id_device when calling 03415b7dd9593feac9f44a4e42a80d84'
+                'Missing the required parameter $id_device when calling sales'
             );
         }
         // verify the required parameter 'service_number' is set
         if ($service_number === null || (is_array($service_number) && count($service_number) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $service_number when calling 03415b7dd9593feac9f44a4e42a80d84'
+                'Missing the required parameter $service_number when calling sales'
             );
         }
         // verify the required parameter 'id_operator' is set
         if ($id_operator === null || (is_array($id_operator) && count($id_operator) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id_operator when calling 03415b7dd9593feac9f44a4e42a80d84'
+                'Missing the required parameter $id_operator when calling sales'
             );
         }
         // verify the required parameter 'id_sale_method' is set
         if ($id_sale_method === null || (is_array($id_sale_method) && count($id_sale_method) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id_sale_method when calling 03415b7dd9593feac9f44a4e42a80d84'
+                'Missing the required parameter $id_sale_method when calling sales'
             );
         }
         // verify the required parameter 'id_client' is set
         if ($id_client === null || (is_array($id_client) && count($id_client) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id_client when calling 03415b7dd9593feac9f44a4e42a80d84'
+                'Missing the required parameter $id_client when calling sales'
             );
         }
 
@@ -482,7 +482,7 @@ class StatistiquesApi
     }
 
     /**
-     * Operation 48e669b491d19b210a7970e158cda705
+     * Operation fiscalArchives
      *
      * Récupération des archives fiscales
      *
@@ -494,13 +494,13 @@ class StatistiquesApi
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function 48e669b491d19b210a7970e158cda705($id_device, $id, $filter)
+    public function fiscalArchives($id_device, $id, $filter)
     {
-        $this->48e669b491d19b210a7970e158cda705WithHttpInfo($id_device, $id, $filter);
+        $this->fiscalArchivesWithHttpInfo($id_device, $id, $filter);
     }
 
     /**
-     * Operation 48e669b491d19b210a7970e158cda705WithHttpInfo
+     * Operation fiscalArchivesWithHttpInfo
      *
      * Récupération des archives fiscales
      *
@@ -512,10 +512,10 @@ class StatistiquesApi
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function 48e669b491d19b210a7970e158cda705WithHttpInfo($id_device, $id, $filter)
+    public function fiscalArchivesWithHttpInfo($id_device, $id, $filter)
     {
         $returnType = '';
-        $request = $this->48e669b491d19b210a7970e158cda705Request($id_device, $id, $filter);
+        $request = $this->fiscalArchivesRequest($id_device, $id, $filter);
 
         try {
             $options = $this->createHttpClientOption();
@@ -555,7 +555,7 @@ class StatistiquesApi
     }
 
     /**
-     * Operation 48e669b491d19b210a7970e158cda705Async
+     * Operation fiscalArchivesAsync
      *
      * Récupération des archives fiscales
      *
@@ -566,9 +566,9 @@ class StatistiquesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 48e669b491d19b210a7970e158cda705Async($id_device, $id, $filter)
+    public function fiscalArchivesAsync($id_device, $id, $filter)
     {
-        return $this->48e669b491d19b210a7970e158cda705AsyncWithHttpInfo($id_device, $id, $filter)
+        return $this->fiscalArchivesAsyncWithHttpInfo($id_device, $id, $filter)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -577,7 +577,7 @@ class StatistiquesApi
     }
 
     /**
-     * Operation 48e669b491d19b210a7970e158cda705AsyncWithHttpInfo
+     * Operation fiscalArchivesAsyncWithHttpInfo
      *
      * Récupération des archives fiscales
      *
@@ -588,10 +588,10 @@ class StatistiquesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 48e669b491d19b210a7970e158cda705AsyncWithHttpInfo($id_device, $id, $filter)
+    public function fiscalArchivesAsyncWithHttpInfo($id_device, $id, $filter)
     {
         $returnType = '';
-        $request = $this->48e669b491d19b210a7970e158cda705Request($id_device, $id, $filter);
+        $request = $this->fiscalArchivesRequest($id_device, $id, $filter);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -617,7 +617,7 @@ class StatistiquesApi
     }
 
     /**
-     * Create request for operation '48e669b491d19b210a7970e158cda705'
+     * Create request for operation 'fiscalArchives'
      *
      * @param  int $id_device Identifiant de l&#x27;appareil (required)
      * @param  int $id Identifiant de la ligne archive (Récupération unique) (required)
@@ -626,24 +626,24 @@ class StatistiquesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 48e669b491d19b210a7970e158cda705Request($id_device, $id, $filter)
+    protected function fiscalArchivesRequest($id_device, $id, $filter)
     {
         // verify the required parameter 'id_device' is set
         if ($id_device === null || (is_array($id_device) && count($id_device) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id_device when calling 48e669b491d19b210a7970e158cda705'
+                'Missing the required parameter $id_device when calling fiscalArchives'
             );
         }
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling 48e669b491d19b210a7970e158cda705'
+                'Missing the required parameter $id when calling fiscalArchives'
             );
         }
         // verify the required parameter 'filter' is set
         if ($filter === null || (is_array($filter) && count($filter) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $filter when calling 48e669b491d19b210a7970e158cda705'
+                'Missing the required parameter $filter when calling fiscalArchives'
             );
         }
 
@@ -745,7 +745,7 @@ class StatistiquesApi
     }
 
     /**
-     * Operation 4ce5804f9e16cad6e31e42d2ca580f57
+     * Operation taxes
      *
      * Répartition des taxes
      *
@@ -759,13 +759,13 @@ class StatistiquesApi
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function 4ce5804f9e16cad6e31e42d2ca580f57($from_date, $to_date, $id_point_of_sale, $id_device, $id_sale_method)
+    public function taxes($from_date, $to_date, $id_point_of_sale, $id_device, $id_sale_method)
     {
-        $this->4ce5804f9e16cad6e31e42d2ca580f57WithHttpInfo($from_date, $to_date, $id_point_of_sale, $id_device, $id_sale_method);
+        $this->taxesWithHttpInfo($from_date, $to_date, $id_point_of_sale, $id_device, $id_sale_method);
     }
 
     /**
-     * Operation 4ce5804f9e16cad6e31e42d2ca580f57WithHttpInfo
+     * Operation taxesWithHttpInfo
      *
      * Répartition des taxes
      *
@@ -779,10 +779,10 @@ class StatistiquesApi
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function 4ce5804f9e16cad6e31e42d2ca580f57WithHttpInfo($from_date, $to_date, $id_point_of_sale, $id_device, $id_sale_method)
+    public function taxesWithHttpInfo($from_date, $to_date, $id_point_of_sale, $id_device, $id_sale_method)
     {
         $returnType = '';
-        $request = $this->4ce5804f9e16cad6e31e42d2ca580f57Request($from_date, $to_date, $id_point_of_sale, $id_device, $id_sale_method);
+        $request = $this->taxesRequest($from_date, $to_date, $id_point_of_sale, $id_device, $id_sale_method);
 
         try {
             $options = $this->createHttpClientOption();
@@ -822,7 +822,7 @@ class StatistiquesApi
     }
 
     /**
-     * Operation 4ce5804f9e16cad6e31e42d2ca580f57Async
+     * Operation taxesAsync
      *
      * Répartition des taxes
      *
@@ -835,9 +835,9 @@ class StatistiquesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 4ce5804f9e16cad6e31e42d2ca580f57Async($from_date, $to_date, $id_point_of_sale, $id_device, $id_sale_method)
+    public function taxesAsync($from_date, $to_date, $id_point_of_sale, $id_device, $id_sale_method)
     {
-        return $this->4ce5804f9e16cad6e31e42d2ca580f57AsyncWithHttpInfo($from_date, $to_date, $id_point_of_sale, $id_device, $id_sale_method)
+        return $this->taxesAsyncWithHttpInfo($from_date, $to_date, $id_point_of_sale, $id_device, $id_sale_method)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -846,7 +846,7 @@ class StatistiquesApi
     }
 
     /**
-     * Operation 4ce5804f9e16cad6e31e42d2ca580f57AsyncWithHttpInfo
+     * Operation taxesAsyncWithHttpInfo
      *
      * Répartition des taxes
      *
@@ -859,10 +859,10 @@ class StatistiquesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 4ce5804f9e16cad6e31e42d2ca580f57AsyncWithHttpInfo($from_date, $to_date, $id_point_of_sale, $id_device, $id_sale_method)
+    public function taxesAsyncWithHttpInfo($from_date, $to_date, $id_point_of_sale, $id_device, $id_sale_method)
     {
         $returnType = '';
-        $request = $this->4ce5804f9e16cad6e31e42d2ca580f57Request($from_date, $to_date, $id_point_of_sale, $id_device, $id_sale_method);
+        $request = $this->taxesRequest($from_date, $to_date, $id_point_of_sale, $id_device, $id_sale_method);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -888,7 +888,7 @@ class StatistiquesApi
     }
 
     /**
-     * Create request for operation '4ce5804f9e16cad6e31e42d2ca580f57'
+     * Create request for operation 'taxes'
      *
      * @param  \DateTime $from_date Date de début de période (YYYY-MM-DD) (required)
      * @param  \DateTime $to_date Date de fin de période (YYYY-MM-DD) (required)
@@ -899,36 +899,36 @@ class StatistiquesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 4ce5804f9e16cad6e31e42d2ca580f57Request($from_date, $to_date, $id_point_of_sale, $id_device, $id_sale_method)
+    protected function taxesRequest($from_date, $to_date, $id_point_of_sale, $id_device, $id_sale_method)
     {
         // verify the required parameter 'from_date' is set
         if ($from_date === null || (is_array($from_date) && count($from_date) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $from_date when calling 4ce5804f9e16cad6e31e42d2ca580f57'
+                'Missing the required parameter $from_date when calling taxes'
             );
         }
         // verify the required parameter 'to_date' is set
         if ($to_date === null || (is_array($to_date) && count($to_date) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $to_date when calling 4ce5804f9e16cad6e31e42d2ca580f57'
+                'Missing the required parameter $to_date when calling taxes'
             );
         }
         // verify the required parameter 'id_point_of_sale' is set
         if ($id_point_of_sale === null || (is_array($id_point_of_sale) && count($id_point_of_sale) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id_point_of_sale when calling 4ce5804f9e16cad6e31e42d2ca580f57'
+                'Missing the required parameter $id_point_of_sale when calling taxes'
             );
         }
         // verify the required parameter 'id_device' is set
         if ($id_device === null || (is_array($id_device) && count($id_device) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id_device when calling 4ce5804f9e16cad6e31e42d2ca580f57'
+                'Missing the required parameter $id_device when calling taxes'
             );
         }
         // verify the required parameter 'id_sale_method' is set
         if ($id_sale_method === null || (is_array($id_sale_method) && count($id_sale_method) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id_sale_method when calling 4ce5804f9e16cad6e31e42d2ca580f57'
+                'Missing the required parameter $id_sale_method when calling taxes'
             );
         }
 

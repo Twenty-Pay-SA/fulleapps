@@ -91,15 +91,15 @@ class ServicesApi
      *
      * Suppression
      *
-     * @param   $  (required)
+     * @param   $id  (required)
      *
      * @throws \Qwenta\Fulleapps\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function bookingSettingsServicesIdDelete($)
+    public function bookingSettingsServicesIdDelete($id)
     {
-        $this->bookingSettingsServicesIdDeleteWithHttpInfo($);
+        $this->bookingSettingsServicesIdDeleteWithHttpInfo($id);
     }
 
     /**
@@ -107,16 +107,16 @@ class ServicesApi
      *
      * Suppression
      *
-     * @param   $ (required)
+     * @param   $id (required)
      *
      * @throws \Qwenta\Fulleapps\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function bookingSettingsServicesIdDeleteWithHttpInfo($)
+    public function bookingSettingsServicesIdDeleteWithHttpInfo($id)
     {
         $returnType = '';
-        $request = $this->bookingSettingsServicesIdDeleteRequest($);
+        $request = $this->bookingSettingsServicesIdDeleteRequest($id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -160,14 +160,14 @@ class ServicesApi
      *
      * Suppression
      *
-     * @param   $ (required)
+     * @param   $id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function bookingSettingsServicesIdDeleteAsync($)
+    public function bookingSettingsServicesIdDeleteAsync($id)
     {
-        return $this->bookingSettingsServicesIdDeleteAsyncWithHttpInfo($)
+        return $this->bookingSettingsServicesIdDeleteAsyncWithHttpInfo($id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -180,15 +180,15 @@ class ServicesApi
      *
      * Suppression
      *
-     * @param   $ (required)
+     * @param   $id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function bookingSettingsServicesIdDeleteAsyncWithHttpInfo($)
+    public function bookingSettingsServicesIdDeleteAsyncWithHttpInfo($id)
     {
         $returnType = '';
-        $request = $this->bookingSettingsServicesIdDeleteRequest($);
+        $request = $this->bookingSettingsServicesIdDeleteRequest($id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -216,17 +216,17 @@ class ServicesApi
     /**
      * Create request for operation 'bookingSettingsServicesIdDelete'
      *
-     * @param   $ (required)
+     * @param   $id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function bookingSettingsServicesIdDeleteRequest($)
+    protected function bookingSettingsServicesIdDeleteRequest($id)
     {
         // verify the required parameter '' is set
-        if ($ === null || (is_array($) && count($) === 0)) {
+        if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $ when calling bookingSettingsServicesIdDelete'
+                'Missing the required parameter $id when calling bookingSettingsServicesIdDelete'
             );
         }
 
@@ -238,8 +238,8 @@ class ServicesApi
         $multipart = false;
 
         // query params
-        if ($ !== null) {
-            $queryParams['id'] = ObjectSerializer::toQueryValue($, null);
+        if ($id !== null) {
+            $queryParams['id'] = ObjectSerializer::toQueryValue($id, null);
         }
 
 

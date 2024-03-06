@@ -87,7 +87,7 @@ class ModesDeRglementApi
     }
 
     /**
-     * Operation 1bdc237e2c731798a2889a8e44355b70
+     * Operation create
      *
      * Création
      *
@@ -97,13 +97,13 @@ class ModesDeRglementApi
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function 1bdc237e2c731798a2889a8e44355b70($body)
+    public function create($body)
     {
-        $this->1bdc237e2c731798a2889a8e44355b70WithHttpInfo($body);
+        $this->createWithHttpInfo($body);
     }
 
     /**
-     * Operation 1bdc237e2c731798a2889a8e44355b70WithHttpInfo
+     * Operation createWithHttpInfo
      *
      * Création
      *
@@ -113,10 +113,10 @@ class ModesDeRglementApi
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function 1bdc237e2c731798a2889a8e44355b70WithHttpInfo($body)
+    public function createWithHttpInfo($body)
     {
         $returnType = '';
-        $request = $this->1bdc237e2c731798a2889a8e44355b70Request($body);
+        $request = $this->createRequest($body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -156,7 +156,7 @@ class ModesDeRglementApi
     }
 
     /**
-     * Operation 1bdc237e2c731798a2889a8e44355b70Async
+     * Operation createAsync
      *
      * Création
      *
@@ -165,9 +165,9 @@ class ModesDeRglementApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 1bdc237e2c731798a2889a8e44355b70Async($body)
+    public function createAsync($body)
     {
-        return $this->1bdc237e2c731798a2889a8e44355b70AsyncWithHttpInfo($body)
+        return $this->createAsyncWithHttpInfo($body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -176,7 +176,7 @@ class ModesDeRglementApi
     }
 
     /**
-     * Operation 1bdc237e2c731798a2889a8e44355b70AsyncWithHttpInfo
+     * Operation createAsyncWithHttpInfo
      *
      * Création
      *
@@ -185,10 +185,10 @@ class ModesDeRglementApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 1bdc237e2c731798a2889a8e44355b70AsyncWithHttpInfo($body)
+    public function createAsyncWithHttpInfo($body)
     {
         $returnType = '';
-        $request = $this->1bdc237e2c731798a2889a8e44355b70Request($body);
+        $request = $this->createRequest($body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -214,19 +214,19 @@ class ModesDeRglementApi
     }
 
     /**
-     * Create request for operation '1bdc237e2c731798a2889a8e44355b70'
+     * Create request for operation 'create'
      *
      * @param  \Qwenta\Fulleapps\Model\PaymentMean $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 1bdc237e2c731798a2889a8e44355b70Request($body)
+    protected function createRequest($body)
     {
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling 1bdc237e2c731798a2889a8e44355b70'
+                'Missing the required parameter $body when calling create'
             );
         }
 
@@ -307,7 +307,7 @@ class ModesDeRglementApi
     }
 
     /**
-     * Operation 3ec533d07ca9a2ec69daeac171a83502
+     * Operation get
      *
      * Récupération
      *
@@ -316,14 +316,14 @@ class ModesDeRglementApi
      * @throws \InvalidArgumentException
      * @return \Qwenta\Fulleapps\Model\InlineResponse20017
      */
-    public function 3ec533d07ca9a2ec69daeac171a83502()
+    public function get()
     {
-        list($response) = $this->3ec533d07ca9a2ec69daeac171a83502WithHttpInfo();
+        list($response) = $this->getWithHttpInfo();
         return $response;
     }
 
     /**
-     * Operation 3ec533d07ca9a2ec69daeac171a83502WithHttpInfo
+     * Operation getWithHttpInfo
      *
      * Récupération
      *
@@ -332,10 +332,10 @@ class ModesDeRglementApi
      * @throws \InvalidArgumentException
      * @return array of \Qwenta\Fulleapps\Model\InlineResponse20017, HTTP status code, HTTP response headers (array of strings)
      */
-    public function 3ec533d07ca9a2ec69daeac171a83502WithHttpInfo()
+    public function getWithHttpInfo()
     {
         $returnType = '\Qwenta\Fulleapps\Model\InlineResponse20017';
-        $request = $this->3ec533d07ca9a2ec69daeac171a83502Request();
+        $request = $this->getRequest();
 
         try {
             $options = $this->createHttpClientOption();
@@ -397,7 +397,7 @@ class ModesDeRglementApi
     }
 
     /**
-     * Operation 3ec533d07ca9a2ec69daeac171a83502Async
+     * Operation getAsync
      *
      * Récupération
      *
@@ -405,9 +405,9 @@ class ModesDeRglementApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 3ec533d07ca9a2ec69daeac171a83502Async()
+    public function getAsync()
     {
-        return $this->3ec533d07ca9a2ec69daeac171a83502AsyncWithHttpInfo()
+        return $this->getAsyncWithHttpInfo()
             ->then(
                 function ($response) {
                     return $response[0];
@@ -416,7 +416,7 @@ class ModesDeRglementApi
     }
 
     /**
-     * Operation 3ec533d07ca9a2ec69daeac171a83502AsyncWithHttpInfo
+     * Operation getAsyncWithHttpInfo
      *
      * Récupération
      *
@@ -424,10 +424,10 @@ class ModesDeRglementApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 3ec533d07ca9a2ec69daeac171a83502AsyncWithHttpInfo()
+    public function getAsyncWithHttpInfo()
     {
         $returnType = '\Qwenta\Fulleapps\Model\InlineResponse20017';
-        $request = $this->3ec533d07ca9a2ec69daeac171a83502Request();
+        $request = $this->getRequest();
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -467,13 +467,13 @@ class ModesDeRglementApi
     }
 
     /**
-     * Create request for operation '3ec533d07ca9a2ec69daeac171a83502'
+     * Create request for operation 'get'
      *
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 3ec533d07ca9a2ec69daeac171a83502Request()
+    protected function getRequest()
     {
 
         $resourcePath = '/payment_means';
@@ -550,7 +550,7 @@ class ModesDeRglementApi
     }
 
     /**
-     * Operation 80f2b4a022b7de1bf7e9fe27b708985e
+     * Operation update
      *
      * Modification
      *
@@ -560,13 +560,13 @@ class ModesDeRglementApi
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function 80f2b4a022b7de1bf7e9fe27b708985e($body)
+    public function update($body)
     {
-        $this->80f2b4a022b7de1bf7e9fe27b708985eWithHttpInfo($body);
+        $this->updateWithHttpInfo($body);
     }
 
     /**
-     * Operation 80f2b4a022b7de1bf7e9fe27b708985eWithHttpInfo
+     * Operation updateWithHttpInfo
      *
      * Modification
      *
@@ -576,10 +576,10 @@ class ModesDeRglementApi
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function 80f2b4a022b7de1bf7e9fe27b708985eWithHttpInfo($body)
+    public function updateWithHttpInfo($body)
     {
         $returnType = '';
-        $request = $this->80f2b4a022b7de1bf7e9fe27b708985eRequest($body);
+        $request = $this->updateRequest($body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -619,7 +619,7 @@ class ModesDeRglementApi
     }
 
     /**
-     * Operation 80f2b4a022b7de1bf7e9fe27b708985eAsync
+     * Operation updateAsync
      *
      * Modification
      *
@@ -628,9 +628,9 @@ class ModesDeRglementApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 80f2b4a022b7de1bf7e9fe27b708985eAsync($body)
+    public function updateAsync($body)
     {
-        return $this->80f2b4a022b7de1bf7e9fe27b708985eAsyncWithHttpInfo($body)
+        return $this->updateAsyncWithHttpInfo($body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -639,7 +639,7 @@ class ModesDeRglementApi
     }
 
     /**
-     * Operation 80f2b4a022b7de1bf7e9fe27b708985eAsyncWithHttpInfo
+     * Operation updateAsyncWithHttpInfo
      *
      * Modification
      *
@@ -648,10 +648,10 @@ class ModesDeRglementApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 80f2b4a022b7de1bf7e9fe27b708985eAsyncWithHttpInfo($body)
+    public function updateAsyncWithHttpInfo($body)
     {
         $returnType = '';
-        $request = $this->80f2b4a022b7de1bf7e9fe27b708985eRequest($body);
+        $request = $this->updateRequest($body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -677,19 +677,19 @@ class ModesDeRglementApi
     }
 
     /**
-     * Create request for operation '80f2b4a022b7de1bf7e9fe27b708985e'
+     * Create request for operation 'update'
      *
      * @param  \Qwenta\Fulleapps\Model\PaymentMean $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 80f2b4a022b7de1bf7e9fe27b708985eRequest($body)
+    protected function updateRequest($body)
     {
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling 80f2b4a022b7de1bf7e9fe27b708985e'
+                'Missing the required parameter $body when calling update'
             );
         }
 

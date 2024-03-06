@@ -87,7 +87,7 @@ class LocalisationsApi
     }
 
     /**
-     * Operation 80b83011240cac4a3fed00b6ebb1e592
+     * Operation get
      *
      * Récupération des pays
      *
@@ -96,14 +96,14 @@ class LocalisationsApi
      * @throws \InvalidArgumentException
      * @return \Qwenta\Fulleapps\Model\Country[]
      */
-    public function 80b83011240cac4a3fed00b6ebb1e592()
+    public function get()
     {
-        list($response) = $this->80b83011240cac4a3fed00b6ebb1e592WithHttpInfo();
+        list($response) = $this->getWithHttpInfo();
         return $response;
     }
 
     /**
-     * Operation 80b83011240cac4a3fed00b6ebb1e592WithHttpInfo
+     * Operation getWithHttpInfo
      *
      * Récupération des pays
      *
@@ -112,10 +112,10 @@ class LocalisationsApi
      * @throws \InvalidArgumentException
      * @return array of \Qwenta\Fulleapps\Model\Country[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function 80b83011240cac4a3fed00b6ebb1e592WithHttpInfo()
+    public function getWithHttpInfo()
     {
         $returnType = '\Qwenta\Fulleapps\Model\Country[]';
-        $request = $this->80b83011240cac4a3fed00b6ebb1e592Request();
+        $request = $this->getRequest();
 
         try {
             $options = $this->createHttpClientOption();
@@ -177,7 +177,7 @@ class LocalisationsApi
     }
 
     /**
-     * Operation 80b83011240cac4a3fed00b6ebb1e592Async
+     * Operation getAsync
      *
      * Récupération des pays
      *
@@ -185,9 +185,9 @@ class LocalisationsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 80b83011240cac4a3fed00b6ebb1e592Async()
+    public function getAsync()
     {
-        return $this->80b83011240cac4a3fed00b6ebb1e592AsyncWithHttpInfo()
+        return $this->getAsyncWithHttpInfo()
             ->then(
                 function ($response) {
                     return $response[0];
@@ -196,7 +196,7 @@ class LocalisationsApi
     }
 
     /**
-     * Operation 80b83011240cac4a3fed00b6ebb1e592AsyncWithHttpInfo
+     * Operation getAsyncWithHttpInfo
      *
      * Récupération des pays
      *
@@ -204,10 +204,10 @@ class LocalisationsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 80b83011240cac4a3fed00b6ebb1e592AsyncWithHttpInfo()
+    public function getAsyncWithHttpInfo()
     {
         $returnType = '\Qwenta\Fulleapps\Model\Country[]';
-        $request = $this->80b83011240cac4a3fed00b6ebb1e592Request();
+        $request = $this->getRequest();
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -247,13 +247,13 @@ class LocalisationsApi
     }
 
     /**
-     * Create request for operation '80b83011240cac4a3fed00b6ebb1e592'
+     * Create request for operation 'get'
      *
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 80b83011240cac4a3fed00b6ebb1e592Request()
+    protected function getRequest()
     {
 
         $resourcePath = '/v1/countries';

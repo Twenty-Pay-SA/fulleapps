@@ -87,7 +87,7 @@ class TicketsFacturesApi
     }
 
     /**
-     * Operation 562036c332b6ce12941531a4d67d1dcc
+     * Operation list
      *
      * Get list
      *
@@ -104,14 +104,14 @@ class TicketsFacturesApi
      * @throws \InvalidArgumentException
      * @return \Qwenta\Fulleapps\Model\InlineResponse20015
      */
-    public function 562036c332b6ce12941531a4d67d1dcc($from_service_date, $to_service_date, $from_date, $to_date, $id_point_of_sale, $id_sale_method, $offset, $limit)
+    public function list($from_service_date, $to_service_date, $from_date, $to_date, $id_point_of_sale, $id_sale_method, $offset, $limit)
     {
-        list($response) = $this->562036c332b6ce12941531a4d67d1dccWithHttpInfo($from_service_date, $to_service_date, $from_date, $to_date, $id_point_of_sale, $id_sale_method, $offset, $limit);
+        list($response) = $this->listWithHttpInfo($from_service_date, $to_service_date, $from_date, $to_date, $id_point_of_sale, $id_sale_method, $offset, $limit);
         return $response;
     }
 
     /**
-     * Operation 562036c332b6ce12941531a4d67d1dccWithHttpInfo
+     * Operation listWithHttpInfo
      *
      * Get list
      *
@@ -128,10 +128,10 @@ class TicketsFacturesApi
      * @throws \InvalidArgumentException
      * @return array of \Qwenta\Fulleapps\Model\InlineResponse20015, HTTP status code, HTTP response headers (array of strings)
      */
-    public function 562036c332b6ce12941531a4d67d1dccWithHttpInfo($from_service_date, $to_service_date, $from_date, $to_date, $id_point_of_sale, $id_sale_method, $offset, $limit)
+    public function listWithHttpInfo($from_service_date, $to_service_date, $from_date, $to_date, $id_point_of_sale, $id_sale_method, $offset, $limit)
     {
         $returnType = '\Qwenta\Fulleapps\Model\InlineResponse20015';
-        $request = $this->562036c332b6ce12941531a4d67d1dccRequest($from_service_date, $to_service_date, $from_date, $to_date, $id_point_of_sale, $id_sale_method, $offset, $limit);
+        $request = $this->listRequest($from_service_date, $to_service_date, $from_date, $to_date, $id_point_of_sale, $id_sale_method, $offset, $limit);
 
         try {
             $options = $this->createHttpClientOption();
@@ -193,7 +193,7 @@ class TicketsFacturesApi
     }
 
     /**
-     * Operation 562036c332b6ce12941531a4d67d1dccAsync
+     * Operation listAsync
      *
      * Get list
      *
@@ -209,9 +209,9 @@ class TicketsFacturesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 562036c332b6ce12941531a4d67d1dccAsync($from_service_date, $to_service_date, $from_date, $to_date, $id_point_of_sale, $id_sale_method, $offset, $limit)
+    public function listAsync($from_service_date, $to_service_date, $from_date, $to_date, $id_point_of_sale, $id_sale_method, $offset, $limit)
     {
-        return $this->562036c332b6ce12941531a4d67d1dccAsyncWithHttpInfo($from_service_date, $to_service_date, $from_date, $to_date, $id_point_of_sale, $id_sale_method, $offset, $limit)
+        return $this->listAsyncWithHttpInfo($from_service_date, $to_service_date, $from_date, $to_date, $id_point_of_sale, $id_sale_method, $offset, $limit)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -220,7 +220,7 @@ class TicketsFacturesApi
     }
 
     /**
-     * Operation 562036c332b6ce12941531a4d67d1dccAsyncWithHttpInfo
+     * Operation listAsyncWithHttpInfo
      *
      * Get list
      *
@@ -236,10 +236,10 @@ class TicketsFacturesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 562036c332b6ce12941531a4d67d1dccAsyncWithHttpInfo($from_service_date, $to_service_date, $from_date, $to_date, $id_point_of_sale, $id_sale_method, $offset, $limit)
+    public function listAsyncWithHttpInfo($from_service_date, $to_service_date, $from_date, $to_date, $id_point_of_sale, $id_sale_method, $offset, $limit)
     {
         $returnType = '\Qwenta\Fulleapps\Model\InlineResponse20015';
-        $request = $this->562036c332b6ce12941531a4d67d1dccRequest($from_service_date, $to_service_date, $from_date, $to_date, $id_point_of_sale, $id_sale_method, $offset, $limit);
+        $request = $this->listRequest($from_service_date, $to_service_date, $from_date, $to_date, $id_point_of_sale, $id_sale_method, $offset, $limit);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -279,7 +279,7 @@ class TicketsFacturesApi
     }
 
     /**
-     * Create request for operation '562036c332b6ce12941531a4d67d1dcc'
+     * Create request for operation 'list'
      *
      * @param  \DateTime $from_service_date Date de début de période (required)
      * @param  \DateTime $to_service_date Date de fin de période (required)
@@ -293,54 +293,54 @@ class TicketsFacturesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 562036c332b6ce12941531a4d67d1dccRequest($from_service_date, $to_service_date, $from_date, $to_date, $id_point_of_sale, $id_sale_method, $offset, $limit)
+    protected function listRequest($from_service_date, $to_service_date, $from_date, $to_date, $id_point_of_sale, $id_sale_method, $offset, $limit)
     {
         // verify the required parameter 'from_service_date' is set
         if ($from_service_date === null || (is_array($from_service_date) && count($from_service_date) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $from_service_date when calling 562036c332b6ce12941531a4d67d1dcc'
+                'Missing the required parameter $from_service_date when calling list'
             );
         }
         // verify the required parameter 'to_service_date' is set
         if ($to_service_date === null || (is_array($to_service_date) && count($to_service_date) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $to_service_date when calling 562036c332b6ce12941531a4d67d1dcc'
+                'Missing the required parameter $to_service_date when calling list'
             );
         }
         // verify the required parameter 'from_date' is set
         if ($from_date === null || (is_array($from_date) && count($from_date) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $from_date when calling 562036c332b6ce12941531a4d67d1dcc'
+                'Missing the required parameter $from_date when calling list'
             );
         }
         // verify the required parameter 'to_date' is set
         if ($to_date === null || (is_array($to_date) && count($to_date) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $to_date when calling 562036c332b6ce12941531a4d67d1dcc'
+                'Missing the required parameter $to_date when calling list'
             );
         }
         // verify the required parameter 'id_point_of_sale' is set
         if ($id_point_of_sale === null || (is_array($id_point_of_sale) && count($id_point_of_sale) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id_point_of_sale when calling 562036c332b6ce12941531a4d67d1dcc'
+                'Missing the required parameter $id_point_of_sale when calling list'
             );
         }
         // verify the required parameter 'id_sale_method' is set
         if ($id_sale_method === null || (is_array($id_sale_method) && count($id_sale_method) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id_sale_method when calling 562036c332b6ce12941531a4d67d1dcc'
+                'Missing the required parameter $id_sale_method when calling list'
             );
         }
         // verify the required parameter 'offset' is set
         if ($offset === null || (is_array($offset) && count($offset) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $offset when calling 562036c332b6ce12941531a4d67d1dcc'
+                'Missing the required parameter $offset when calling list'
             );
         }
         // verify the required parameter 'limit' is set
         if ($limit === null || (is_array($limit) && count($limit) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $limit when calling 562036c332b6ce12941531a4d67d1dcc'
+                'Missing the required parameter $limit when calling list'
             );
         }
 
@@ -482,7 +482,7 @@ class TicketsFacturesApi
     }
 
     /**
-     * Operation 975b864a5ceffd0c3a4eecb52e4bc0f3
+     * Operation create
      *
      * Générer une facture
      *
@@ -493,13 +493,13 @@ class TicketsFacturesApi
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function 975b864a5ceffd0c3a4eecb52e4bc0f3($id, $body = null)
+    public function create($id, $body = null)
     {
-        $this->975b864a5ceffd0c3a4eecb52e4bc0f3WithHttpInfo($id, $body);
+        $this->createWithHttpInfo($id, $body);
     }
 
     /**
-     * Operation 975b864a5ceffd0c3a4eecb52e4bc0f3WithHttpInfo
+     * Operation createWithHttpInfo
      *
      * Générer une facture
      *
@@ -510,10 +510,10 @@ class TicketsFacturesApi
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function 975b864a5ceffd0c3a4eecb52e4bc0f3WithHttpInfo($id, $body = null)
+    public function createWithHttpInfo($id, $body = null)
     {
         $returnType = '';
-        $request = $this->975b864a5ceffd0c3a4eecb52e4bc0f3Request($id, $body);
+        $request = $this->createRequest($id, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -553,7 +553,7 @@ class TicketsFacturesApi
     }
 
     /**
-     * Operation 975b864a5ceffd0c3a4eecb52e4bc0f3Async
+     * Operation createAsync
      *
      * Générer une facture
      *
@@ -563,9 +563,9 @@ class TicketsFacturesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 975b864a5ceffd0c3a4eecb52e4bc0f3Async($id, $body = null)
+    public function createAsync($id, $body = null)
     {
-        return $this->975b864a5ceffd0c3a4eecb52e4bc0f3AsyncWithHttpInfo($id, $body)
+        return $this->createAsyncWithHttpInfo($id, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -574,7 +574,7 @@ class TicketsFacturesApi
     }
 
     /**
-     * Operation 975b864a5ceffd0c3a4eecb52e4bc0f3AsyncWithHttpInfo
+     * Operation createAsyncWithHttpInfo
      *
      * Générer une facture
      *
@@ -584,10 +584,10 @@ class TicketsFacturesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 975b864a5ceffd0c3a4eecb52e4bc0f3AsyncWithHttpInfo($id, $body = null)
+    public function createAsyncWithHttpInfo($id, $body = null)
     {
         $returnType = '';
-        $request = $this->975b864a5ceffd0c3a4eecb52e4bc0f3Request($id, $body);
+        $request = $this->createRequest($id, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -613,7 +613,7 @@ class TicketsFacturesApi
     }
 
     /**
-     * Create request for operation '975b864a5ceffd0c3a4eecb52e4bc0f3'
+     * Create request for operation 'create'
      *
      * @param  int $id Ticket ID (required)
      * @param  \Qwenta\Fulleapps\Model\InvoiceIdBody $body (optional)
@@ -621,12 +621,12 @@ class TicketsFacturesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 975b864a5ceffd0c3a4eecb52e4bc0f3Request($id, $body = null)
+    protected function createRequest($id, $body = null)
     {
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling 975b864a5ceffd0c3a4eecb52e4bc0f3'
+                'Missing the required parameter $id when calling create'
             );
         }
 
@@ -950,15 +950,15 @@ class TicketsFacturesApi
      *
      * Get by ID
      *
-     * @param   $ Ticket ID (required)
+     * @param   $id Ticket ID (required)
      *
      * @throws \Qwenta\Fulleapps\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Qwenta\Fulleapps\Model\InlineResponse20015
      */
-    public function ticketsIdGet($)
+    public function ticketsIdGet($id)
     {
-        list($response) = $this->ticketsIdGetWithHttpInfo($);
+        list($response) = $this->ticketsIdGetWithHttpInfo($id);
         return $response;
     }
 
@@ -967,16 +967,16 @@ class TicketsFacturesApi
      *
      * Get by ID
      *
-     * @param   $ Ticket ID (required)
+     * @param   $id Ticket ID (required)
      *
      * @throws \Qwenta\Fulleapps\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Qwenta\Fulleapps\Model\InlineResponse20015, HTTP status code, HTTP response headers (array of strings)
      */
-    public function ticketsIdGetWithHttpInfo($)
+    public function ticketsIdGetWithHttpInfo($id)
     {
         $returnType = '\Qwenta\Fulleapps\Model\InlineResponse20015';
-        $request = $this->ticketsIdGetRequest($);
+        $request = $this->ticketsIdGetRequest($id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1042,14 +1042,14 @@ class TicketsFacturesApi
      *
      * Get by ID
      *
-     * @param   $ Ticket ID (required)
+     * @param   $id Ticket ID (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function ticketsIdGetAsync($)
+    public function ticketsIdGetAsync($id)
     {
-        return $this->ticketsIdGetAsyncWithHttpInfo($)
+        return $this->ticketsIdGetAsyncWithHttpInfo($id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1062,15 +1062,15 @@ class TicketsFacturesApi
      *
      * Get by ID
      *
-     * @param   $ Ticket ID (required)
+     * @param   $id Ticket ID (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function ticketsIdGetAsyncWithHttpInfo($)
+    public function ticketsIdGetAsyncWithHttpInfo($id)
     {
         $returnType = '\Qwenta\Fulleapps\Model\InlineResponse20015';
-        $request = $this->ticketsIdGetRequest($);
+        $request = $this->ticketsIdGetRequest($id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1112,17 +1112,17 @@ class TicketsFacturesApi
     /**
      * Create request for operation 'ticketsIdGet'
      *
-     * @param   $ Ticket ID (required)
+     * @param   $id Ticket ID (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function ticketsIdGetRequest($)
+    protected function ticketsIdGetRequest($id)
     {
         // verify the required parameter '' is set
-        if ($ === null || (is_array($) && count($) === 0)) {
+        if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $ when calling ticketsIdGet'
+                'Missing the required parameter $id when calling ticketsIdGet'
             );
         }
 
@@ -1134,8 +1134,8 @@ class TicketsFacturesApi
         $multipart = false;
 
         // query params
-        if ($ !== null) {
-            $queryParams['id'] = ObjectSerializer::toQueryValue($, null);
+        if ($id !== null) {
+            $queryParams['id'] = ObjectSerializer::toQueryValue($id, null);
         }
 
 

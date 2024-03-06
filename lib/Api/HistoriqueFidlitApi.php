@@ -87,7 +87,7 @@ class HistoriqueFidlitApi
     }
 
     /**
-     * Operation 851a9e3b5a3f96682fa7d5fbaa8a438a
+     * Operation get
      *
      * Récupération
      *
@@ -96,14 +96,14 @@ class HistoriqueFidlitApi
      * @throws \InvalidArgumentException
      * @return \Qwenta\Fulleapps\Model\FidelityHistory[]
      */
-    public function 851a9e3b5a3f96682fa7d5fbaa8a438a()
+    public function get()
     {
-        list($response) = $this->851a9e3b5a3f96682fa7d5fbaa8a438aWithHttpInfo();
+        list($response) = $this->getWithHttpInfo();
         return $response;
     }
 
     /**
-     * Operation 851a9e3b5a3f96682fa7d5fbaa8a438aWithHttpInfo
+     * Operation getWithHttpInfo
      *
      * Récupération
      *
@@ -112,10 +112,10 @@ class HistoriqueFidlitApi
      * @throws \InvalidArgumentException
      * @return array of \Qwenta\Fulleapps\Model\FidelityHistory[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function 851a9e3b5a3f96682fa7d5fbaa8a438aWithHttpInfo()
+    public function getWithHttpInfo()
     {
         $returnType = '\Qwenta\Fulleapps\Model\FidelityHistory[]';
-        $request = $this->851a9e3b5a3f96682fa7d5fbaa8a438aRequest();
+        $request = $this->getRequest();
 
         try {
             $options = $this->createHttpClientOption();
@@ -177,7 +177,7 @@ class HistoriqueFidlitApi
     }
 
     /**
-     * Operation 851a9e3b5a3f96682fa7d5fbaa8a438aAsync
+     * Operation getAsync
      *
      * Récupération
      *
@@ -185,9 +185,9 @@ class HistoriqueFidlitApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 851a9e3b5a3f96682fa7d5fbaa8a438aAsync()
+    public function getAsync()
     {
-        return $this->851a9e3b5a3f96682fa7d5fbaa8a438aAsyncWithHttpInfo()
+        return $this->getAsyncWithHttpInfo()
             ->then(
                 function ($response) {
                     return $response[0];
@@ -196,7 +196,7 @@ class HistoriqueFidlitApi
     }
 
     /**
-     * Operation 851a9e3b5a3f96682fa7d5fbaa8a438aAsyncWithHttpInfo
+     * Operation getAsyncWithHttpInfo
      *
      * Récupération
      *
@@ -204,10 +204,10 @@ class HistoriqueFidlitApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 851a9e3b5a3f96682fa7d5fbaa8a438aAsyncWithHttpInfo()
+    public function getAsyncWithHttpInfo()
     {
         $returnType = '\Qwenta\Fulleapps\Model\FidelityHistory[]';
-        $request = $this->851a9e3b5a3f96682fa7d5fbaa8a438aRequest();
+        $request = $this->getRequest();
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -247,13 +247,13 @@ class HistoriqueFidlitApi
     }
 
     /**
-     * Create request for operation '851a9e3b5a3f96682fa7d5fbaa8a438a'
+     * Create request for operation 'get'
      *
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 851a9e3b5a3f96682fa7d5fbaa8a438aRequest()
+    protected function getRequest()
     {
 
         $resourcePath = '/v1/fidelity_history';

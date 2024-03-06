@@ -87,7 +87,7 @@ class ProduitsApi
     }
 
     /**
-     * Operation 3ba660a9f333d1df8098db483d880d83
+     * Operation get
      *
      * Récupération
      *
@@ -106,14 +106,14 @@ class ProduitsApi
      * @throws \InvalidArgumentException
      * @return \Qwenta\Fulleapps\Model\Product[]
      */
-    public function 3ba660a9f333d1df8098db483d880d83($id_rubric, $archive, $id_point_of_sale, $id_sale_method, $handle_price_period, $price_period_day, $price_period_hour, $down_fidelity_points, $up_fidelity_points, $base64)
+    public function get($id_rubric, $archive, $id_point_of_sale, $id_sale_method, $handle_price_period, $price_period_day, $price_period_hour, $down_fidelity_points, $up_fidelity_points, $base64)
     {
-        list($response) = $this->3ba660a9f333d1df8098db483d880d83WithHttpInfo($id_rubric, $archive, $id_point_of_sale, $id_sale_method, $handle_price_period, $price_period_day, $price_period_hour, $down_fidelity_points, $up_fidelity_points, $base64);
+        list($response) = $this->getWithHttpInfo($id_rubric, $archive, $id_point_of_sale, $id_sale_method, $handle_price_period, $price_period_day, $price_period_hour, $down_fidelity_points, $up_fidelity_points, $base64);
         return $response;
     }
 
     /**
-     * Operation 3ba660a9f333d1df8098db483d880d83WithHttpInfo
+     * Operation getWithHttpInfo
      *
      * Récupération
      *
@@ -132,10 +132,10 @@ class ProduitsApi
      * @throws \InvalidArgumentException
      * @return array of \Qwenta\Fulleapps\Model\Product[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function 3ba660a9f333d1df8098db483d880d83WithHttpInfo($id_rubric, $archive, $id_point_of_sale, $id_sale_method, $handle_price_period, $price_period_day, $price_period_hour, $down_fidelity_points, $up_fidelity_points, $base64)
+    public function getWithHttpInfo($id_rubric, $archive, $id_point_of_sale, $id_sale_method, $handle_price_period, $price_period_day, $price_period_hour, $down_fidelity_points, $up_fidelity_points, $base64)
     {
         $returnType = '\Qwenta\Fulleapps\Model\Product[]';
-        $request = $this->3ba660a9f333d1df8098db483d880d83Request($id_rubric, $archive, $id_point_of_sale, $id_sale_method, $handle_price_period, $price_period_day, $price_period_hour, $down_fidelity_points, $up_fidelity_points, $base64);
+        $request = $this->getRequest($id_rubric, $archive, $id_point_of_sale, $id_sale_method, $handle_price_period, $price_period_day, $price_period_hour, $down_fidelity_points, $up_fidelity_points, $base64);
 
         try {
             $options = $this->createHttpClientOption();
@@ -197,7 +197,7 @@ class ProduitsApi
     }
 
     /**
-     * Operation 3ba660a9f333d1df8098db483d880d83Async
+     * Operation getAsync
      *
      * Récupération
      *
@@ -215,9 +215,9 @@ class ProduitsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 3ba660a9f333d1df8098db483d880d83Async($id_rubric, $archive, $id_point_of_sale, $id_sale_method, $handle_price_period, $price_period_day, $price_period_hour, $down_fidelity_points, $up_fidelity_points, $base64)
+    public function getAsync($id_rubric, $archive, $id_point_of_sale, $id_sale_method, $handle_price_period, $price_period_day, $price_period_hour, $down_fidelity_points, $up_fidelity_points, $base64)
     {
-        return $this->3ba660a9f333d1df8098db483d880d83AsyncWithHttpInfo($id_rubric, $archive, $id_point_of_sale, $id_sale_method, $handle_price_period, $price_period_day, $price_period_hour, $down_fidelity_points, $up_fidelity_points, $base64)
+        return $this->getAsyncWithHttpInfo($id_rubric, $archive, $id_point_of_sale, $id_sale_method, $handle_price_period, $price_period_day, $price_period_hour, $down_fidelity_points, $up_fidelity_points, $base64)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -226,7 +226,7 @@ class ProduitsApi
     }
 
     /**
-     * Operation 3ba660a9f333d1df8098db483d880d83AsyncWithHttpInfo
+     * Operation getAsyncWithHttpInfo
      *
      * Récupération
      *
@@ -244,10 +244,10 @@ class ProduitsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 3ba660a9f333d1df8098db483d880d83AsyncWithHttpInfo($id_rubric, $archive, $id_point_of_sale, $id_sale_method, $handle_price_period, $price_period_day, $price_period_hour, $down_fidelity_points, $up_fidelity_points, $base64)
+    public function getAsyncWithHttpInfo($id_rubric, $archive, $id_point_of_sale, $id_sale_method, $handle_price_period, $price_period_day, $price_period_hour, $down_fidelity_points, $up_fidelity_points, $base64)
     {
         $returnType = '\Qwenta\Fulleapps\Model\Product[]';
-        $request = $this->3ba660a9f333d1df8098db483d880d83Request($id_rubric, $archive, $id_point_of_sale, $id_sale_method, $handle_price_period, $price_period_day, $price_period_hour, $down_fidelity_points, $up_fidelity_points, $base64);
+        $request = $this->getRequest($id_rubric, $archive, $id_point_of_sale, $id_sale_method, $handle_price_period, $price_period_day, $price_period_hour, $down_fidelity_points, $up_fidelity_points, $base64);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -287,7 +287,7 @@ class ProduitsApi
     }
 
     /**
-     * Create request for operation '3ba660a9f333d1df8098db483d880d83'
+     * Create request for operation 'get'
      *
      * @param  int $id_rubric Récupération par rubrique de vente (Identifiant de la rubrique associée) (required)
      * @param  int $archive Récupération par niveau d&#x27;archivage (0 &#x3D; Produits actifs, 1 &#x3D; Produits archivés) (required)
@@ -303,66 +303,66 @@ class ProduitsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 3ba660a9f333d1df8098db483d880d83Request($id_rubric, $archive, $id_point_of_sale, $id_sale_method, $handle_price_period, $price_period_day, $price_period_hour, $down_fidelity_points, $up_fidelity_points, $base64)
+    protected function getRequest($id_rubric, $archive, $id_point_of_sale, $id_sale_method, $handle_price_period, $price_period_day, $price_period_hour, $down_fidelity_points, $up_fidelity_points, $base64)
     {
         // verify the required parameter 'id_rubric' is set
         if ($id_rubric === null || (is_array($id_rubric) && count($id_rubric) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id_rubric when calling 3ba660a9f333d1df8098db483d880d83'
+                'Missing the required parameter $id_rubric when calling get'
             );
         }
         // verify the required parameter 'archive' is set
         if ($archive === null || (is_array($archive) && count($archive) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $archive when calling 3ba660a9f333d1df8098db483d880d83'
+                'Missing the required parameter $archive when calling get'
             );
         }
         // verify the required parameter 'id_point_of_sale' is set
         if ($id_point_of_sale === null || (is_array($id_point_of_sale) && count($id_point_of_sale) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id_point_of_sale when calling 3ba660a9f333d1df8098db483d880d83'
+                'Missing the required parameter $id_point_of_sale when calling get'
             );
         }
         // verify the required parameter 'id_sale_method' is set
         if ($id_sale_method === null || (is_array($id_sale_method) && count($id_sale_method) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id_sale_method when calling 3ba660a9f333d1df8098db483d880d83'
+                'Missing the required parameter $id_sale_method when calling get'
             );
         }
         // verify the required parameter 'handle_price_period' is set
         if ($handle_price_period === null || (is_array($handle_price_period) && count($handle_price_period) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $handle_price_period when calling 3ba660a9f333d1df8098db483d880d83'
+                'Missing the required parameter $handle_price_period when calling get'
             );
         }
         // verify the required parameter 'price_period_day' is set
         if ($price_period_day === null || (is_array($price_period_day) && count($price_period_day) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $price_period_day when calling 3ba660a9f333d1df8098db483d880d83'
+                'Missing the required parameter $price_period_day when calling get'
             );
         }
         // verify the required parameter 'price_period_hour' is set
         if ($price_period_hour === null || (is_array($price_period_hour) && count($price_period_hour) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $price_period_hour when calling 3ba660a9f333d1df8098db483d880d83'
+                'Missing the required parameter $price_period_hour when calling get'
             );
         }
         // verify the required parameter 'down_fidelity_points' is set
         if ($down_fidelity_points === null || (is_array($down_fidelity_points) && count($down_fidelity_points) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $down_fidelity_points when calling 3ba660a9f333d1df8098db483d880d83'
+                'Missing the required parameter $down_fidelity_points when calling get'
             );
         }
         // verify the required parameter 'up_fidelity_points' is set
         if ($up_fidelity_points === null || (is_array($up_fidelity_points) && count($up_fidelity_points) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $up_fidelity_points when calling 3ba660a9f333d1df8098db483d880d83'
+                'Missing the required parameter $up_fidelity_points when calling get'
             );
         }
         // verify the required parameter 'base64' is set
         if ($base64 === null || (is_array($base64) && count($base64) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $base64 when calling 3ba660a9f333d1df8098db483d880d83'
+                'Missing the required parameter $base64 when calling get'
             );
         }
 
@@ -520,24 +520,24 @@ class ProduitsApi
     }
 
     /**
-     * Operation 5b961b8e9696b357db255293ca9e8e3b
+     * Operation gallery
      *
      * Gallery
      *
-     * @param   $ Product ID (required)
+     * @param   $id Product ID (required)
      *
      * @throws \Qwenta\Fulleapps\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Qwenta\Fulleapps\Model\InlineResponse20022
      */
-    public function 5b961b8e9696b357db255293ca9e8e3b($)
+    public function gallery($id)
     {
-        list($response) = $this->5b961b8e9696b357db255293ca9e8e3bWithHttpInfo($);
+        list($response) = $this->galleryWithHttpInfo($id);
         return $response;
     }
 
     /**
-     * Operation 5b961b8e9696b357db255293ca9e8e3bWithHttpInfo
+     * Operation galleryWithHttpInfo
      *
      * Gallery
      *
@@ -547,10 +547,10 @@ class ProduitsApi
      * @throws \InvalidArgumentException
      * @return array of \Qwenta\Fulleapps\Model\InlineResponse20022, HTTP status code, HTTP response headers (array of strings)
      */
-    public function 5b961b8e9696b357db255293ca9e8e3bWithHttpInfo($)
+    public function galleryWithHttpInfo($id)
     {
         $returnType = '\Qwenta\Fulleapps\Model\InlineResponse20022';
-        $request = $this->5b961b8e9696b357db255293ca9e8e3bRequest($);
+        $request = $this->galleryRequest($id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -612,7 +612,7 @@ class ProduitsApi
     }
 
     /**
-     * Operation 5b961b8e9696b357db255293ca9e8e3bAsync
+     * Operation galleryAsync
      *
      * Gallery
      *
@@ -621,9 +621,9 @@ class ProduitsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 5b961b8e9696b357db255293ca9e8e3bAsync($)
+    public function galleryAsync($id)
     {
-        return $this->5b961b8e9696b357db255293ca9e8e3bAsyncWithHttpInfo($)
+        return $this->galleryAsyncWithHttpInfo($id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -632,7 +632,7 @@ class ProduitsApi
     }
 
     /**
-     * Operation 5b961b8e9696b357db255293ca9e8e3bAsyncWithHttpInfo
+     * Operation galleryAsyncWithHttpInfo
      *
      * Gallery
      *
@@ -641,10 +641,10 @@ class ProduitsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 5b961b8e9696b357db255293ca9e8e3bAsyncWithHttpInfo($)
+    public function galleryAsyncWithHttpInfo($id)
     {
         $returnType = '\Qwenta\Fulleapps\Model\InlineResponse20022';
-        $request = $this->5b961b8e9696b357db255293ca9e8e3bRequest($);
+        $request = $this->galleryRequest($id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -684,19 +684,19 @@ class ProduitsApi
     }
 
     /**
-     * Create request for operation '5b961b8e9696b357db255293ca9e8e3b'
+     * Create request for operation 'gallery'
      *
      * @param   $ Product ID (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 5b961b8e9696b357db255293ca9e8e3bRequest($)
+    protected function galleryRequest($id)
     {
         // verify the required parameter '' is set
-        if ($ === null || (is_array($) && count($) === 0)) {
+        if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $ when calling 5b961b8e9696b357db255293ca9e8e3b'
+                'Missing the required parameter $ when calling gallery'
             );
         }
 
@@ -708,8 +708,8 @@ class ProduitsApi
         $multipart = false;
 
         // query params
-        if ($ !== null) {
-            $queryParams['id'] = ObjectSerializer::toQueryValue($, null);
+        if ($id !== null) {
+            $queryParams['id'] = ObjectSerializer::toQueryValue($id, null);
         }
 
 
@@ -778,7 +778,7 @@ class ProduitsApi
     }
 
     /**
-     * Operation 60e0183c88da15bb0daa0557d37c8f07
+     * Operation allergensList
      *
      * Get allergens list
      *
@@ -787,14 +787,14 @@ class ProduitsApi
      * @throws \InvalidArgumentException
      * @return \Qwenta\Fulleapps\Model\ProductAllergen[]
      */
-    public function 60e0183c88da15bb0daa0557d37c8f07()
+    public function allergensList()
     {
-        list($response) = $this->60e0183c88da15bb0daa0557d37c8f07WithHttpInfo();
+        list($response) = $this->allergensListWithHttpInfo();
         return $response;
     }
 
     /**
-     * Operation 60e0183c88da15bb0daa0557d37c8f07WithHttpInfo
+     * Operation allergensListWithHttpInfo
      *
      * Get allergens list
      *
@@ -803,10 +803,10 @@ class ProduitsApi
      * @throws \InvalidArgumentException
      * @return array of \Qwenta\Fulleapps\Model\ProductAllergen[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function 60e0183c88da15bb0daa0557d37c8f07WithHttpInfo()
+    public function allergensListWithHttpInfo()
     {
         $returnType = '\Qwenta\Fulleapps\Model\ProductAllergen[]';
-        $request = $this->60e0183c88da15bb0daa0557d37c8f07Request();
+        $request = $this->allergensListRequest();
 
         try {
             $options = $this->createHttpClientOption();
@@ -868,7 +868,7 @@ class ProduitsApi
     }
 
     /**
-     * Operation 60e0183c88da15bb0daa0557d37c8f07Async
+     * Operation allergensListAsync
      *
      * Get allergens list
      *
@@ -876,9 +876,9 @@ class ProduitsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 60e0183c88da15bb0daa0557d37c8f07Async()
+    public function allergensListAsync()
     {
-        return $this->60e0183c88da15bb0daa0557d37c8f07AsyncWithHttpInfo()
+        return $this->allergensListAsyncWithHttpInfo()
             ->then(
                 function ($response) {
                     return $response[0];
@@ -887,7 +887,7 @@ class ProduitsApi
     }
 
     /**
-     * Operation 60e0183c88da15bb0daa0557d37c8f07AsyncWithHttpInfo
+     * Operation allergensListAsyncWithHttpInfo
      *
      * Get allergens list
      *
@@ -895,10 +895,10 @@ class ProduitsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 60e0183c88da15bb0daa0557d37c8f07AsyncWithHttpInfo()
+    public function allergensListAsyncWithHttpInfo()
     {
         $returnType = '\Qwenta\Fulleapps\Model\ProductAllergen[]';
-        $request = $this->60e0183c88da15bb0daa0557d37c8f07Request();
+        $request = $this->allergensListRequest();
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -938,13 +938,13 @@ class ProduitsApi
     }
 
     /**
-     * Create request for operation '60e0183c88da15bb0daa0557d37c8f07'
+     * Create request for operation 'allergensList'
      *
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 60e0183c88da15bb0daa0557d37c8f07Request()
+    protected function allergensListRequest()
     {
 
         $resourcePath = '/product_allergens';

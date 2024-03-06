@@ -91,15 +91,15 @@ class AbonnementsApi
      *
      * Récupération d'une facture d'abonnement
      *
-     * @param   $ Identifiant de la facture d&#x27;abonnement (optional)
+     * @param   $id Identifiant de la facture d&#x27;abonnement (optional)
      *
      * @throws \Qwenta\Fulleapps\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Qwenta\Fulleapps\Model\InlineResponse20024
      */
-    public function getStripeInvoice($ = null)
+    public function getStripeInvoice($id = null)
     {
-        list($response) = $this->getStripeInvoiceWithHttpInfo($);
+        list($response) = $this->getStripeInvoiceWithHttpInfo($id);
         return $response;
     }
 
@@ -114,10 +114,10 @@ class AbonnementsApi
      * @throws \InvalidArgumentException
      * @return array of \Qwenta\Fulleapps\Model\InlineResponse20024, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getStripeInvoiceWithHttpInfo($ = null)
+    public function getStripeInvoiceWithHttpInfo($id = null)
     {
         $returnType = '\Qwenta\Fulleapps\Model\InlineResponse20024';
-        $request = $this->getStripeInvoiceRequest($);
+        $request = $this->getStripeInvoiceRequest($id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -188,9 +188,9 @@ class AbonnementsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getStripeInvoiceAsync($ = null)
+    public function getStripeInvoiceAsync($id = null)
     {
-        return $this->getStripeInvoiceAsyncWithHttpInfo($)
+        return $this->getStripeInvoiceAsyncWithHttpInfo($id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -208,10 +208,10 @@ class AbonnementsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getStripeInvoiceAsyncWithHttpInfo($ = null)
+    public function getStripeInvoiceAsyncWithHttpInfo($id = null)
     {
         $returnType = '\Qwenta\Fulleapps\Model\InlineResponse20024';
-        $request = $this->getStripeInvoiceRequest($);
+        $request = $this->getStripeInvoiceRequest($id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -258,7 +258,7 @@ class AbonnementsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getStripeInvoiceRequest($ = null)
+    protected function getStripeInvoiceRequest($id = null)
     {
 
         $resourcePath = '/stripe_customer/invoice/{id}';
@@ -269,8 +269,8 @@ class AbonnementsApi
         $multipart = false;
 
         // query params
-        if ($ !== null) {
-            $queryParams['id'] = ObjectSerializer::toQueryValue($, null);
+        if ($id !== null) {
+            $queryParams['id'] = ObjectSerializer::toQueryValue($id, null);
         }
 
 

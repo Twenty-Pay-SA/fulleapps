@@ -87,7 +87,7 @@ class AttributsApi
     }
 
     /**
-     * Operation 3a064b6398673c6995dc0aefceee688c
+     * Operation list
      *
      * Liste des attributs
      *
@@ -96,14 +96,14 @@ class AttributsApi
      * @throws \InvalidArgumentException
      * @return \Qwenta\Fulleapps\Model\Attribute[]
      */
-    public function 3a064b6398673c6995dc0aefceee688c()
+    public function list()
     {
-        list($response) = $this->3a064b6398673c6995dc0aefceee688cWithHttpInfo();
+        list($response) = $this->listWithHttpInfo();
         return $response;
     }
 
     /**
-     * Operation 3a064b6398673c6995dc0aefceee688cWithHttpInfo
+     * Operation listWithHttpInfo
      *
      * Liste des attributs
      *
@@ -112,10 +112,10 @@ class AttributsApi
      * @throws \InvalidArgumentException
      * @return array of \Qwenta\Fulleapps\Model\Attribute[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function 3a064b6398673c6995dc0aefceee688cWithHttpInfo()
+    public function listWithHttpInfo()
     {
         $returnType = '\Qwenta\Fulleapps\Model\Attribute[]';
-        $request = $this->3a064b6398673c6995dc0aefceee688cRequest();
+        $request = $this->listRequest();
 
         try {
             $options = $this->createHttpClientOption();
@@ -177,7 +177,7 @@ class AttributsApi
     }
 
     /**
-     * Operation 3a064b6398673c6995dc0aefceee688cAsync
+     * Operation listAsync
      *
      * Liste des attributs
      *
@@ -185,9 +185,9 @@ class AttributsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 3a064b6398673c6995dc0aefceee688cAsync()
+    public function listAsync()
     {
-        return $this->3a064b6398673c6995dc0aefceee688cAsyncWithHttpInfo()
+        return $this->listAsyncWithHttpInfo()
             ->then(
                 function ($response) {
                     return $response[0];
@@ -196,7 +196,7 @@ class AttributsApi
     }
 
     /**
-     * Operation 3a064b6398673c6995dc0aefceee688cAsyncWithHttpInfo
+     * Operation listAsyncWithHttpInfo
      *
      * Liste des attributs
      *
@@ -204,10 +204,10 @@ class AttributsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 3a064b6398673c6995dc0aefceee688cAsyncWithHttpInfo()
+    public function listAsyncWithHttpInfo()
     {
         $returnType = '\Qwenta\Fulleapps\Model\Attribute[]';
-        $request = $this->3a064b6398673c6995dc0aefceee688cRequest();
+        $request = $this->listRequest();
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -247,13 +247,13 @@ class AttributsApi
     }
 
     /**
-     * Create request for operation '3a064b6398673c6995dc0aefceee688c'
+     * Create request for operation 'list'
      *
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 3a064b6398673c6995dc0aefceee688cRequest()
+    protected function listRequest()
     {
 
         $resourcePath = '/attributes';
@@ -330,7 +330,7 @@ class AttributsApi
     }
 
     /**
-     * Operation 7191fe18b65b91c285d163fae7dde21d
+     * Operation delete
      *
      * Suppression d'un attribut
      *
@@ -339,13 +339,13 @@ class AttributsApi
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function 7191fe18b65b91c285d163fae7dde21d()
+    public function delete()
     {
-        $this->7191fe18b65b91c285d163fae7dde21dWithHttpInfo();
+        $this->deleteWithHttpInfo();
     }
 
     /**
-     * Operation 7191fe18b65b91c285d163fae7dde21dWithHttpInfo
+     * Operation deleteWithHttpInfo
      *
      * Suppression d'un attribut
      *
@@ -354,10 +354,10 @@ class AttributsApi
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function 7191fe18b65b91c285d163fae7dde21dWithHttpInfo()
+    public function deleteWithHttpInfo()
     {
         $returnType = '';
-        $request = $this->7191fe18b65b91c285d163fae7dde21dRequest();
+        $request = $this->deleteRequest();
 
         try {
             $options = $this->createHttpClientOption();
@@ -397,7 +397,7 @@ class AttributsApi
     }
 
     /**
-     * Operation 7191fe18b65b91c285d163fae7dde21dAsync
+     * Operation deleteAsync
      *
      * Suppression d'un attribut
      *
@@ -405,9 +405,9 @@ class AttributsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 7191fe18b65b91c285d163fae7dde21dAsync()
+    public function deleteAsync()
     {
-        return $this->7191fe18b65b91c285d163fae7dde21dAsyncWithHttpInfo()
+        return $this->deleteAsyncWithHttpInfo()
             ->then(
                 function ($response) {
                     return $response[0];
@@ -416,7 +416,7 @@ class AttributsApi
     }
 
     /**
-     * Operation 7191fe18b65b91c285d163fae7dde21dAsyncWithHttpInfo
+     * Operation deleteAsyncWithHttpInfo
      *
      * Suppression d'un attribut
      *
@@ -424,10 +424,10 @@ class AttributsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 7191fe18b65b91c285d163fae7dde21dAsyncWithHttpInfo()
+    public function deleteAsyncWithHttpInfo()
     {
         $returnType = '';
-        $request = $this->7191fe18b65b91c285d163fae7dde21dRequest();
+        $request = $this->deleteRequest();
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -453,13 +453,13 @@ class AttributsApi
     }
 
     /**
-     * Create request for operation '7191fe18b65b91c285d163fae7dde21d'
+     * Create request for operation 'delete'
      *
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 7191fe18b65b91c285d163fae7dde21dRequest()
+    protected function deleteRequest()
     {
 
         $resourcePath = '/attributes/delete/id';
@@ -536,7 +536,7 @@ class AttributsApi
     }
 
     /**
-     * Operation 8964ae04f1148c9fec667ca8a726de4d
+     * Operation update
      *
      * Modification
      *
@@ -546,13 +546,13 @@ class AttributsApi
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function 8964ae04f1148c9fec667ca8a726de4d($body)
+    public function update($body)
     {
-        $this->8964ae04f1148c9fec667ca8a726de4dWithHttpInfo($body);
+        $this->updateWithHttpInfo($body);
     }
 
     /**
-     * Operation 8964ae04f1148c9fec667ca8a726de4dWithHttpInfo
+     * Operation updateWithHttpInfo
      *
      * Modification
      *
@@ -562,10 +562,10 @@ class AttributsApi
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function 8964ae04f1148c9fec667ca8a726de4dWithHttpInfo($body)
+    public function updateWithHttpInfo($body)
     {
         $returnType = '';
-        $request = $this->8964ae04f1148c9fec667ca8a726de4dRequest($body);
+        $request = $this->updateRequest($body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -605,7 +605,7 @@ class AttributsApi
     }
 
     /**
-     * Operation 8964ae04f1148c9fec667ca8a726de4dAsync
+     * Operation updateAsync
      *
      * Modification
      *
@@ -614,9 +614,9 @@ class AttributsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 8964ae04f1148c9fec667ca8a726de4dAsync($body)
+    public function updateAsync($body)
     {
-        return $this->8964ae04f1148c9fec667ca8a726de4dAsyncWithHttpInfo($body)
+        return $this->updateAsyncWithHttpInfo($body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -625,7 +625,7 @@ class AttributsApi
     }
 
     /**
-     * Operation 8964ae04f1148c9fec667ca8a726de4dAsyncWithHttpInfo
+     * Operation updateAsyncWithHttpInfo
      *
      * Modification
      *
@@ -634,10 +634,10 @@ class AttributsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 8964ae04f1148c9fec667ca8a726de4dAsyncWithHttpInfo($body)
+    public function updateAsyncWithHttpInfo($body)
     {
         $returnType = '';
-        $request = $this->8964ae04f1148c9fec667ca8a726de4dRequest($body);
+        $request = $this->updateRequest($body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -663,19 +663,19 @@ class AttributsApi
     }
 
     /**
-     * Create request for operation '8964ae04f1148c9fec667ca8a726de4d'
+     * Create request for operation 'update'
      *
      * @param  \Qwenta\Fulleapps\Model\Attribute $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 8964ae04f1148c9fec667ca8a726de4dRequest($body)
+    protected function updateRequest($body)
     {
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling 8964ae04f1148c9fec667ca8a726de4d'
+                'Missing the required parameter $body when calling update'
             );
         }
 
@@ -999,7 +999,7 @@ class AttributsApi
     }
 
     /**
-     * Operation d5ea16a916f50732b8255ee1f85fc68e
+     * Operation create
      *
      * Création
      *
@@ -1009,13 +1009,13 @@ class AttributsApi
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function d5ea16a916f50732b8255ee1f85fc68e($body)
+    public function create($body)
     {
-        $this->d5ea16a916f50732b8255ee1f85fc68eWithHttpInfo($body);
+        $this->createWithHttpInfo($body);
     }
 
     /**
-     * Operation d5ea16a916f50732b8255ee1f85fc68eWithHttpInfo
+     * Operation createWithHttpInfo
      *
      * Création
      *
@@ -1025,10 +1025,10 @@ class AttributsApi
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function d5ea16a916f50732b8255ee1f85fc68eWithHttpInfo($body)
+    public function createWithHttpInfo($body)
     {
         $returnType = '';
-        $request = $this->d5ea16a916f50732b8255ee1f85fc68eRequest($body);
+        $request = $this->createRequest($body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1068,7 +1068,7 @@ class AttributsApi
     }
 
     /**
-     * Operation d5ea16a916f50732b8255ee1f85fc68eAsync
+     * Operation createAsync
      *
      * Création
      *
@@ -1077,9 +1077,9 @@ class AttributsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function d5ea16a916f50732b8255ee1f85fc68eAsync($body)
+    public function createAsync($body)
     {
-        return $this->d5ea16a916f50732b8255ee1f85fc68eAsyncWithHttpInfo($body)
+        return $this->createAsyncWithHttpInfo($body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1088,7 +1088,7 @@ class AttributsApi
     }
 
     /**
-     * Operation d5ea16a916f50732b8255ee1f85fc68eAsyncWithHttpInfo
+     * Operation createAsyncWithHttpInfo
      *
      * Création
      *
@@ -1097,10 +1097,10 @@ class AttributsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function d5ea16a916f50732b8255ee1f85fc68eAsyncWithHttpInfo($body)
+    public function createAsyncWithHttpInfo($body)
     {
         $returnType = '';
-        $request = $this->d5ea16a916f50732b8255ee1f85fc68eRequest($body);
+        $request = $this->createRequest($body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1126,19 +1126,19 @@ class AttributsApi
     }
 
     /**
-     * Create request for operation 'd5ea16a916f50732b8255ee1f85fc68e'
+     * Create request for operation 'create'
      *
      * @param  \Qwenta\Fulleapps\Model\Attribute $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function d5ea16a916f50732b8255ee1f85fc68eRequest($body)
+    protected function createRequest($body)
     {
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling d5ea16a916f50732b8255ee1f85fc68e'
+                'Missing the required parameter $body when calling create'
             );
         }
 

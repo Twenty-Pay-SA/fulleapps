@@ -87,7 +87,7 @@ class TarifsDexpeditionApi
     }
 
     /**
-     * Operation 21ec321a64a985429452b4318ce8f31e
+     * Operation delete
      *
      * Suppression
      *
@@ -96,13 +96,13 @@ class TarifsDexpeditionApi
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function 21ec321a64a985429452b4318ce8f31e()
+    public function delete()
     {
-        $this->21ec321a64a985429452b4318ce8f31eWithHttpInfo();
+        $this->deleteWithHttpInfo();
     }
 
     /**
-     * Operation 21ec321a64a985429452b4318ce8f31eWithHttpInfo
+     * Operation deleteWithHttpInfo
      *
      * Suppression
      *
@@ -111,10 +111,10 @@ class TarifsDexpeditionApi
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function 21ec321a64a985429452b4318ce8f31eWithHttpInfo()
+    public function deleteWithHttpInfo()
     {
         $returnType = '';
-        $request = $this->21ec321a64a985429452b4318ce8f31eRequest();
+        $request = $this->deleteRequest();
 
         try {
             $options = $this->createHttpClientOption();
@@ -154,7 +154,7 @@ class TarifsDexpeditionApi
     }
 
     /**
-     * Operation 21ec321a64a985429452b4318ce8f31eAsync
+     * Operation deleteAsync
      *
      * Suppression
      *
@@ -162,9 +162,9 @@ class TarifsDexpeditionApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 21ec321a64a985429452b4318ce8f31eAsync()
+    public function deleteAsync()
     {
-        return $this->21ec321a64a985429452b4318ce8f31eAsyncWithHttpInfo()
+        return $this->deleteAsyncWithHttpInfo()
             ->then(
                 function ($response) {
                     return $response[0];
@@ -173,7 +173,7 @@ class TarifsDexpeditionApi
     }
 
     /**
-     * Operation 21ec321a64a985429452b4318ce8f31eAsyncWithHttpInfo
+     * Operation deleteAsyncWithHttpInfo
      *
      * Suppression
      *
@@ -181,10 +181,10 @@ class TarifsDexpeditionApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 21ec321a64a985429452b4318ce8f31eAsyncWithHttpInfo()
+    public function deleteAsyncWithHttpInfo()
     {
         $returnType = '';
-        $request = $this->21ec321a64a985429452b4318ce8f31eRequest();
+        $request = $this->deleteRequest();
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -210,13 +210,13 @@ class TarifsDexpeditionApi
     }
 
     /**
-     * Create request for operation '21ec321a64a985429452b4318ce8f31e'
+     * Create request for operation 'delete'
      *
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 21ec321a64a985429452b4318ce8f31eRequest()
+    protected function deleteRequest()
     {
 
         $resourcePath = '/v1/shipping_costs/delete/id';
@@ -293,7 +293,7 @@ class TarifsDexpeditionApi
     }
 
     /**
-     * Operation 59996808a4dbfac478c96c8a4d77a4c1
+     * Operation create
      *
      * Création
      *
@@ -303,13 +303,13 @@ class TarifsDexpeditionApi
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function 59996808a4dbfac478c96c8a4d77a4c1($body)
+    public function create($body)
     {
-        $this->59996808a4dbfac478c96c8a4d77a4c1WithHttpInfo($body);
+        $this->createWithHttpInfo($body);
     }
 
     /**
-     * Operation 59996808a4dbfac478c96c8a4d77a4c1WithHttpInfo
+     * Operation createWithHttpInfo
      *
      * Création
      *
@@ -319,10 +319,10 @@ class TarifsDexpeditionApi
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function 59996808a4dbfac478c96c8a4d77a4c1WithHttpInfo($body)
+    public function createWithHttpInfo($body)
     {
         $returnType = '';
-        $request = $this->59996808a4dbfac478c96c8a4d77a4c1Request($body);
+        $request = $this->createRequest($body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -362,7 +362,7 @@ class TarifsDexpeditionApi
     }
 
     /**
-     * Operation 59996808a4dbfac478c96c8a4d77a4c1Async
+     * Operation createAsync
      *
      * Création
      *
@@ -371,9 +371,9 @@ class TarifsDexpeditionApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 59996808a4dbfac478c96c8a4d77a4c1Async($body)
+    public function createAsync($body)
     {
-        return $this->59996808a4dbfac478c96c8a4d77a4c1AsyncWithHttpInfo($body)
+        return $this->createAsyncWithHttpInfo($body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -382,7 +382,7 @@ class TarifsDexpeditionApi
     }
 
     /**
-     * Operation 59996808a4dbfac478c96c8a4d77a4c1AsyncWithHttpInfo
+     * Operation createAsyncWithHttpInfo
      *
      * Création
      *
@@ -391,10 +391,10 @@ class TarifsDexpeditionApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 59996808a4dbfac478c96c8a4d77a4c1AsyncWithHttpInfo($body)
+    public function createAsyncWithHttpInfo($body)
     {
         $returnType = '';
-        $request = $this->59996808a4dbfac478c96c8a4d77a4c1Request($body);
+        $request = $this->createRequest($body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -420,19 +420,19 @@ class TarifsDexpeditionApi
     }
 
     /**
-     * Create request for operation '59996808a4dbfac478c96c8a4d77a4c1'
+     * Create request for operation 'create'
      *
      * @param  \Qwenta\Fulleapps\Model\ShippingCost $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 59996808a4dbfac478c96c8a4d77a4c1Request($body)
+    protected function createRequest($body)
     {
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling 59996808a4dbfac478c96c8a4d77a4c1'
+                'Missing the required parameter $body when calling create'
             );
         }
 

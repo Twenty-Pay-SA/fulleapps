@@ -87,7 +87,7 @@ class ClientsApi
     }
 
     /**
-     * Operation 17fbd3b411db30f4b7617004576c1667
+     * Operation createFromPhone
      *
      * Téléphone client
      *
@@ -97,13 +97,13 @@ class ClientsApi
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function 17fbd3b411db30f4b7617004576c1667($body)
+    public function createFromPhone($body)
     {
-        $this->17fbd3b411db30f4b7617004576c1667WithHttpInfo($body);
+        $this->createFromPhoneWithHttpInfo($body);
     }
 
     /**
-     * Operation 17fbd3b411db30f4b7617004576c1667WithHttpInfo
+     * Operation createFromPhoneWithHttpInfo
      *
      * Téléphone client
      *
@@ -113,10 +113,10 @@ class ClientsApi
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function 17fbd3b411db30f4b7617004576c1667WithHttpInfo($body)
+    public function createFromPhoneWithHttpInfo($body)
     {
         $returnType = '';
-        $request = $this->17fbd3b411db30f4b7617004576c1667Request($body);
+        $request = $this->createFromPhoneRequest($body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -156,7 +156,7 @@ class ClientsApi
     }
 
     /**
-     * Operation 17fbd3b411db30f4b7617004576c1667Async
+     * Operation createFromPhoneAsync
      *
      * Téléphone client
      *
@@ -165,9 +165,9 @@ class ClientsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 17fbd3b411db30f4b7617004576c1667Async($body)
+    public function createFromPhoneAsync($body)
     {
-        return $this->17fbd3b411db30f4b7617004576c1667AsyncWithHttpInfo($body)
+        return $this->createFromPhoneAsyncWithHttpInfo($body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -176,7 +176,7 @@ class ClientsApi
     }
 
     /**
-     * Operation 17fbd3b411db30f4b7617004576c1667AsyncWithHttpInfo
+     * Operation createFromPhoneAsyncWithHttpInfo
      *
      * Téléphone client
      *
@@ -185,10 +185,10 @@ class ClientsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 17fbd3b411db30f4b7617004576c1667AsyncWithHttpInfo($body)
+    public function createFromPhoneAsyncWithHttpInfo($body)
     {
         $returnType = '';
-        $request = $this->17fbd3b411db30f4b7617004576c1667Request($body);
+        $request = $this->createFromPhoneRequest($body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -214,19 +214,19 @@ class ClientsApi
     }
 
     /**
-     * Create request for operation '17fbd3b411db30f4b7617004576c1667'
+     * Create request for operation 'createFromPhone'
      *
      * @param  \Qwenta\Fulleapps\Model\ClientPhone $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 17fbd3b411db30f4b7617004576c1667Request($body)
+    protected function createFromPhoneRequest($body)
     {
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling 17fbd3b411db30f4b7617004576c1667'
+                'Missing the required parameter $body when calling createFromPhone'
             );
         }
 
@@ -307,7 +307,7 @@ class ClientsApi
     }
 
     /**
-     * Operation 7e68b42573f5fa4bfbb5a5e1c3bfe984
+     * Operation list
      *
      * List all clients
      *
@@ -321,14 +321,14 @@ class ClientsApi
      * @throws \InvalidArgumentException
      * @return \Qwenta\Fulleapps\Model\InlineResponse2006
      */
-    public function 7e68b42573f5fa4bfbb5a5e1c3bfe984($reference, $mail, $phone, $phone_country, $search)
+    public function list($reference, $mail, $phone, $phone_country, $search)
     {
-        list($response) = $this->7e68b42573f5fa4bfbb5a5e1c3bfe984WithHttpInfo($reference, $mail, $phone, $phone_country, $search);
+        list($response) = $this->listWithHttpInfo($reference, $mail, $phone, $phone_country, $search);
         return $response;
     }
 
     /**
-     * Operation 7e68b42573f5fa4bfbb5a5e1c3bfe984WithHttpInfo
+     * Operation listWithHttpInfo
      *
      * List all clients
      *
@@ -342,10 +342,10 @@ class ClientsApi
      * @throws \InvalidArgumentException
      * @return array of \Qwenta\Fulleapps\Model\InlineResponse2006, HTTP status code, HTTP response headers (array of strings)
      */
-    public function 7e68b42573f5fa4bfbb5a5e1c3bfe984WithHttpInfo($reference, $mail, $phone, $phone_country, $search)
+    public function listWithHttpInfo($reference, $mail, $phone, $phone_country, $search)
     {
         $returnType = '\Qwenta\Fulleapps\Model\InlineResponse2006';
-        $request = $this->7e68b42573f5fa4bfbb5a5e1c3bfe984Request($reference, $mail, $phone, $phone_country, $search);
+        $request = $this->listRequest($reference, $mail, $phone, $phone_country, $search);
 
         try {
             $options = $this->createHttpClientOption();
@@ -407,7 +407,7 @@ class ClientsApi
     }
 
     /**
-     * Operation 7e68b42573f5fa4bfbb5a5e1c3bfe984Async
+     * Operation listAsync
      *
      * List all clients
      *
@@ -420,9 +420,9 @@ class ClientsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 7e68b42573f5fa4bfbb5a5e1c3bfe984Async($reference, $mail, $phone, $phone_country, $search)
+    public function listAsync($reference, $mail, $phone, $phone_country, $search)
     {
-        return $this->7e68b42573f5fa4bfbb5a5e1c3bfe984AsyncWithHttpInfo($reference, $mail, $phone, $phone_country, $search)
+        return $this->listAsyncWithHttpInfo($reference, $mail, $phone, $phone_country, $search)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -431,7 +431,7 @@ class ClientsApi
     }
 
     /**
-     * Operation 7e68b42573f5fa4bfbb5a5e1c3bfe984AsyncWithHttpInfo
+     * Operation listAsyncWithHttpInfo
      *
      * List all clients
      *
@@ -444,10 +444,10 @@ class ClientsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 7e68b42573f5fa4bfbb5a5e1c3bfe984AsyncWithHttpInfo($reference, $mail, $phone, $phone_country, $search)
+    public function listAsyncWithHttpInfo($reference, $mail, $phone, $phone_country, $search)
     {
         $returnType = '\Qwenta\Fulleapps\Model\InlineResponse2006';
-        $request = $this->7e68b42573f5fa4bfbb5a5e1c3bfe984Request($reference, $mail, $phone, $phone_country, $search);
+        $request = $this->listRequest($reference, $mail, $phone, $phone_country, $search);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -487,7 +487,7 @@ class ClientsApi
     }
 
     /**
-     * Create request for operation '7e68b42573f5fa4bfbb5a5e1c3bfe984'
+     * Create request for operation 'list'
      *
      * @param  string $reference Récupération par référence (unique) (required)
      * @param  string $mail Récupération par email (unique) (required)
@@ -498,36 +498,36 @@ class ClientsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 7e68b42573f5fa4bfbb5a5e1c3bfe984Request($reference, $mail, $phone, $phone_country, $search)
+    protected function listRequest($reference, $mail, $phone, $phone_country, $search)
     {
         // verify the required parameter 'reference' is set
         if ($reference === null || (is_array($reference) && count($reference) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $reference when calling 7e68b42573f5fa4bfbb5a5e1c3bfe984'
+                'Missing the required parameter $reference when calling list'
             );
         }
         // verify the required parameter 'mail' is set
         if ($mail === null || (is_array($mail) && count($mail) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $mail when calling 7e68b42573f5fa4bfbb5a5e1c3bfe984'
+                'Missing the required parameter $mail when calling list'
             );
         }
         // verify the required parameter 'phone' is set
         if ($phone === null || (is_array($phone) && count($phone) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $phone when calling 7e68b42573f5fa4bfbb5a5e1c3bfe984'
+                'Missing the required parameter $phone when calling list'
             );
         }
         // verify the required parameter 'phone_country' is set
         if ($phone_country === null || (is_array($phone_country) && count($phone_country) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $phone_country when calling 7e68b42573f5fa4bfbb5a5e1c3bfe984'
+                'Missing the required parameter $phone_country when calling list'
             );
         }
         // verify the required parameter 'search' is set
         if ($search === null || (is_array($search) && count($search) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $search when calling 7e68b42573f5fa4bfbb5a5e1c3bfe984'
+                'Missing the required parameter $search when calling list'
             );
         }
 
@@ -645,7 +645,7 @@ class ClientsApi
     }
 
     /**
-     * Operation 84296fbe6a10aaaf600d67365c9689f7
+     * Operation create
      *
      * Création
      *
@@ -655,14 +655,14 @@ class ClientsApi
      * @throws \InvalidArgumentException
      * @return \Qwenta\Fulleapps\Model\InlineResponse2007
      */
-    public function 84296fbe6a10aaaf600d67365c9689f7($body)
+    public function create($body)
     {
-        list($response) = $this->84296fbe6a10aaaf600d67365c9689f7WithHttpInfo($body);
+        list($response) = $this->createWithHttpInfo($body);
         return $response;
     }
 
     /**
-     * Operation 84296fbe6a10aaaf600d67365c9689f7WithHttpInfo
+     * Operation createWithHttpInfo
      *
      * Création
      *
@@ -672,10 +672,10 @@ class ClientsApi
      * @throws \InvalidArgumentException
      * @return array of \Qwenta\Fulleapps\Model\InlineResponse2007, HTTP status code, HTTP response headers (array of strings)
      */
-    public function 84296fbe6a10aaaf600d67365c9689f7WithHttpInfo($body)
+    public function createWithHttpInfo($body)
     {
         $returnType = '\Qwenta\Fulleapps\Model\InlineResponse2007';
-        $request = $this->84296fbe6a10aaaf600d67365c9689f7Request($body);
+        $request = $this->createRequest($body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -737,7 +737,7 @@ class ClientsApi
     }
 
     /**
-     * Operation 84296fbe6a10aaaf600d67365c9689f7Async
+     * Operation createAsync
      *
      * Création
      *
@@ -746,9 +746,9 @@ class ClientsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 84296fbe6a10aaaf600d67365c9689f7Async($body)
+    public function createAsync($body)
     {
-        return $this->84296fbe6a10aaaf600d67365c9689f7AsyncWithHttpInfo($body)
+        return $this->createAsyncWithHttpInfo($body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -757,7 +757,7 @@ class ClientsApi
     }
 
     /**
-     * Operation 84296fbe6a10aaaf600d67365c9689f7AsyncWithHttpInfo
+     * Operation createAsyncWithHttpInfo
      *
      * Création
      *
@@ -766,10 +766,10 @@ class ClientsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 84296fbe6a10aaaf600d67365c9689f7AsyncWithHttpInfo($body)
+    public function createAsyncWithHttpInfo($body)
     {
         $returnType = '\Qwenta\Fulleapps\Model\InlineResponse2007';
-        $request = $this->84296fbe6a10aaaf600d67365c9689f7Request($body);
+        $request = $this->createRequest($body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -809,19 +809,19 @@ class ClientsApi
     }
 
     /**
-     * Create request for operation '84296fbe6a10aaaf600d67365c9689f7'
+     * Create request for operation 'create'
      *
      * @param  \Qwenta\Fulleapps\Model\Client $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 84296fbe6a10aaaf600d67365c9689f7Request($body)
+    protected function createRequest($body)
     {
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling 84296fbe6a10aaaf600d67365c9689f7'
+                'Missing the required parameter $body when calling create'
             );
         }
 
@@ -902,7 +902,7 @@ class ClientsApi
     }
 
     /**
-     * Operation 946269d51fb17f425e86ecacf6bee4f0
+     * Operation delete
      *
      * Suppression
      *
@@ -911,13 +911,13 @@ class ClientsApi
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function 946269d51fb17f425e86ecacf6bee4f0()
+    public function delete()
     {
-        $this->946269d51fb17f425e86ecacf6bee4f0WithHttpInfo();
+        $this->deleteWithHttpInfo();
     }
 
     /**
-     * Operation 946269d51fb17f425e86ecacf6bee4f0WithHttpInfo
+     * Operation deleteWithHttpInfo
      *
      * Suppression
      *
@@ -926,10 +926,10 @@ class ClientsApi
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function 946269d51fb17f425e86ecacf6bee4f0WithHttpInfo()
+    public function deleteWithHttpInfo()
     {
         $returnType = '';
-        $request = $this->946269d51fb17f425e86ecacf6bee4f0Request();
+        $request = $this->deleteRequest();
 
         try {
             $options = $this->createHttpClientOption();
@@ -969,7 +969,7 @@ class ClientsApi
     }
 
     /**
-     * Operation 946269d51fb17f425e86ecacf6bee4f0Async
+     * Operation deleteAsync
      *
      * Suppression
      *
@@ -977,9 +977,9 @@ class ClientsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 946269d51fb17f425e86ecacf6bee4f0Async()
+    public function deleteAsync()
     {
-        return $this->946269d51fb17f425e86ecacf6bee4f0AsyncWithHttpInfo()
+        return $this->deleteAsyncWithHttpInfo()
             ->then(
                 function ($response) {
                     return $response[0];
@@ -988,7 +988,7 @@ class ClientsApi
     }
 
     /**
-     * Operation 946269d51fb17f425e86ecacf6bee4f0AsyncWithHttpInfo
+     * Operation deleteAsyncWithHttpInfo
      *
      * Suppression
      *
@@ -996,10 +996,10 @@ class ClientsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 946269d51fb17f425e86ecacf6bee4f0AsyncWithHttpInfo()
+    public function deleteAsyncWithHttpInfo()
     {
         $returnType = '';
-        $request = $this->946269d51fb17f425e86ecacf6bee4f0Request();
+        $request = $this->deleteRequest();
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1025,13 +1025,13 @@ class ClientsApi
     }
 
     /**
-     * Create request for operation '946269d51fb17f425e86ecacf6bee4f0'
+     * Create request for operation 'delete'
      *
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 946269d51fb17f425e86ecacf6bee4f0Request()
+    protected function deleteRequest()
     {
 
         $resourcePath = '/clients/delete/id';

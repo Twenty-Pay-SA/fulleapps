@@ -87,7 +87,7 @@ class PointsDeStockApi
     }
 
     /**
-     * Operation 8d24a6b22a8bd4ee617d1c686ed65d60
+     * Operation update
      *
      * Modification
      *
@@ -98,13 +98,13 @@ class PointsDeStockApi
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function 8d24a6b22a8bd4ee617d1c686ed65d60($body, $id)
+    public function update($body, $id)
     {
-        $this->8d24a6b22a8bd4ee617d1c686ed65d60WithHttpInfo($body, $id);
+        $this->updateWithHttpInfo($body, $id);
     }
 
     /**
-     * Operation 8d24a6b22a8bd4ee617d1c686ed65d60WithHttpInfo
+     * Operation updateWithHttpInfo
      *
      * Modification
      *
@@ -115,10 +115,10 @@ class PointsDeStockApi
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function 8d24a6b22a8bd4ee617d1c686ed65d60WithHttpInfo($body, $id)
+    public function updateWithHttpInfo($body, $id)
     {
         $returnType = '';
-        $request = $this->8d24a6b22a8bd4ee617d1c686ed65d60Request($body, $id);
+        $request = $this->updateRequest($body, $id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -158,7 +158,7 @@ class PointsDeStockApi
     }
 
     /**
-     * Operation 8d24a6b22a8bd4ee617d1c686ed65d60Async
+     * Operation updateAsync
      *
      * Modification
      *
@@ -168,9 +168,9 @@ class PointsDeStockApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 8d24a6b22a8bd4ee617d1c686ed65d60Async($body, $id)
+    public function updateAsync($body, $id)
     {
-        return $this->8d24a6b22a8bd4ee617d1c686ed65d60AsyncWithHttpInfo($body, $id)
+        return $this->updateAsyncWithHttpInfo($body, $id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -179,7 +179,7 @@ class PointsDeStockApi
     }
 
     /**
-     * Operation 8d24a6b22a8bd4ee617d1c686ed65d60AsyncWithHttpInfo
+     * Operation updateAsyncWithHttpInfo
      *
      * Modification
      *
@@ -189,10 +189,10 @@ class PointsDeStockApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 8d24a6b22a8bd4ee617d1c686ed65d60AsyncWithHttpInfo($body, $id)
+    public function updateAsyncWithHttpInfo($body, $id)
     {
         $returnType = '';
-        $request = $this->8d24a6b22a8bd4ee617d1c686ed65d60Request($body, $id);
+        $request = $this->updateRequest($body, $id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -218,7 +218,7 @@ class PointsDeStockApi
     }
 
     /**
-     * Create request for operation '8d24a6b22a8bd4ee617d1c686ed65d60'
+     * Create request for operation 'update'
      *
      * @param  \Qwenta\Fulleapps\Model\PointOfStock $body (required)
      * @param  int $id Identifiant du point de stock (required)
@@ -226,18 +226,18 @@ class PointsDeStockApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 8d24a6b22a8bd4ee617d1c686ed65d60Request($body, $id)
+    protected function updateRequest($body, $id)
     {
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling 8d24a6b22a8bd4ee617d1c686ed65d60'
+                'Missing the required parameter $body when calling update'
             );
         }
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling 8d24a6b22a8bd4ee617d1c686ed65d60'
+                'Missing the required parameter $id when calling update'
             );
         }
 
@@ -326,7 +326,7 @@ class PointsDeStockApi
     }
 
     /**
-     * Operation 9f7e94287bc44feed733c9e62bad5112
+     * Operation create
      *
      * Création
      *
@@ -336,13 +336,13 @@ class PointsDeStockApi
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function 9f7e94287bc44feed733c9e62bad5112($body)
+    public function create($body)
     {
-        $this->9f7e94287bc44feed733c9e62bad5112WithHttpInfo($body);
+        $this->createWithHttpInfo($body);
     }
 
     /**
-     * Operation 9f7e94287bc44feed733c9e62bad5112WithHttpInfo
+     * Operation createWithHttpInfo
      *
      * Création
      *
@@ -352,10 +352,10 @@ class PointsDeStockApi
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function 9f7e94287bc44feed733c9e62bad5112WithHttpInfo($body)
+    public function createWithHttpInfo($body)
     {
         $returnType = '';
-        $request = $this->9f7e94287bc44feed733c9e62bad5112Request($body);
+        $request = $this->createRequest($body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -395,7 +395,7 @@ class PointsDeStockApi
     }
 
     /**
-     * Operation 9f7e94287bc44feed733c9e62bad5112Async
+     * Operation createAsync
      *
      * Création
      *
@@ -404,9 +404,9 @@ class PointsDeStockApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 9f7e94287bc44feed733c9e62bad5112Async($body)
+    public function createAsync($body)
     {
-        return $this->9f7e94287bc44feed733c9e62bad5112AsyncWithHttpInfo($body)
+        return $this->createAsyncWithHttpInfo($body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -415,7 +415,7 @@ class PointsDeStockApi
     }
 
     /**
-     * Operation 9f7e94287bc44feed733c9e62bad5112AsyncWithHttpInfo
+     * Operation createAsyncWithHttpInfo
      *
      * Création
      *
@@ -424,10 +424,10 @@ class PointsDeStockApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 9f7e94287bc44feed733c9e62bad5112AsyncWithHttpInfo($body)
+    public function createAsyncWithHttpInfo($body)
     {
         $returnType = '';
-        $request = $this->9f7e94287bc44feed733c9e62bad5112Request($body);
+        $request = $this->createRequest($body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -453,19 +453,19 @@ class PointsDeStockApi
     }
 
     /**
-     * Create request for operation '9f7e94287bc44feed733c9e62bad5112'
+     * Create request for operation 'create'
      *
      * @param  \Qwenta\Fulleapps\Model\PointOfStock $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 9f7e94287bc44feed733c9e62bad5112Request($body)
+    protected function createRequest($body)
     {
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling 9f7e94287bc44feed733c9e62bad5112'
+                'Missing the required parameter $body when calling create'
             );
         }
 

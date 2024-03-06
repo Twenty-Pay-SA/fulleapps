@@ -87,7 +87,7 @@ class AdressesApi
     }
 
     /**
-     * Operation 294d0f9a1d8d475e701a2b353d6ba139
+     * Operation update
      *
      * Modification
      *
@@ -97,13 +97,13 @@ class AdressesApi
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function 294d0f9a1d8d475e701a2b353d6ba139($body)
+    public function update($body)
     {
-        $this->294d0f9a1d8d475e701a2b353d6ba139WithHttpInfo($body);
+        $this->updateWithHttpInfo($body);
     }
 
     /**
-     * Operation 294d0f9a1d8d475e701a2b353d6ba139WithHttpInfo
+     * Operation updateWithHttpInfo
      *
      * Modification
      *
@@ -113,10 +113,10 @@ class AdressesApi
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function 294d0f9a1d8d475e701a2b353d6ba139WithHttpInfo($body)
+    public function updateWithHttpInfo($body)
     {
         $returnType = '';
-        $request = $this->294d0f9a1d8d475e701a2b353d6ba139Request($body);
+        $request = $this->updateRequest($body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -156,7 +156,7 @@ class AdressesApi
     }
 
     /**
-     * Operation 294d0f9a1d8d475e701a2b353d6ba139Async
+     * Operation updateAsync
      *
      * Modification
      *
@@ -165,9 +165,9 @@ class AdressesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 294d0f9a1d8d475e701a2b353d6ba139Async($body)
+    public function updateAsync($body)
     {
-        return $this->294d0f9a1d8d475e701a2b353d6ba139AsyncWithHttpInfo($body)
+        return $this->updateAsyncWithHttpInfo($body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -176,7 +176,7 @@ class AdressesApi
     }
 
     /**
-     * Operation 294d0f9a1d8d475e701a2b353d6ba139AsyncWithHttpInfo
+     * Operation updateAsyncWithHttpInfo
      *
      * Modification
      *
@@ -185,10 +185,10 @@ class AdressesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 294d0f9a1d8d475e701a2b353d6ba139AsyncWithHttpInfo($body)
+    public function updateAsyncWithHttpInfo($body)
     {
         $returnType = '';
-        $request = $this->294d0f9a1d8d475e701a2b353d6ba139Request($body);
+        $request = $this->updateRequest($body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -214,19 +214,19 @@ class AdressesApi
     }
 
     /**
-     * Create request for operation '294d0f9a1d8d475e701a2b353d6ba139'
+     * Create request for operation 'update'
      *
      * @param  \Qwenta\Fulleapps\Model\ClientAddress $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 294d0f9a1d8d475e701a2b353d6ba139Request($body)
+    protected function updateRequest($body)
     {
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling 294d0f9a1d8d475e701a2b353d6ba139'
+                'Missing the required parameter $body when calling update'
             );
         }
 
@@ -307,7 +307,7 @@ class AdressesApi
     }
 
     /**
-     * Operation b14e872fe1fa12d6de1bb1214abd83f1
+     * Operation create
      *
      * Création
      *
@@ -317,13 +317,13 @@ class AdressesApi
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function b14e872fe1fa12d6de1bb1214abd83f1($body)
+    public function create($body)
     {
-        $this->b14e872fe1fa12d6de1bb1214abd83f1WithHttpInfo($body);
+        $this->createWithHttpInfo($body);
     }
 
     /**
-     * Operation b14e872fe1fa12d6de1bb1214abd83f1WithHttpInfo
+     * Operation createWithHttpInfo
      *
      * Création
      *
@@ -333,10 +333,10 @@ class AdressesApi
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function b14e872fe1fa12d6de1bb1214abd83f1WithHttpInfo($body)
+    public function createWithHttpInfo($body)
     {
         $returnType = '';
-        $request = $this->b14e872fe1fa12d6de1bb1214abd83f1Request($body);
+        $request = $this->createRequest($body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -376,7 +376,7 @@ class AdressesApi
     }
 
     /**
-     * Operation b14e872fe1fa12d6de1bb1214abd83f1Async
+     * Operation createAsync
      *
      * Création
      *
@@ -385,9 +385,9 @@ class AdressesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function b14e872fe1fa12d6de1bb1214abd83f1Async($body)
+    public function createAsync($body)
     {
-        return $this->b14e872fe1fa12d6de1bb1214abd83f1AsyncWithHttpInfo($body)
+        return $this->createAsyncWithHttpInfo($body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -396,7 +396,7 @@ class AdressesApi
     }
 
     /**
-     * Operation b14e872fe1fa12d6de1bb1214abd83f1AsyncWithHttpInfo
+     * Operation createAsyncWithHttpInfo
      *
      * Création
      *
@@ -405,10 +405,10 @@ class AdressesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function b14e872fe1fa12d6de1bb1214abd83f1AsyncWithHttpInfo($body)
+    public function createAsyncWithHttpInfo($body)
     {
         $returnType = '';
-        $request = $this->b14e872fe1fa12d6de1bb1214abd83f1Request($body);
+        $request = $this->createRequest($body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -434,19 +434,19 @@ class AdressesApi
     }
 
     /**
-     * Create request for operation 'b14e872fe1fa12d6de1bb1214abd83f1'
+     * Create request for operation 'create'
      *
      * @param  \Qwenta\Fulleapps\Model\ClientAddress $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function b14e872fe1fa12d6de1bb1214abd83f1Request($body)
+    protected function createRequest($body)
     {
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling b14e872fe1fa12d6de1bb1214abd83f1'
+                'Missing the required parameter $body when calling create'
             );
         }
 

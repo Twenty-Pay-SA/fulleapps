@@ -87,7 +87,7 @@ class HorairesDouvertureApi
     }
 
     /**
-     * Operation 927a90f7518b7a9667b77c2ef45f1072
+     * Operation get
      *
      * Récupération
      *
@@ -97,14 +97,14 @@ class HorairesDouvertureApi
      * @throws \InvalidArgumentException
      * @return \Qwenta\Fulleapps\Model\TimeTable[]
      */
-    public function 927a90f7518b7a9667b77c2ef45f1072($id_point_of_sale)
+    public function get($id_point_of_sale)
     {
-        list($response) = $this->927a90f7518b7a9667b77c2ef45f1072WithHttpInfo($id_point_of_sale);
+        list($response) = $this->getWithHttpInfo($id_point_of_sale);
         return $response;
     }
 
     /**
-     * Operation 927a90f7518b7a9667b77c2ef45f1072WithHttpInfo
+     * Operation getWithHttpInfo
      *
      * Récupération
      *
@@ -114,10 +114,10 @@ class HorairesDouvertureApi
      * @throws \InvalidArgumentException
      * @return array of \Qwenta\Fulleapps\Model\TimeTable[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function 927a90f7518b7a9667b77c2ef45f1072WithHttpInfo($id_point_of_sale)
+    public function getWithHttpInfo($id_point_of_sale)
     {
         $returnType = '\Qwenta\Fulleapps\Model\TimeTable[]';
-        $request = $this->927a90f7518b7a9667b77c2ef45f1072Request($id_point_of_sale);
+        $request = $this->getRequest($id_point_of_sale);
 
         try {
             $options = $this->createHttpClientOption();
@@ -179,7 +179,7 @@ class HorairesDouvertureApi
     }
 
     /**
-     * Operation 927a90f7518b7a9667b77c2ef45f1072Async
+     * Operation getAsync
      *
      * Récupération
      *
@@ -188,9 +188,9 @@ class HorairesDouvertureApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 927a90f7518b7a9667b77c2ef45f1072Async($id_point_of_sale)
+    public function getAsync($id_point_of_sale)
     {
-        return $this->927a90f7518b7a9667b77c2ef45f1072AsyncWithHttpInfo($id_point_of_sale)
+        return $this->getAsyncWithHttpInfo($id_point_of_sale)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -199,7 +199,7 @@ class HorairesDouvertureApi
     }
 
     /**
-     * Operation 927a90f7518b7a9667b77c2ef45f1072AsyncWithHttpInfo
+     * Operation getAsyncWithHttpInfo
      *
      * Récupération
      *
@@ -208,10 +208,10 @@ class HorairesDouvertureApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 927a90f7518b7a9667b77c2ef45f1072AsyncWithHttpInfo($id_point_of_sale)
+    public function getAsyncWithHttpInfo($id_point_of_sale)
     {
         $returnType = '\Qwenta\Fulleapps\Model\TimeTable[]';
-        $request = $this->927a90f7518b7a9667b77c2ef45f1072Request($id_point_of_sale);
+        $request = $this->getRequest($id_point_of_sale);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -251,19 +251,19 @@ class HorairesDouvertureApi
     }
 
     /**
-     * Create request for operation '927a90f7518b7a9667b77c2ef45f1072'
+     * Create request for operation 'get'
      *
      * @param  int $id_point_of_sale Identifiant du point de vente (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 927a90f7518b7a9667b77c2ef45f1072Request($id_point_of_sale)
+    protected function getRequest($id_point_of_sale)
     {
         // verify the required parameter 'id_point_of_sale' is set
         if ($id_point_of_sale === null || (is_array($id_point_of_sale) && count($id_point_of_sale) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id_point_of_sale when calling 927a90f7518b7a9667b77c2ef45f1072'
+                'Missing the required parameter $id_point_of_sale when calling get'
             );
         }
 

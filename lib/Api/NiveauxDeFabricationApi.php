@@ -87,7 +87,7 @@ class NiveauxDeFabricationApi
     }
 
     /**
-     * Operation 2b00caad42538e9be7dab4f1ff320ef9
+     * Operation update
      *
      * Modification
      *
@@ -97,13 +97,13 @@ class NiveauxDeFabricationApi
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function 2b00caad42538e9be7dab4f1ff320ef9($body)
+    public function update($body)
     {
-        $this->2b00caad42538e9be7dab4f1ff320ef9WithHttpInfo($body);
+        $this->updateWithHttpInfo($body);
     }
 
     /**
-     * Operation 2b00caad42538e9be7dab4f1ff320ef9WithHttpInfo
+     * Operation updateWithHttpInfo
      *
      * Modification
      *
@@ -113,10 +113,10 @@ class NiveauxDeFabricationApi
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function 2b00caad42538e9be7dab4f1ff320ef9WithHttpInfo($body)
+    public function updateWithHttpInfo($body)
     {
         $returnType = '';
-        $request = $this->2b00caad42538e9be7dab4f1ff320ef9Request($body);
+        $request = $this->updateRequest($body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -156,7 +156,7 @@ class NiveauxDeFabricationApi
     }
 
     /**
-     * Operation 2b00caad42538e9be7dab4f1ff320ef9Async
+     * Operation updateAsync
      *
      * Modification
      *
@@ -165,9 +165,9 @@ class NiveauxDeFabricationApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 2b00caad42538e9be7dab4f1ff320ef9Async($body)
+    public function updateAsync($body)
     {
-        return $this->2b00caad42538e9be7dab4f1ff320ef9AsyncWithHttpInfo($body)
+        return $this->updateAsyncWithHttpInfo($body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -176,7 +176,7 @@ class NiveauxDeFabricationApi
     }
 
     /**
-     * Operation 2b00caad42538e9be7dab4f1ff320ef9AsyncWithHttpInfo
+     * Operation updateAsyncWithHttpInfo
      *
      * Modification
      *
@@ -185,10 +185,10 @@ class NiveauxDeFabricationApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 2b00caad42538e9be7dab4f1ff320ef9AsyncWithHttpInfo($body)
+    public function updateAsyncWithHttpInfo($body)
     {
         $returnType = '';
-        $request = $this->2b00caad42538e9be7dab4f1ff320ef9Request($body);
+        $request = $this->updateRequest($body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -214,19 +214,19 @@ class NiveauxDeFabricationApi
     }
 
     /**
-     * Create request for operation '2b00caad42538e9be7dab4f1ff320ef9'
+     * Create request for operation 'update'
      *
      * @param  \Qwenta\Fulleapps\Model\KitchenLevel $body Pet object that needs to be added to the store (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 2b00caad42538e9be7dab4f1ff320ef9Request($body)
+    protected function updateRequest($body)
     {
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling 2b00caad42538e9be7dab4f1ff320ef9'
+                'Missing the required parameter $body when calling update'
             );
         }
 
@@ -307,7 +307,7 @@ class NiveauxDeFabricationApi
     }
 
     /**
-     * Operation 500e11a684de8458a5c2542edf4c69f1
+     * Operation get
      *
      * Récupération
      *
@@ -316,14 +316,14 @@ class NiveauxDeFabricationApi
      * @throws \InvalidArgumentException
      * @return \Qwenta\Fulleapps\Model\KitchenLevel[]
      */
-    public function 500e11a684de8458a5c2542edf4c69f1()
+    public function get()
     {
-        list($response) = $this->500e11a684de8458a5c2542edf4c69f1WithHttpInfo();
+        list($response) = $this->getWithHttpInfo();
         return $response;
     }
 
     /**
-     * Operation 500e11a684de8458a5c2542edf4c69f1WithHttpInfo
+     * Operation getWithHttpInfo
      *
      * Récupération
      *
@@ -332,10 +332,10 @@ class NiveauxDeFabricationApi
      * @throws \InvalidArgumentException
      * @return array of \Qwenta\Fulleapps\Model\KitchenLevel[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function 500e11a684de8458a5c2542edf4c69f1WithHttpInfo()
+    public function getWithHttpInfo()
     {
         $returnType = '\Qwenta\Fulleapps\Model\KitchenLevel[]';
-        $request = $this->500e11a684de8458a5c2542edf4c69f1Request();
+        $request = $this->getRequest();
 
         try {
             $options = $this->createHttpClientOption();
@@ -397,7 +397,7 @@ class NiveauxDeFabricationApi
     }
 
     /**
-     * Operation 500e11a684de8458a5c2542edf4c69f1Async
+     * Operation getAsync
      *
      * Récupération
      *
@@ -405,9 +405,9 @@ class NiveauxDeFabricationApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 500e11a684de8458a5c2542edf4c69f1Async()
+    public function getAsync()
     {
-        return $this->500e11a684de8458a5c2542edf4c69f1AsyncWithHttpInfo()
+        return $this->getAsyncWithHttpInfo()
             ->then(
                 function ($response) {
                     return $response[0];
@@ -416,7 +416,7 @@ class NiveauxDeFabricationApi
     }
 
     /**
-     * Operation 500e11a684de8458a5c2542edf4c69f1AsyncWithHttpInfo
+     * Operation getAsyncWithHttpInfo
      *
      * Récupération
      *
@@ -424,10 +424,10 @@ class NiveauxDeFabricationApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 500e11a684de8458a5c2542edf4c69f1AsyncWithHttpInfo()
+    public function getAsyncWithHttpInfo()
     {
         $returnType = '\Qwenta\Fulleapps\Model\KitchenLevel[]';
-        $request = $this->500e11a684de8458a5c2542edf4c69f1Request();
+        $request = $this->getRequest();
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -467,13 +467,13 @@ class NiveauxDeFabricationApi
     }
 
     /**
-     * Create request for operation '500e11a684de8458a5c2542edf4c69f1'
+     * Create request for operation 'get'
      *
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 500e11a684de8458a5c2542edf4c69f1Request()
+    protected function getRequest()
     {
 
         $resourcePath = '/v1/kitchen_levels';

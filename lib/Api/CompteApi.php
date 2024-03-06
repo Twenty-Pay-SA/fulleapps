@@ -87,7 +87,7 @@ class CompteApi
     }
 
     /**
-     * Operation 731e85135df5902ffbe54731ad3cdfb0
+     * Operation get
      *
      * Récupération
      *
@@ -96,14 +96,14 @@ class CompteApi
      * @throws \InvalidArgumentException
      * @return \Qwenta\Fulleapps\Model\InlineResponse200
      */
-    public function 731e85135df5902ffbe54731ad3cdfb0()
+    public function get()
     {
-        list($response) = $this->731e85135df5902ffbe54731ad3cdfb0WithHttpInfo();
+        list($response) = $this->getWithHttpInfo();
         return $response;
     }
 
     /**
-     * Operation 731e85135df5902ffbe54731ad3cdfb0WithHttpInfo
+     * Operation getWithHttpInfo
      *
      * Récupération
      *
@@ -112,10 +112,10 @@ class CompteApi
      * @throws \InvalidArgumentException
      * @return array of \Qwenta\Fulleapps\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      */
-    public function 731e85135df5902ffbe54731ad3cdfb0WithHttpInfo()
+    public function getWithHttpInfo()
     {
         $returnType = '\Qwenta\Fulleapps\Model\InlineResponse200';
-        $request = $this->731e85135df5902ffbe54731ad3cdfb0Request();
+        $request = $this->getRequest();
 
         try {
             $options = $this->createHttpClientOption();
@@ -177,7 +177,7 @@ class CompteApi
     }
 
     /**
-     * Operation 731e85135df5902ffbe54731ad3cdfb0Async
+     * Operation getAsync
      *
      * Récupération
      *
@@ -185,9 +185,9 @@ class CompteApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 731e85135df5902ffbe54731ad3cdfb0Async()
+    public function getAsync()
     {
-        return $this->731e85135df5902ffbe54731ad3cdfb0AsyncWithHttpInfo()
+        return $this->getAsyncWithHttpInfo()
             ->then(
                 function ($response) {
                     return $response[0];
@@ -196,7 +196,7 @@ class CompteApi
     }
 
     /**
-     * Operation 731e85135df5902ffbe54731ad3cdfb0AsyncWithHttpInfo
+     * Operation getAsyncWithHttpInfo
      *
      * Récupération
      *
@@ -204,10 +204,10 @@ class CompteApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 731e85135df5902ffbe54731ad3cdfb0AsyncWithHttpInfo()
+    public function getAsyncWithHttpInfo()
     {
         $returnType = '\Qwenta\Fulleapps\Model\InlineResponse200';
-        $request = $this->731e85135df5902ffbe54731ad3cdfb0Request();
+        $request = $this->getRequest();
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -247,13 +247,13 @@ class CompteApi
     }
 
     /**
-     * Create request for operation '731e85135df5902ffbe54731ad3cdfb0'
+     * Create request for operation 'get'
      *
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 731e85135df5902ffbe54731ad3cdfb0Request()
+    protected function getRequest()
     {
 
         $resourcePath = '/account';

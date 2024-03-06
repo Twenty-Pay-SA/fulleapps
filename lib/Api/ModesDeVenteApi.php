@@ -87,7 +87,7 @@ class ModesDeVenteApi
     }
 
     /**
-     * Operation 712eabac3ef5c01fbc5c7bc42bd422c7
+     * Operation update
      *
      * Modification
      *
@@ -97,13 +97,13 @@ class ModesDeVenteApi
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function 712eabac3ef5c01fbc5c7bc42bd422c7($body)
+    public function update($body)
     {
-        $this->712eabac3ef5c01fbc5c7bc42bd422c7WithHttpInfo($body);
+        $this->updateWithHttpInfo($body);
     }
 
     /**
-     * Operation 712eabac3ef5c01fbc5c7bc42bd422c7WithHttpInfo
+     * Operation updateWithHttpInfo
      *
      * Modification
      *
@@ -113,10 +113,10 @@ class ModesDeVenteApi
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function 712eabac3ef5c01fbc5c7bc42bd422c7WithHttpInfo($body)
+    public function updateWithHttpInfo($body)
     {
         $returnType = '';
-        $request = $this->712eabac3ef5c01fbc5c7bc42bd422c7Request($body);
+        $request = $this->updateRequest($body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -156,7 +156,7 @@ class ModesDeVenteApi
     }
 
     /**
-     * Operation 712eabac3ef5c01fbc5c7bc42bd422c7Async
+     * Operation updateAsync
      *
      * Modification
      *
@@ -165,9 +165,9 @@ class ModesDeVenteApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 712eabac3ef5c01fbc5c7bc42bd422c7Async($body)
+    public function updateAsync($body)
     {
-        return $this->712eabac3ef5c01fbc5c7bc42bd422c7AsyncWithHttpInfo($body)
+        return $this->updateAsyncWithHttpInfo($body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -176,7 +176,7 @@ class ModesDeVenteApi
     }
 
     /**
-     * Operation 712eabac3ef5c01fbc5c7bc42bd422c7AsyncWithHttpInfo
+     * Operation updateAsyncWithHttpInfo
      *
      * Modification
      *
@@ -185,10 +185,10 @@ class ModesDeVenteApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 712eabac3ef5c01fbc5c7bc42bd422c7AsyncWithHttpInfo($body)
+    public function updateAsyncWithHttpInfo($body)
     {
         $returnType = '';
-        $request = $this->712eabac3ef5c01fbc5c7bc42bd422c7Request($body);
+        $request = $this->updateRequest($body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -214,19 +214,19 @@ class ModesDeVenteApi
     }
 
     /**
-     * Create request for operation '712eabac3ef5c01fbc5c7bc42bd422c7'
+     * Create request for operation 'update'
      *
      * @param  \Qwenta\Fulleapps\Model\SaleMethod $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 712eabac3ef5c01fbc5c7bc42bd422c7Request($body)
+    protected function updateRequest($body)
     {
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling 712eabac3ef5c01fbc5c7bc42bd422c7'
+                'Missing the required parameter $body when calling update'
             );
         }
 
@@ -307,7 +307,7 @@ class ModesDeVenteApi
     }
 
     /**
-     * Operation 741e4e8f0649992ea56c42a2f0e49d4a
+     * Operation create
      *
      * Création
      *
@@ -317,13 +317,13 @@ class ModesDeVenteApi
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function 741e4e8f0649992ea56c42a2f0e49d4a($body)
+    public function create($body)
     {
-        $this->741e4e8f0649992ea56c42a2f0e49d4aWithHttpInfo($body);
+        $this->createWithHttpInfo($body);
     }
 
     /**
-     * Operation 741e4e8f0649992ea56c42a2f0e49d4aWithHttpInfo
+     * Operation createWithHttpInfo
      *
      * Création
      *
@@ -333,10 +333,10 @@ class ModesDeVenteApi
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function 741e4e8f0649992ea56c42a2f0e49d4aWithHttpInfo($body)
+    public function createWithHttpInfo($body)
     {
         $returnType = '';
-        $request = $this->741e4e8f0649992ea56c42a2f0e49d4aRequest($body);
+        $request = $this->createRequest($body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -376,7 +376,7 @@ class ModesDeVenteApi
     }
 
     /**
-     * Operation 741e4e8f0649992ea56c42a2f0e49d4aAsync
+     * Operation createAsync
      *
      * Création
      *
@@ -385,9 +385,9 @@ class ModesDeVenteApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 741e4e8f0649992ea56c42a2f0e49d4aAsync($body)
+    public function createAsync($body)
     {
-        return $this->741e4e8f0649992ea56c42a2f0e49d4aAsyncWithHttpInfo($body)
+        return $this->createAsyncWithHttpInfo($body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -396,7 +396,7 @@ class ModesDeVenteApi
     }
 
     /**
-     * Operation 741e4e8f0649992ea56c42a2f0e49d4aAsyncWithHttpInfo
+     * Operation createAsyncWithHttpInfo
      *
      * Création
      *
@@ -405,10 +405,10 @@ class ModesDeVenteApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 741e4e8f0649992ea56c42a2f0e49d4aAsyncWithHttpInfo($body)
+    public function createAsyncWithHttpInfo($body)
     {
         $returnType = '';
-        $request = $this->741e4e8f0649992ea56c42a2f0e49d4aRequest($body);
+        $request = $this->createRequest($body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -434,19 +434,19 @@ class ModesDeVenteApi
     }
 
     /**
-     * Create request for operation '741e4e8f0649992ea56c42a2f0e49d4a'
+     * Create request for operation 'create'
      *
      * @param  \Qwenta\Fulleapps\Model\SaleMethod $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 741e4e8f0649992ea56c42a2f0e49d4aRequest($body)
+    protected function createRequest($body)
     {
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling 741e4e8f0649992ea56c42a2f0e49d4a'
+                'Missing the required parameter $body when calling create'
             );
         }
 

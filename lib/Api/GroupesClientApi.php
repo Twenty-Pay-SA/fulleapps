@@ -87,7 +87,7 @@ class GroupesClientApi
     }
 
     /**
-     * Operation 146098cc811544f2d480f8886b2f9b39
+     * Operation get
      *
      * Récupération
      *
@@ -96,14 +96,14 @@ class GroupesClientApi
      * @throws \InvalidArgumentException
      * @return \Qwenta\Fulleapps\Model\InlineResponse20010
      */
-    public function 146098cc811544f2d480f8886b2f9b39()
+    public function get()
     {
-        list($response) = $this->146098cc811544f2d480f8886b2f9b39WithHttpInfo();
+        list($response) = $this->getWithHttpInfo();
         return $response;
     }
 
     /**
-     * Operation 146098cc811544f2d480f8886b2f9b39WithHttpInfo
+     * Operation getWithHttpInfo
      *
      * Récupération
      *
@@ -112,10 +112,10 @@ class GroupesClientApi
      * @throws \InvalidArgumentException
      * @return array of \Qwenta\Fulleapps\Model\InlineResponse20010, HTTP status code, HTTP response headers (array of strings)
      */
-    public function 146098cc811544f2d480f8886b2f9b39WithHttpInfo()
+    public function getWithHttpInfo()
     {
         $returnType = '\Qwenta\Fulleapps\Model\InlineResponse20010';
-        $request = $this->146098cc811544f2d480f8886b2f9b39Request();
+        $request = $this->getRequest();
 
         try {
             $options = $this->createHttpClientOption();
@@ -177,7 +177,7 @@ class GroupesClientApi
     }
 
     /**
-     * Operation 146098cc811544f2d480f8886b2f9b39Async
+     * Operation getAsync
      *
      * Récupération
      *
@@ -185,9 +185,9 @@ class GroupesClientApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 146098cc811544f2d480f8886b2f9b39Async()
+    public function getAsync()
     {
-        return $this->146098cc811544f2d480f8886b2f9b39AsyncWithHttpInfo()
+        return $this->getAsyncWithHttpInfo()
             ->then(
                 function ($response) {
                     return $response[0];
@@ -196,7 +196,7 @@ class GroupesClientApi
     }
 
     /**
-     * Operation 146098cc811544f2d480f8886b2f9b39AsyncWithHttpInfo
+     * Operation getAsyncWithHttpInfo
      *
      * Récupération
      *
@@ -204,10 +204,10 @@ class GroupesClientApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 146098cc811544f2d480f8886b2f9b39AsyncWithHttpInfo()
+    public function getAsyncWithHttpInfo()
     {
         $returnType = '\Qwenta\Fulleapps\Model\InlineResponse20010';
-        $request = $this->146098cc811544f2d480f8886b2f9b39Request();
+        $request = $this->getRequest();
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -247,13 +247,13 @@ class GroupesClientApi
     }
 
     /**
-     * Create request for operation '146098cc811544f2d480f8886b2f9b39'
+     * Create request for operation 'get'
      *
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 146098cc811544f2d480f8886b2f9b39Request()
+    protected function getRequest()
     {
 
         $resourcePath = '/client_groups';
@@ -330,7 +330,7 @@ class GroupesClientApi
     }
 
     /**
-     * Operation 32491814c5a085d9cb86a2ac9aee3df0
+     * Operation delete
      *
      * Suppression
      *
@@ -340,13 +340,13 @@ class GroupesClientApi
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function 32491814c5a085d9cb86a2ac9aee3df0($id = null)
+    public function delete($id = null)
     {
-        $this->32491814c5a085d9cb86a2ac9aee3df0WithHttpInfo($id);
+        $this->deleteWithHttpInfo($id);
     }
 
     /**
-     * Operation 32491814c5a085d9cb86a2ac9aee3df0WithHttpInfo
+     * Operation deleteWithHttpInfo
      *
      * Suppression
      *
@@ -356,10 +356,10 @@ class GroupesClientApi
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function 32491814c5a085d9cb86a2ac9aee3df0WithHttpInfo($id = null)
+    public function deleteWithHttpInfo($id = null)
     {
         $returnType = '';
-        $request = $this->32491814c5a085d9cb86a2ac9aee3df0Request($id);
+        $request = $this->deleteRequest($id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -399,7 +399,7 @@ class GroupesClientApi
     }
 
     /**
-     * Operation 32491814c5a085d9cb86a2ac9aee3df0Async
+     * Operation deleteAsync
      *
      * Suppression
      *
@@ -408,9 +408,9 @@ class GroupesClientApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 32491814c5a085d9cb86a2ac9aee3df0Async($id = null)
+    public function deleteAsync($id = null)
     {
-        return $this->32491814c5a085d9cb86a2ac9aee3df0AsyncWithHttpInfo($id)
+        return $this->deleteAsyncWithHttpInfo($id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -419,7 +419,7 @@ class GroupesClientApi
     }
 
     /**
-     * Operation 32491814c5a085d9cb86a2ac9aee3df0AsyncWithHttpInfo
+     * Operation deleteAsyncWithHttpInfo
      *
      * Suppression
      *
@@ -428,10 +428,10 @@ class GroupesClientApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 32491814c5a085d9cb86a2ac9aee3df0AsyncWithHttpInfo($id = null)
+    public function deleteAsyncWithHttpInfo($id = null)
     {
         $returnType = '';
-        $request = $this->32491814c5a085d9cb86a2ac9aee3df0Request($id);
+        $request = $this->deleteRequest($id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -457,14 +457,14 @@ class GroupesClientApi
     }
 
     /**
-     * Create request for operation '32491814c5a085d9cb86a2ac9aee3df0'
+     * Create request for operation 'delete'
      *
      * @param  int $id Identifiant du mode de réglement (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 32491814c5a085d9cb86a2ac9aee3df0Request($id = null)
+    protected function deleteRequest($id = null)
     {
 
         $resourcePath = '/client_groups/delete/{id}';

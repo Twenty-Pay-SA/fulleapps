@@ -87,7 +87,7 @@ class RubriquesDeVenteApi
     }
 
     /**
-     * Operation 29e899394792e28252fce25cffc2c17f
+     * Operation delete
      *
      * Suppression
      *
@@ -96,13 +96,13 @@ class RubriquesDeVenteApi
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function 29e899394792e28252fce25cffc2c17f()
+    public function delete()
     {
-        $this->29e899394792e28252fce25cffc2c17fWithHttpInfo();
+        $this->deleteWithHttpInfo();
     }
 
     /**
-     * Operation 29e899394792e28252fce25cffc2c17fWithHttpInfo
+     * Operation deleteWithHttpInfo
      *
      * Suppression
      *
@@ -111,10 +111,10 @@ class RubriquesDeVenteApi
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function 29e899394792e28252fce25cffc2c17fWithHttpInfo()
+    public function deleteWithHttpInfo()
     {
         $returnType = '';
-        $request = $this->29e899394792e28252fce25cffc2c17fRequest();
+        $request = $this->deleteRequest();
 
         try {
             $options = $this->createHttpClientOption();
@@ -154,7 +154,7 @@ class RubriquesDeVenteApi
     }
 
     /**
-     * Operation 29e899394792e28252fce25cffc2c17fAsync
+     * Operation deleteAsync
      *
      * Suppression
      *
@@ -162,9 +162,9 @@ class RubriquesDeVenteApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 29e899394792e28252fce25cffc2c17fAsync()
+    public function deleteAsync()
     {
-        return $this->29e899394792e28252fce25cffc2c17fAsyncWithHttpInfo()
+        return $this->deleteAsyncWithHttpInfo()
             ->then(
                 function ($response) {
                     return $response[0];
@@ -173,7 +173,7 @@ class RubriquesDeVenteApi
     }
 
     /**
-     * Operation 29e899394792e28252fce25cffc2c17fAsyncWithHttpInfo
+     * Operation deleteAsyncWithHttpInfo
      *
      * Suppression
      *
@@ -181,10 +181,10 @@ class RubriquesDeVenteApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 29e899394792e28252fce25cffc2c17fAsyncWithHttpInfo()
+    public function deleteAsyncWithHttpInfo()
     {
         $returnType = '';
-        $request = $this->29e899394792e28252fce25cffc2c17fRequest();
+        $request = $this->deleteRequest();
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -210,13 +210,13 @@ class RubriquesDeVenteApi
     }
 
     /**
-     * Create request for operation '29e899394792e28252fce25cffc2c17f'
+     * Create request for operation 'delete'
      *
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 29e899394792e28252fce25cffc2c17fRequest()
+    protected function deleteRequest()
     {
 
         $resourcePath = '/rubrics/delete/id';
@@ -293,7 +293,7 @@ class RubriquesDeVenteApi
     }
 
     /**
-     * Operation 3a53d1d2bfc74004e7a102fc56edf88b
+     * Operation get
      *
      * Récupération
      *
@@ -302,14 +302,14 @@ class RubriquesDeVenteApi
      * @throws \InvalidArgumentException
      * @return \Qwenta\Fulleapps\Model\Rubric[]
      */
-    public function 3a53d1d2bfc74004e7a102fc56edf88b()
+    public function get()
     {
-        list($response) = $this->3a53d1d2bfc74004e7a102fc56edf88bWithHttpInfo();
+        list($response) = $this->getWithHttpInfo();
         return $response;
     }
 
     /**
-     * Operation 3a53d1d2bfc74004e7a102fc56edf88bWithHttpInfo
+     * Operation getWithHttpInfo
      *
      * Récupération
      *
@@ -318,10 +318,10 @@ class RubriquesDeVenteApi
      * @throws \InvalidArgumentException
      * @return array of \Qwenta\Fulleapps\Model\Rubric[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function 3a53d1d2bfc74004e7a102fc56edf88bWithHttpInfo()
+    public function getWithHttpInfo()
     {
         $returnType = '\Qwenta\Fulleapps\Model\Rubric[]';
-        $request = $this->3a53d1d2bfc74004e7a102fc56edf88bRequest();
+        $request = $this->getRequest();
 
         try {
             $options = $this->createHttpClientOption();
@@ -383,7 +383,7 @@ class RubriquesDeVenteApi
     }
 
     /**
-     * Operation 3a53d1d2bfc74004e7a102fc56edf88bAsync
+     * Operation getAsync
      *
      * Récupération
      *
@@ -391,9 +391,9 @@ class RubriquesDeVenteApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 3a53d1d2bfc74004e7a102fc56edf88bAsync()
+    public function getAsync()
     {
-        return $this->3a53d1d2bfc74004e7a102fc56edf88bAsyncWithHttpInfo()
+        return $this->getAsyncWithHttpInfo()
             ->then(
                 function ($response) {
                     return $response[0];
@@ -402,7 +402,7 @@ class RubriquesDeVenteApi
     }
 
     /**
-     * Operation 3a53d1d2bfc74004e7a102fc56edf88bAsyncWithHttpInfo
+     * Operation getAsyncWithHttpInfo
      *
      * Récupération
      *
@@ -410,10 +410,10 @@ class RubriquesDeVenteApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 3a53d1d2bfc74004e7a102fc56edf88bAsyncWithHttpInfo()
+    public function getAsyncWithHttpInfo()
     {
         $returnType = '\Qwenta\Fulleapps\Model\Rubric[]';
-        $request = $this->3a53d1d2bfc74004e7a102fc56edf88bRequest();
+        $request = $this->getRequest();
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -453,13 +453,13 @@ class RubriquesDeVenteApi
     }
 
     /**
-     * Create request for operation '3a53d1d2bfc74004e7a102fc56edf88b'
+     * Create request for operation 'get'
      *
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 3a53d1d2bfc74004e7a102fc56edf88bRequest()
+    protected function getRequest()
     {
 
         $resourcePath = '/rubrics';

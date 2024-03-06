@@ -87,7 +87,7 @@ class CommandesApi
     }
 
     /**
-     * Operation 69c3b6ea53c35dc400174e6dd00999c2
+     * Operation historic
      *
      * Historique
      *
@@ -97,14 +97,14 @@ class CommandesApi
      * @throws \InvalidArgumentException
      * @return \Qwenta\Fulleapps\Model\InlineResponse20016
      */
-    public function 69c3b6ea53c35dc400174e6dd00999c2($id)
+    public function historic($id)
     {
-        list($response) = $this->69c3b6ea53c35dc400174e6dd00999c2WithHttpInfo($id);
+        list($response) = $this->historicWithHttpInfo($id);
         return $response;
     }
 
     /**
-     * Operation 69c3b6ea53c35dc400174e6dd00999c2WithHttpInfo
+     * Operation historicWithHttpInfo
      *
      * Historique
      *
@@ -114,10 +114,10 @@ class CommandesApi
      * @throws \InvalidArgumentException
      * @return array of \Qwenta\Fulleapps\Model\InlineResponse20016, HTTP status code, HTTP response headers (array of strings)
      */
-    public function 69c3b6ea53c35dc400174e6dd00999c2WithHttpInfo($id)
+    public function historicWithHttpInfo($id)
     {
         $returnType = '\Qwenta\Fulleapps\Model\InlineResponse20016';
-        $request = $this->69c3b6ea53c35dc400174e6dd00999c2Request($id);
+        $request = $this->historicRequest($id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -179,7 +179,7 @@ class CommandesApi
     }
 
     /**
-     * Operation 69c3b6ea53c35dc400174e6dd00999c2Async
+     * Operation historicAsync
      *
      * Historique
      *
@@ -188,9 +188,9 @@ class CommandesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 69c3b6ea53c35dc400174e6dd00999c2Async($id)
+    public function historicAsync($id)
     {
-        return $this->69c3b6ea53c35dc400174e6dd00999c2AsyncWithHttpInfo($id)
+        return $this->historicAsyncWithHttpInfo($id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -199,7 +199,7 @@ class CommandesApi
     }
 
     /**
-     * Operation 69c3b6ea53c35dc400174e6dd00999c2AsyncWithHttpInfo
+     * Operation historicAsyncWithHttpInfo
      *
      * Historique
      *
@@ -208,10 +208,10 @@ class CommandesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 69c3b6ea53c35dc400174e6dd00999c2AsyncWithHttpInfo($id)
+    public function historicAsyncWithHttpInfo($id)
     {
         $returnType = '\Qwenta\Fulleapps\Model\InlineResponse20016';
-        $request = $this->69c3b6ea53c35dc400174e6dd00999c2Request($id);
+        $request = $this->historicRequest($id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -251,19 +251,19 @@ class CommandesApi
     }
 
     /**
-     * Create request for operation '69c3b6ea53c35dc400174e6dd00999c2'
+     * Create request for operation 'historic'
      *
      * @param  int $id Identifiant de la commande (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 69c3b6ea53c35dc400174e6dd00999c2Request($id)
+    protected function historicRequest($id)
     {
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling 69c3b6ea53c35dc400174e6dd00999c2'
+                'Missing the required parameter $id when calling historic'
             );
         }
 
@@ -345,7 +345,7 @@ class CommandesApi
     }
 
     /**
-     * Operation 78bd5c6f7d06b9bafd09970611714b0a
+     * Operation changeState
      *
      * Changement d'état
      *
@@ -357,14 +357,14 @@ class CommandesApi
      * @throws \InvalidArgumentException
      * @return \Qwenta\Fulleapps\Model\Order[]
      */
-    public function 78bd5c6f7d06b9bafd09970611714b0a($, $id_order_level, $comment)
+    public function changeState($id, $id_order_level, $comment)
     {
-        list($response) = $this->78bd5c6f7d06b9bafd09970611714b0aWithHttpInfo($, $id_order_level, $comment);
+        list($response) = $this->changeStateWithHttpInfo($id, $id_order_level, $comment);
         return $response;
     }
 
     /**
-     * Operation 78bd5c6f7d06b9bafd09970611714b0aWithHttpInfo
+     * Operation changeStateWithHttpInfo
      *
      * Changement d'état
      *
@@ -376,10 +376,10 @@ class CommandesApi
      * @throws \InvalidArgumentException
      * @return array of \Qwenta\Fulleapps\Model\Order[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function 78bd5c6f7d06b9bafd09970611714b0aWithHttpInfo($, $id_order_level, $comment)
+    public function changeStateWithHttpInfo($id, $id_order_level, $comment)
     {
         $returnType = '\Qwenta\Fulleapps\Model\Order[]';
-        $request = $this->78bd5c6f7d06b9bafd09970611714b0aRequest($, $id_order_level, $comment);
+        $request = $this->changeStateRequest($id, $id_order_level, $comment);
 
         try {
             $options = $this->createHttpClientOption();
@@ -441,20 +441,20 @@ class CommandesApi
     }
 
     /**
-     * Operation 78bd5c6f7d06b9bafd09970611714b0aAsync
+     * Operation changeStateAsync
      *
      * Changement d'état
      *
-     * @param   $ Identifiant de la commande (required)
+     * @param   $id Identifiant de la commande (required)
      * @param  Int $id_order_level Identifiant de l&#x27;état de commande (required)
      * @param  string $comment Commentaire libre (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 78bd5c6f7d06b9bafd09970611714b0aAsync($, $id_order_level, $comment)
+    public function changeStateAsync($id, $id_order_level, $comment)
     {
-        return $this->78bd5c6f7d06b9bafd09970611714b0aAsyncWithHttpInfo($, $id_order_level, $comment)
+        return $this->changeStateAsyncWithHttpInfo($id, $id_order_level, $comment)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -463,7 +463,7 @@ class CommandesApi
     }
 
     /**
-     * Operation 78bd5c6f7d06b9bafd09970611714b0aAsyncWithHttpInfo
+     * Operation changeStateAsyncWithHttpInfo
      *
      * Changement d'état
      *
@@ -474,10 +474,10 @@ class CommandesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function 78bd5c6f7d06b9bafd09970611714b0aAsyncWithHttpInfo($, $id_order_level, $comment)
+    public function changeStateAsyncWithHttpInfo($id, $id_order_level, $comment)
     {
         $returnType = '\Qwenta\Fulleapps\Model\Order[]';
-        $request = $this->78bd5c6f7d06b9bafd09970611714b0aRequest($, $id_order_level, $comment);
+        $request = $this->changeStateRequest($id, $id_order_level, $comment);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -517,7 +517,7 @@ class CommandesApi
     }
 
     /**
-     * Create request for operation '78bd5c6f7d06b9bafd09970611714b0a'
+     * Create request for operation 'changeState'
      *
      * @param   $ Identifiant de la commande (required)
      * @param  Int $id_order_level Identifiant de l&#x27;état de commande (required)
@@ -526,24 +526,24 @@ class CommandesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function 78bd5c6f7d06b9bafd09970611714b0aRequest($, $id_order_level, $comment)
+    protected function changeStateRequest($id, $id_order_level, $comment)
     {
         // verify the required parameter '' is set
-        if ($ === null || (is_array($) && count($) === 0)) {
+        if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $ when calling 78bd5c6f7d06b9bafd09970611714b0a'
+                'Missing the required parameter $id when calling changeState'
             );
         }
         // verify the required parameter 'id_order_level' is set
         if ($id_order_level === null || (is_array($id_order_level) && count($id_order_level) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id_order_level when calling 78bd5c6f7d06b9bafd09970611714b0a'
+                'Missing the required parameter $id_order_level when calling changeState'
             );
         }
         // verify the required parameter 'comment' is set
         if ($comment === null || (is_array($comment) && count($comment) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $comment when calling 78bd5c6f7d06b9bafd09970611714b0a'
+                'Missing the required parameter $comment when calling changeState'
             );
         }
 
@@ -555,8 +555,8 @@ class CommandesApi
         $multipart = false;
 
         // query params
-        if ($ !== null) {
-            $queryParams['id'] = ObjectSerializer::toQueryValue($, null);
+        if ($id !== null) {
+            $queryParams['id'] = ObjectSerializer::toQueryValue($id, null);
         }
 
         // path params
@@ -641,7 +641,7 @@ class CommandesApi
     }
 
     /**
-     * Operation ae29415f124c9834617fb033e8a47823
+     * Operation get
      *
      * Récupération
      *
@@ -655,14 +655,14 @@ class CommandesApi
      * @throws \InvalidArgumentException
      * @return \Qwenta\Fulleapps\Model\Order[]
      */
-    public function ae29415f124c9834617fb033e8a47823($from_date, $to_date, $id_point_of_sale, $id_order_level, $id_sale_method)
+    public function get($from_date, $to_date, $id_point_of_sale, $id_order_level, $id_sale_method)
     {
-        list($response) = $this->ae29415f124c9834617fb033e8a47823WithHttpInfo($from_date, $to_date, $id_point_of_sale, $id_order_level, $id_sale_method);
+        list($response) = $this->getWithHttpInfo($from_date, $to_date, $id_point_of_sale, $id_order_level, $id_sale_method);
         return $response;
     }
 
     /**
-     * Operation ae29415f124c9834617fb033e8a47823WithHttpInfo
+     * Operation getWithHttpInfo
      *
      * Récupération
      *
@@ -676,10 +676,10 @@ class CommandesApi
      * @throws \InvalidArgumentException
      * @return array of \Qwenta\Fulleapps\Model\Order[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function ae29415f124c9834617fb033e8a47823WithHttpInfo($from_date, $to_date, $id_point_of_sale, $id_order_level, $id_sale_method)
+    public function getWithHttpInfo($from_date, $to_date, $id_point_of_sale, $id_order_level, $id_sale_method)
     {
         $returnType = '\Qwenta\Fulleapps\Model\Order[]';
-        $request = $this->ae29415f124c9834617fb033e8a47823Request($from_date, $to_date, $id_point_of_sale, $id_order_level, $id_sale_method);
+        $request = $this->getRequest($from_date, $to_date, $id_point_of_sale, $id_order_level, $id_sale_method);
 
         try {
             $options = $this->createHttpClientOption();
@@ -741,7 +741,7 @@ class CommandesApi
     }
 
     /**
-     * Operation ae29415f124c9834617fb033e8a47823Async
+     * Operation getAsync
      *
      * Récupération
      *
@@ -754,9 +754,9 @@ class CommandesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function ae29415f124c9834617fb033e8a47823Async($from_date, $to_date, $id_point_of_sale, $id_order_level, $id_sale_method)
+    public function getAsync($from_date, $to_date, $id_point_of_sale, $id_order_level, $id_sale_method)
     {
-        return $this->ae29415f124c9834617fb033e8a47823AsyncWithHttpInfo($from_date, $to_date, $id_point_of_sale, $id_order_level, $id_sale_method)
+        return $this->getAsyncWithHttpInfo($from_date, $to_date, $id_point_of_sale, $id_order_level, $id_sale_method)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -765,7 +765,7 @@ class CommandesApi
     }
 
     /**
-     * Operation ae29415f124c9834617fb033e8a47823AsyncWithHttpInfo
+     * Operation getAsyncWithHttpInfo
      *
      * Récupération
      *
@@ -778,10 +778,10 @@ class CommandesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function ae29415f124c9834617fb033e8a47823AsyncWithHttpInfo($from_date, $to_date, $id_point_of_sale, $id_order_level, $id_sale_method)
+    public function getAsyncWithHttpInfo($from_date, $to_date, $id_point_of_sale, $id_order_level, $id_sale_method)
     {
         $returnType = '\Qwenta\Fulleapps\Model\Order[]';
-        $request = $this->ae29415f124c9834617fb033e8a47823Request($from_date, $to_date, $id_point_of_sale, $id_order_level, $id_sale_method);
+        $request = $this->getRequest($from_date, $to_date, $id_point_of_sale, $id_order_level, $id_sale_method);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -821,7 +821,7 @@ class CommandesApi
     }
 
     /**
-     * Create request for operation 'ae29415f124c9834617fb033e8a47823'
+     * Create request for operation 'get'
      *
      * @param  \DateTime $from_date Date de début de période (Recherche par date d&#x27;éxécution de la commande) (required)
      * @param  \DateTime $to_date Date de fin de période (Recherche par date d&#x27;éxécution de la commande) (required)
@@ -832,36 +832,36 @@ class CommandesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function ae29415f124c9834617fb033e8a47823Request($from_date, $to_date, $id_point_of_sale, $id_order_level, $id_sale_method)
+    protected function getRequest($from_date, $to_date, $id_point_of_sale, $id_order_level, $id_sale_method)
     {
         // verify the required parameter 'from_date' is set
         if ($from_date === null || (is_array($from_date) && count($from_date) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $from_date when calling ae29415f124c9834617fb033e8a47823'
+                'Missing the required parameter $from_date when calling get'
             );
         }
         // verify the required parameter 'to_date' is set
         if ($to_date === null || (is_array($to_date) && count($to_date) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $to_date when calling ae29415f124c9834617fb033e8a47823'
+                'Missing the required parameter $to_date when calling get'
             );
         }
         // verify the required parameter 'id_point_of_sale' is set
         if ($id_point_of_sale === null || (is_array($id_point_of_sale) && count($id_point_of_sale) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id_point_of_sale when calling ae29415f124c9834617fb033e8a47823'
+                'Missing the required parameter $id_point_of_sale when calling get'
             );
         }
         // verify the required parameter 'id_order_level' is set
         if ($id_order_level === null || (is_array($id_order_level) && count($id_order_level) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id_order_level when calling ae29415f124c9834617fb033e8a47823'
+                'Missing the required parameter $id_order_level when calling get'
             );
         }
         // verify the required parameter 'id_sale_method' is set
         if ($id_sale_method === null || (is_array($id_sale_method) && count($id_sale_method) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id_sale_method when calling ae29415f124c9834617fb033e8a47823'
+                'Missing the required parameter $id_sale_method when calling get'
             );
         }
 
