@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Qwenta\Fulleapps
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -36,7 +36,7 @@ use \Qwenta\Fulleapps\ObjectSerializer;
  *
  * @category Class
  * @description Prix de revient (utilisé pour le calcul des marges théoriques)
- * @package  Swagger\Client
+ * @package  Qwenta\Fulleapps
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Qwenta\Fulleapps
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -36,7 +36,7 @@ use \Qwenta\Fulleapps\ObjectSerializer;
  *
  * @category Class
  * @description Identifiant du niveau de fabrication associé / &lt;a href&#x3D;&#x27;/docs/index.php#operation/KitchenLevelController::get&#x27;&gt;Voir section&lt;/a&gt;
- * @package  Swagger\Client
+ * @package  Qwenta\Fulleapps
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Qwenta\Fulleapps
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Swagger\Client;
+namespace Qwenta\Fulleapps;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description Selection facultative des options (la pop-up de selection des options ne sera pas affichée automatiquement)
- * @package     Swagger\Client
+ * @package     Qwenta\Fulleapps
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */

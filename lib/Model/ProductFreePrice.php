@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Qwenta\Fulleapps
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -36,7 +36,7 @@ use \Qwenta\Fulleapps\ObjectSerializer;
  *
  * @category Class
  * @description Prix libre (le prix sera demandé lors de la séléction de l&#x27;article sur une note / commande
- * @package  Swagger\Client
+ * @package  Qwenta\Fulleapps
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */

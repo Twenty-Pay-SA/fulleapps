@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Qwenta\Fulleapps
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Swagger\Client;
+namespace Qwenta\Fulleapps;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description Type de produit (0 &#x3D; Produit sans options, 1 &#x3D; Produit avec options, 2 &#x3D; Formule, 3 &#x3D; Bon Cadeau)
- * @package     Swagger\Client
+ * @package     Qwenta\Fulleapps
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */

@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Qwenta\Fulleapps
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace Swagger\Client;
+namespace Qwenta\Fulleapps;
 
 use Qwenta\Fulleapps\Configuration;
 use Qwenta\Fulleapps\ApiException;
@@ -36,7 +36,7 @@ use PHPUnit\Framework\TestCase;
  * PointsDeStockApiTest Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Qwenta\Fulleapps
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
