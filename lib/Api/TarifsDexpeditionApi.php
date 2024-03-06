@@ -281,6 +281,10 @@ class TarifsDexpeditionApi
             $defaultHeaders['X-Api-Key'] = $this->config->getApiKey('X-Api-Key');
         }
 
+        if ($this->config->getApiKey('Authorization')) {
+            $defaultHeaders['Authorization'] = $this->config->getApiKeyWithPrefix('Authorization');
+        }
+
         $headers = array_merge(
             $defaultHeaders,
             $headerParams,
@@ -505,6 +509,10 @@ class TarifsDexpeditionApi
             $defaultHeaders['X-Api-Key'] = $this->config->getApiKey('X-Api-Key');
         }
 
+        if ($this->config->getApiKey('Authorization')) {
+            $defaultHeaders['Authorization'] = $this->config->getApiKeyWithPrefix('Authorization');
+        }
+
         $headers = array_merge(
             $defaultHeaders,
             $headerParams,
@@ -727,6 +735,10 @@ class TarifsDexpeditionApi
 
         if ($this->config->getApiKey('X-Api-Key')) {
             $defaultHeaders['X-Api-Key'] = $this->config->getApiKey('X-Api-Key');
+        }
+
+        if ($this->config->getApiKey('Authorization')) {
+            $defaultHeaders['Authorization'] = $this->config->getApiKeyWithPrefix('Authorization');
         }
 
         $headers = array_merge(
@@ -993,6 +1005,10 @@ class TarifsDexpeditionApi
 
         if ($this->config->getApiKey('X-Api-Key')) {
             $defaultHeaders['X-Api-Key'] = $this->config->getApiKey('X-Api-Key');
+        }
+
+        if ($this->config->getApiKey('Authorization')) {
+            $defaultHeaders['Authorization'] = $this->config->getApiKeyWithPrefix('Authorization');
         }
 
         $headers = array_merge(

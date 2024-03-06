@@ -508,6 +508,10 @@ class ProduitsApi
             $defaultHeaders['X-Api-Key'] = $this->config->getApiKey('X-Api-Key');
         }
 
+        if ($this->config->getApiKey('Authorization')) {
+            $defaultHeaders['Authorization'] = $this->config->getApiKeyWithPrefix('Authorization');
+        }
+
         $headers = array_merge(
             $defaultHeaders,
             $headerParams,
@@ -770,6 +774,10 @@ class ProduitsApi
             $defaultHeaders['X-Api-Key'] = $this->config->getApiKey('X-Api-Key');
         }
 
+        if ($this->config->getApiKey('Authorization')) {
+            $defaultHeaders['Authorization'] = $this->config->getApiKeyWithPrefix('Authorization');
+        }
+
         $headers = array_merge(
             $defaultHeaders,
             $headerParams,
@@ -1017,6 +1025,10 @@ class ProduitsApi
             $defaultHeaders['X-Api-Key'] = $this->config->getApiKey('X-Api-Key');
         }
 
+        if ($this->config->getApiKey('Authorization')) {
+            $defaultHeaders['Authorization'] = $this->config->getApiKeyWithPrefix('Authorization');
+        }
+
         $headers = array_merge(
             $defaultHeaders,
             $headerParams,
@@ -1239,6 +1251,10 @@ class ProduitsApi
 
         if ($this->config->getApiKey('X-Api-Key')) {
             $defaultHeaders['X-Api-Key'] = $this->config->getApiKey('X-Api-Key');
+        }
+
+        if ($this->config->getApiKey('Authorization')) {
+            $defaultHeaders['Authorization'] = $this->config->getApiKeyWithPrefix('Authorization');
         }
 
         $headers = array_merge(
@@ -1472,6 +1488,10 @@ class ProduitsApi
 
         if ($this->config->getApiKey('X-Api-Key')) {
             $defaultHeaders['X-Api-Key'] = $this->config->getApiKey('X-Api-Key');
+        }
+
+        if ($this->config->getApiKey('Authorization')) {
+            $defaultHeaders['Authorization'] = $this->config->getApiKeyWithPrefix('Authorization');
         }
 
         $headers = array_merge(
