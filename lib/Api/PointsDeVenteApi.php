@@ -291,6 +291,10 @@ class PointsDeVenteApi
             $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
         }
 
+        if ($this->config->getApiKey('X-Api-Key')) {
+            $defaultHeaders['X-Api-Key'] = $this->config->getApiKey('X-Api-Key');
+        }
+
         $headers = array_merge(
             $defaultHeaders,
             $headerParams,
@@ -506,6 +510,10 @@ class PointsDeVenteApi
             $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
         }
 
+        if ($this->config->getApiKey('X-Api-Key')) {
+            $defaultHeaders['X-Api-Key'] = $this->config->getApiKey('X-Api-Key');
+        }
+
         $headers = array_merge(
             $defaultHeaders,
             $headerParams,
@@ -695,29 +703,19 @@ class PointsDeVenteApi
      */
     protected function getPointsOfSaleRequest($base64)
     {
-        // verify the required parameter 'base64' is set
-        if ($base64 === null || (is_array($base64) && count($base64) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $base64 when calling getPointsOfSale'
-            );
-        }
-
-        $resourcePath = '/points_of_sale';
+        $resourcePath = '/points_of_sale/{base64}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
         $httpBody = '';
         $multipart = false;
 
-
         // path params
-        if ($base64 !== null) {
-            $resourcePath = str_replace(
-                '{' . 'base64' . '}',
-                ObjectSerializer::toPathValue($base64),
-                $resourcePath
-            );
-        }
+        $resourcePath = str_replace(
+            '{' . 'base64' . '}',
+            $base64 !== null ? ObjectSerializer::toPathValue($base64) : '',
+            $resourcePath
+        );
 
         // body params
         $_tempBody = null;
@@ -766,6 +764,10 @@ class PointsDeVenteApi
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
             $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        if ($this->config->getApiKey('X-Api-Key')) {
+            $defaultHeaders['X-Api-Key'] = $this->config->getApiKey('X-Api-Key');
         }
 
         $headers = array_merge(
@@ -995,6 +997,10 @@ class PointsDeVenteApi
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
             $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        if ($this->config->getApiKey('X-Api-Key')) {
+            $defaultHeaders['X-Api-Key'] = $this->config->getApiKey('X-Api-Key');
         }
 
         $headers = array_merge(

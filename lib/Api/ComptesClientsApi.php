@@ -353,6 +353,10 @@ class ComptesClientsApi
             $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
         }
 
+        if ($this->config->getApiKey('X-Api-Key')) {
+            $defaultHeaders['X-Api-Key'] = $this->config->getApiKey('X-Api-Key');
+        }
+
         $headers = array_merge(
             $defaultHeaders,
             $headerParams,
@@ -650,6 +654,10 @@ class ComptesClientsApi
             $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
         }
 
+        if ($this->config->getApiKey('X-Api-Key')) {
+            $defaultHeaders['X-Api-Key'] = $this->config->getApiKey('X-Api-Key');
+        }
+
         $headers = array_merge(
             $defaultHeaders,
             $headerParams,
@@ -911,6 +919,10 @@ class ComptesClientsApi
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
             $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        if ($this->config->getApiKey('X-Api-Key')) {
+            $defaultHeaders['X-Api-Key'] = $this->config->getApiKey('X-Api-Key');
         }
 
         $headers = array_merge(
@@ -1195,6 +1207,10 @@ class ComptesClientsApi
             $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
         }
 
+        if ($this->config->getApiKey('X-Api-Key')) {
+            $defaultHeaders['X-Api-Key'] = $this->config->getApiKey('X-Api-Key');
+        }
+
         $headers = array_merge(
             $defaultHeaders,
             $headerParams,
@@ -1426,6 +1442,10 @@ class ComptesClientsApi
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
             $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        if ($this->config->getApiKey('X-Api-Key')) {
+            $defaultHeaders['X-Api-Key'] = $this->config->getApiKey('X-Api-Key');
         }
 
         $headers = array_merge(
@@ -1714,6 +1734,10 @@ class ComptesClientsApi
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
             $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        if ($this->config->getApiKey('X-Api-Key')) {
+            $defaultHeaders['X-Api-Key'] = $this->config->getApiKey('X-Api-Key');
         }
 
         $headers = array_merge(

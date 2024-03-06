@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Qwenta\Fulleapps
+ * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Qwenta\Fulleapps\Api;
+namespace Swagger\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Qwenta\Fulleapps\ApiException;
-use Qwenta\Fulleapps\Configuration;
-use Qwenta\Fulleapps\HeaderSelector;
-use Qwenta\Fulleapps\ObjectSerializer;
+use Swagger\Client\ApiException;
+use Swagger\Client\Configuration;
+use Swagger\Client\HeaderSelector;
+use Swagger\Client\ObjectSerializer;
 
 /**
  * PlanDeSalleApi Class Doc Comment
  *
  * @category Class
- * @package  Qwenta\Fulleapps
+ * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,9 +93,9 @@ class PlanDeSalleApi
      *
      * @param  Int $id_point_of_sale Identifiant du point de vente associé (required)
      *
-     * @throws \Qwenta\Fulleapps\ApiException on non-2xx response
+     * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Qwenta\Fulleapps\Model\InlineResponse20023
+     * @return \Swagger\Client\Model\InlineResponse20023
      */
     public function getRoomPlan($id_point_of_sale)
     {
@@ -110,13 +110,13 @@ class PlanDeSalleApi
      *
      * @param  Int $id_point_of_sale Identifiant du point de vente associé (required)
      *
-     * @throws \Qwenta\Fulleapps\ApiException on non-2xx response
+     * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Qwenta\Fulleapps\Model\InlineResponse20023, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\InlineResponse20023, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRoomPlanWithHttpInfo($id_point_of_sale)
     {
-        $returnType = '\Qwenta\Fulleapps\Model\InlineResponse20023';
+        $returnType = '\Swagger\Client\Model\InlineResponse20023';
         $request = $this->getRoomPlanRequest($id_point_of_sale);
 
         try {
@@ -168,7 +168,7 @@ class PlanDeSalleApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Qwenta\Fulleapps\Model\InlineResponse20023',
+                        '\Swagger\Client\Model\InlineResponse20023',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -210,7 +210,7 @@ class PlanDeSalleApi
      */
     public function getRoomPlanAsyncWithHttpInfo($id_point_of_sale)
     {
-        $returnType = '\Qwenta\Fulleapps\Model\InlineResponse20023';
+        $returnType = '\Swagger\Client\Model\InlineResponse20023';
         $request = $this->getRoomPlanRequest($id_point_of_sale);
 
         return $this->client
@@ -331,6 +331,10 @@ class PlanDeSalleApi
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
             $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        if ($this->config->getApiKey('X-Api-Key')) {
+            $defaultHeaders['X-Api-Key'] = $this->config->getApiKey('X-Api-Key');
         }
 
         $headers = array_merge(

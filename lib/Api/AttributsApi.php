@@ -314,6 +314,10 @@ class AttributsApi
             $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
         }
 
+        if ($this->config->getApiKey('X-Api-Key')) {
+            $defaultHeaders['X-Api-Key'] = $this->config->getApiKey('X-Api-Key');
+        }
+
         $headers = array_merge(
             $defaultHeaders,
             $headerParams,
@@ -518,6 +522,10 @@ class AttributsApi
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
             $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        if ($this->config->getApiKey('X-Api-Key')) {
+            $defaultHeaders['X-Api-Key'] = $this->config->getApiKey('X-Api-Key');
         }
 
         $headers = array_merge(
@@ -738,6 +746,10 @@ class AttributsApi
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
             $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        if ($this->config->getApiKey('X-Api-Key')) {
+            $defaultHeaders['X-Api-Key'] = $this->config->getApiKey('X-Api-Key');
         }
 
         $headers = array_merge(
@@ -983,6 +995,10 @@ class AttributsApi
             $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
         }
 
+        if ($this->config->getApiKey('X-Api-Key')) {
+            $defaultHeaders['X-Api-Key'] = $this->config->getApiKey('X-Api-Key');
+        }
+
         $headers = array_merge(
             $defaultHeaders,
             $headerParams,
@@ -1201,6 +1217,10 @@ class AttributsApi
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
             $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        if ($this->config->getApiKey('X-Api-Key')) {
+            $defaultHeaders['X-Api-Key'] = $this->config->getApiKey('X-Api-Key');
         }
 
         $headers = array_merge(
