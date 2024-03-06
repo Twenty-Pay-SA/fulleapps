@@ -148,17 +148,8 @@ class TaxesApi
             }
 
             $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if (!in_array($returnType, ['string','integer','bool'])) {
-                    $content = json_decode($content);
-                }
-            }
-
             return [
-                ObjectSerializer::deserialize($content, $returnType, []),
+                json_decode($responseBody->getContents(), true),
                 $response->getStatusCode(),
                 $response->getHeaders()
             ];
@@ -1333,17 +1324,8 @@ class TaxesApi
             }
 
             $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if (!in_array($returnType, ['string','integer','bool'])) {
-                    $content = json_decode($content);
-                }
-            }
-
             return [
-                ObjectSerializer::deserialize($content, $returnType, []),
+                json_decode($responseBody->getContents(), true),
                 $response->getStatusCode(),
                 $response->getHeaders()
             ];
