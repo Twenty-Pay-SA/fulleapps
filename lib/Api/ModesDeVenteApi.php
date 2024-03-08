@@ -785,7 +785,7 @@ class ModesDeVenteApi
      * @throws \InvalidArgumentException
      * @return \Qwenta\Fulleapps\Model\SaleMethod[]
      */
-    public function getSaleMethods($id_point_of_sale, $enable_note, $enable_order, $enable_online_order, $archive)
+    public function getSaleMethods($id_point_of_sale = null, $enable_note = null, $enable_order = null, $enable_online_order = null, $archive = null)
     {
         list($response) = $this->getSaleMethodsWithHttpInfo($id_point_of_sale, $enable_note, $enable_order, $enable_online_order, $archive);
         return $response;
@@ -875,7 +875,7 @@ class ModesDeVenteApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getSaleMethodsAsync($id_point_of_sale, $enable_note, $enable_order, $enable_online_order, $archive)
+    public function getSaleMethodsAsync($id_point_of_sale = null, $enable_note = null, $enable_order = null, $enable_online_order = null, $archive = null)
     {
         return $this->getSaleMethodsAsyncWithHttpInfo($id_point_of_sale, $enable_note, $enable_order, $enable_online_order, $archive)
             ->then(
@@ -955,37 +955,6 @@ class ModesDeVenteApi
      */
     protected function getSaleMethodsRequest($id_point_of_sale, $enable_note, $enable_order, $enable_online_order, $archive)
     {
-        // verify the required parameter 'id_point_of_sale' is set
-        if ($id_point_of_sale === null || (is_array($id_point_of_sale) && count($id_point_of_sale) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $id_point_of_sale when calling getSaleMethods'
-            );
-        }
-        // verify the required parameter 'enable_note' is set
-        if ($enable_note === null || (is_array($enable_note) && count($enable_note) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $enable_note when calling getSaleMethods'
-            );
-        }
-        // verify the required parameter 'enable_order' is set
-        if ($enable_order === null || (is_array($enable_order) && count($enable_order) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $enable_order when calling getSaleMethods'
-            );
-        }
-        // verify the required parameter 'enable_online_order' is set
-        if ($enable_online_order === null || (is_array($enable_online_order) && count($enable_online_order) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $enable_online_order when calling getSaleMethods'
-            );
-        }
-        // verify the required parameter 'archive' is set
-        if ($archive === null || (is_array($archive) && count($archive) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $archive when calling getSaleMethods'
-            );
-        }
-
         $resourcePath = '/sale_methods';
         $formParams = [];
         $queryParams = [];
@@ -993,46 +962,25 @@ class ModesDeVenteApi
         $httpBody = '';
         $multipart = false;
 
-
-        // path params
+        // query params
         if ($id_point_of_sale !== null) {
-            $resourcePath = str_replace(
-                '{' . 'id_point_of_sale' . '}',
-                ObjectSerializer::toPathValue($id_point_of_sale),
-                $resourcePath
-            );
+            $queryParams['id_point_of_sale'] = ObjectSerializer::toQueryValue($id_point_of_sale, null);
         }
-        // path params
+        // query params
         if ($enable_note !== null) {
-            $resourcePath = str_replace(
-                '{' . 'enable_note' . '}',
-                ObjectSerializer::toPathValue($enable_note),
-                $resourcePath
-            );
+            $queryParams['enable_note'] = ObjectSerializer::toQueryValue($enable_note, null);
         }
-        // path params
+        // query params
         if ($enable_order !== null) {
-            $resourcePath = str_replace(
-                '{' . 'enable_order' . '}',
-                ObjectSerializer::toPathValue($enable_order),
-                $resourcePath
-            );
+            $queryParams['enable_order'] = ObjectSerializer::toQueryValue($enable_order, null);
         }
-        // path params
+        // query params
         if ($enable_online_order !== null) {
-            $resourcePath = str_replace(
-                '{' . 'enable_online_order' . '}',
-                ObjectSerializer::toPathValue($enable_online_order),
-                $resourcePath
-            );
+            $queryParams['enable_online_order'] = ObjectSerializer::toQueryValue($enable_online_order, null);
         }
-        // path params
+        // query params
         if ($archive !== null) {
-            $resourcePath = str_replace(
-                '{' . 'archive' . '}',
-                ObjectSerializer::toPathValue($archive),
-                $resourcePath
-            );
+            $queryParams['archive'] = ObjectSerializer::toQueryValue($archive, null);
         }
 
         // body params

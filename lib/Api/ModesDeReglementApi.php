@@ -1,6 +1,6 @@
 <?php
 /**
- * ModesDeRglementApi
+ * ModesDeReglementApi
  * PHP version 5
  *
  * @category Class
@@ -39,14 +39,14 @@ use Qwenta\Fulleapps\HeaderSelector;
 use Qwenta\Fulleapps\ObjectSerializer;
 
 /**
- * ModesDeRglementApi Class Doc Comment
+ * ModesDeReglementApi Class Doc Comment
  *
  * @category Class
  * @package  Qwenta\Fulleapps
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ModesDeRglementApi
+class ModesDeReglementApi
 {
     /**
      * @var ClientInterface

@@ -576,7 +576,7 @@ class OptionsProduitsApi
      * @throws \InvalidArgumentException
      * @return \Qwenta\Fulleapps\Model\ProductCategory[]
      */
-    public function getCategories($type)
+    public function getCategories($type = null)
     {
         list($response) = $this->getCategoriesWithHttpInfo($type);
         return $response;
@@ -730,14 +730,7 @@ class OptionsProduitsApi
      */
     protected function getCategoriesRequest($type)
     {
-        // verify the required parameter 'type' is set
-        if ($type === null || (is_array($type) && count($type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $type when calling getCategories'
-            );
-        }
-
-        $resourcePath = '/product_categories?type=1';
+        $resourcePath = '/product_categories';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -745,13 +738,9 @@ class OptionsProduitsApi
         $multipart = false;
 
 
-        // path params
+        // query params
         if ($type !== null) {
-            $resourcePath = str_replace(
-                '{' . 'type' . '}',
-                ObjectSerializer::toPathValue($type),
-                $resourcePath
-            );
+            $queryParams['type'] = ObjectSerializer::toQueryValue($type, null);
         }
 
         // body params

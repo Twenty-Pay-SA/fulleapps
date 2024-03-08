@@ -1,6 +1,6 @@
 <?php
 /**
- * StocksCentralissApi
+ * StocksCentralisesApi
  * PHP version 5
  *
  * @category Class
@@ -39,14 +39,14 @@ use Qwenta\Fulleapps\HeaderSelector;
 use Qwenta\Fulleapps\ObjectSerializer;
 
 /**
- * StocksCentralissApi Class Doc Comment
+ * StocksCentralisesApi Class Doc Comment
  *
  * @category Class
  * @package  Qwenta\Fulleapps
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class StocksCentralissApi
+class StocksCentralisesApi
 {
     /**
      * @var ClientInterface
@@ -790,7 +790,7 @@ class StocksCentralissApi
      * Historique de stock
      *
      * @param   $ Identifiant du point de vente (required)
-     * @param   $ Identifiant du produit (required)
+     * @param   $id_product Identifiant du produit (required)
      * @param   $ Offset (optional)
      * @param   $ Nombre d&#x27;élements à récupérer (par défaut 50) (optional)
      *
@@ -798,9 +798,9 @@ class StocksCentralissApi
      * @throws \InvalidArgumentException
      * @return \Qwenta\Fulleapps\Model\InlineResponse2005
      */
-    public function getStocksHistory($, $, $ = null, $ = null)
+    public function getStocksHistory($, $id_product, $ = null, $ = null)
     {
-        list($response) = $this->getStocksHistoryWithHttpInfo($, $, $, $);
+        list($response) = $this->getStocksHistoryWithHttpInfo($, $id_product, $, $);
         return $response;
     }
 
@@ -818,10 +818,10 @@ class StocksCentralissApi
      * @throws \InvalidArgumentException
      * @return array of \Qwenta\Fulleapps\Model\InlineResponse2005, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getStocksHistoryWithHttpInfo($, $, $ = null, $ = null)
+    public function getStocksHistoryWithHttpInfo($, $id_product, $ = null, $ = null)
     {
         $returnType = '\Qwenta\Fulleapps\Model\InlineResponse2005';
-        $request = $this->getStocksHistoryRequest($, $, $, $);
+        $request = $this->getStocksHistoryRequest($, $id_product, $, $);
 
         try {
             $options = $this->createHttpClientOption();
