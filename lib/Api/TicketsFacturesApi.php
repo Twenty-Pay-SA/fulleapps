@@ -636,7 +636,7 @@ class TicketsFacturesApi
     }
 
     /**
-     * Operation d4ee3ae3ac497d65be0065b51f77a7c4
+     * Operation update
      *
      * Modifier un ticket
      *
@@ -647,13 +647,13 @@ class TicketsFacturesApi
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function d4ee3ae3ac497d65be0065b51f77a7c4($body, $id)
+    public function update($body, $id)
     {
-        $this->d4ee3ae3ac497d65be0065b51f77a7c4WithHttpInfo($body, $id);
+        $this->updateWithHttpInfo($body, $id);
     }
 
     /**
-     * Operation d4ee3ae3ac497d65be0065b51f77a7c4WithHttpInfo
+     * Operation updateWithHttpInfo
      *
      * Modifier un ticket
      *
@@ -664,10 +664,10 @@ class TicketsFacturesApi
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function d4ee3ae3ac497d65be0065b51f77a7c4WithHttpInfo($body, $id)
+    public function updateWithHttpInfo($body, $id)
     {
         $returnType = '';
-        $request = $this->d4ee3ae3ac497d65be0065b51f77a7c4Request($body, $id);
+        $request = $this->updateRequest($body, $id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -707,7 +707,7 @@ class TicketsFacturesApi
     }
 
     /**
-     * Operation d4ee3ae3ac497d65be0065b51f77a7c4Async
+     * Operation updateAsync
      *
      * Modifier un ticket
      *
@@ -717,9 +717,9 @@ class TicketsFacturesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function d4ee3ae3ac497d65be0065b51f77a7c4Async($body, $id)
+    public function updateAsync($body, $id)
     {
-        return $this->d4ee3ae3ac497d65be0065b51f77a7c4AsyncWithHttpInfo($body, $id)
+        return $this->updateAsyncWithHttpInfo($body, $id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -728,7 +728,7 @@ class TicketsFacturesApi
     }
 
     /**
-     * Operation d4ee3ae3ac497d65be0065b51f77a7c4AsyncWithHttpInfo
+     * Operation updateAsyncWithHttpInfo
      *
      * Modifier un ticket
      *
@@ -738,10 +738,10 @@ class TicketsFacturesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function d4ee3ae3ac497d65be0065b51f77a7c4AsyncWithHttpInfo($body, $id)
+    public function updateAsyncWithHttpInfo($body, $id)
     {
         $returnType = '';
-        $request = $this->d4ee3ae3ac497d65be0065b51f77a7c4Request($body, $id);
+        $request = $this->updateRequest($body, $id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -767,7 +767,7 @@ class TicketsFacturesApi
     }
 
     /**
-     * Create request for operation 'd4ee3ae3ac497d65be0065b51f77a7c4'
+     * Create request for operation 'update'
      *
      * @param  \Qwenta\Fulleapps\Model\NoteTicket $body (required)
      * @param  int $id Ticket ID (required)
@@ -775,18 +775,18 @@ class TicketsFacturesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function d4ee3ae3ac497d65be0065b51f77a7c4Request($body, $id)
+    protected function updateRequest($body, $id)
     {
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling d4ee3ae3ac497d65be0065b51f77a7c4'
+                'Missing the required parameter $body when calling update'
             );
         }
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling d4ee3ae3ac497d65be0065b51f77a7c4'
+                'Missing the required parameter $id when calling update'
             );
         }
 
