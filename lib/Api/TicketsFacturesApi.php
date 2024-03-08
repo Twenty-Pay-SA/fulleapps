@@ -104,7 +104,7 @@ class TicketsFacturesApi
      * @throws \InvalidArgumentException
      * @return \Qwenta\Fulleapps\Model\InlineResponse20015
      */
-    public function list($from_service_date, $to_service_date, $from_date, $to_date, $id_point_of_sale, $id_sale_method, $offset, $limit)
+    public function list($from_service_date = null, $to_service_date = null, $from_date = null, $to_date = null, $id_point_of_sale = null, $id_sale_method = null, $offset = null, $limit = null)
     {
         list($response) = $this->listWithHttpInfo($from_service_date, $to_service_date, $from_date, $to_date, $id_point_of_sale, $id_sale_method, $offset, $limit);
         return $response;
@@ -200,7 +200,7 @@ class TicketsFacturesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listAsync($from_service_date, $to_service_date, $from_date, $to_date, $id_point_of_sale, $id_sale_method, $offset, $limit)
+    public function listAsync($from_service_date = null, $to_service_date = null, $from_date = null, $to_date = null, $id_point_of_sale = null, $id_sale_method = null, $offset = null, $limit = null)
     {
         return $this->listAsyncWithHttpInfo($from_service_date, $to_service_date, $from_date, $to_date, $id_point_of_sale, $id_sale_method, $offset, $limit)
             ->then(
@@ -286,55 +286,6 @@ class TicketsFacturesApi
      */
     protected function listRequest($from_service_date, $to_service_date, $from_date, $to_date, $id_point_of_sale, $id_sale_method, $offset, $limit)
     {
-        // verify the required parameter 'from_service_date' is set
-        if ($from_service_date === null || (is_array($from_service_date) && count($from_service_date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $from_service_date when calling list'
-            );
-        }
-        // verify the required parameter 'to_service_date' is set
-        if ($to_service_date === null || (is_array($to_service_date) && count($to_service_date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $to_service_date when calling list'
-            );
-        }
-        // verify the required parameter 'from_date' is set
-        if ($from_date === null || (is_array($from_date) && count($from_date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $from_date when calling list'
-            );
-        }
-        // verify the required parameter 'to_date' is set
-        if ($to_date === null || (is_array($to_date) && count($to_date) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $to_date when calling list'
-            );
-        }
-        // verify the required parameter 'id_point_of_sale' is set
-        if ($id_point_of_sale === null || (is_array($id_point_of_sale) && count($id_point_of_sale) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $id_point_of_sale when calling list'
-            );
-        }
-        // verify the required parameter 'id_sale_method' is set
-        if ($id_sale_method === null || (is_array($id_sale_method) && count($id_sale_method) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $id_sale_method when calling list'
-            );
-        }
-        // verify the required parameter 'offset' is set
-        if ($offset === null || (is_array($offset) && count($offset) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $offset when calling list'
-            );
-        }
-        // verify the required parameter 'limit' is set
-        if ($limit === null || (is_array($limit) && count($limit) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $limit when calling list'
-            );
-        }
-
         $resourcePath = '/tickets';
         $formParams = [];
         $queryParams = [];
@@ -342,70 +293,37 @@ class TicketsFacturesApi
         $httpBody = '';
         $multipart = false;
 
-
-        // path params
+        // query params
         if ($from_service_date !== null) {
-            $resourcePath = str_replace(
-                '{' . 'from_service_date' . '}',
-                ObjectSerializer::toPathValue($from_service_date),
-                $resourcePath
-            );
+            $queryParams['from_service_date'] = ObjectSerializer::toQueryValue($from_service_date, null);
         }
-        // path params
+        // query params
         if ($to_service_date !== null) {
-            $resourcePath = str_replace(
-                '{' . 'to_service_date' . '}',
-                ObjectSerializer::toPathValue($to_service_date),
-                $resourcePath
-            );
+            $queryParams['to_service_date'] = ObjectSerializer::toQueryValue($to_service_date, null);
         }
-        // path params
+        // query params
         if ($from_date !== null) {
-            $resourcePath = str_replace(
-                '{' . 'from_date' . '}',
-                ObjectSerializer::toPathValue($from_date),
-                $resourcePath
-            );
+            $queryParams['from_date'] = ObjectSerializer::toQueryValue($from_date, null);
         }
-        // path params
+        // query params
         if ($to_date !== null) {
-            $resourcePath = str_replace(
-                '{' . 'to_date' . '}',
-                ObjectSerializer::toPathValue($to_date),
-                $resourcePath
-            );
+            $queryParams['to_date'] = ObjectSerializer::toQueryValue($to_date, null);
         }
-        // path params
+        // query params
         if ($id_point_of_sale !== null) {
-            $resourcePath = str_replace(
-                '{' . 'id_point_of_sale' . '}',
-                ObjectSerializer::toPathValue($id_point_of_sale),
-                $resourcePath
-            );
+            $queryParams['id_point_of_sale'] = ObjectSerializer::toQueryValue($id_point_of_sale, null);
         }
-        // path params
+        // query params
         if ($id_sale_method !== null) {
-            $resourcePath = str_replace(
-                '{' . 'id_sale_method' . '}',
-                ObjectSerializer::toPathValue($id_sale_method),
-                $resourcePath
-            );
+            $queryParams['id_sale_method'] = ObjectSerializer::toQueryValue($id_sale_method, null);
         }
-        // path params
+        // query params
         if ($offset !== null) {
-            $resourcePath = str_replace(
-                '{' . 'offset' . '}',
-                ObjectSerializer::toPathValue($offset),
-                $resourcePath
-            );
+            $queryParams['offset'] = ObjectSerializer::toQueryValue($offset, null);
         }
-        // path params
+        // query params
         if ($limit !== null) {
-            $resourcePath = str_replace(
-                '{' . 'limit' . '}',
-                ObjectSerializer::toPathValue($limit),
-                $resourcePath
-            );
+            $queryParams['limit'] = ObjectSerializer::toQueryValue($limit, null);
         }
 
         // body params

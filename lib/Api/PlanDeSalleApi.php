@@ -258,20 +258,15 @@ class PlanDeSalleApi
             );
         }
 
-        $resourcePath = '/rooms/{id_point_of_sale}';
+        $resourcePath = '/rooms';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
         $httpBody = '';
         $multipart = false;
 
-
-        // path params
-        $resourcePath = str_replace(
-            '{' . 'id_point_of_sale' . '}',
-            ObjectSerializer::toPathValue($id_point_of_sale),
-            $resourcePath
-        );
+        // query params
+        $queryParams['id_point_of_sale'] = ObjectSerializer::toQueryValue($id_point_of_sale, null);
 
         // body params
         $_tempBody = null;

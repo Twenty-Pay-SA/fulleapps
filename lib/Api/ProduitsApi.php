@@ -106,7 +106,7 @@ class ProduitsApi
      * @throws \InvalidArgumentException
      * @return \Qwenta\Fulleapps\Model\Product[]
      */
-    public function get($id_rubric, $archive, $id_point_of_sale, $id_sale_method, $handle_price_period, $price_period_day, $price_period_hour, $down_fidelity_points, $up_fidelity_points, $base64)
+    public function get($id_rubric = null, $archive = null, $id_point_of_sale = null, $id_sale_method = null, $handle_price_period = null, $price_period_day = null, $price_period_hour = null, $down_fidelity_points = null, $up_fidelity_points = null, $base64 = null)
     {
         list($response) = $this->getWithHttpInfo($id_rubric, $archive, $id_point_of_sale, $id_sale_method, $handle_price_period, $price_period_day, $price_period_hour, $down_fidelity_points, $up_fidelity_points, $base64);
         return $response;
@@ -206,7 +206,7 @@ class ProduitsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAsync($id_rubric, $archive, $id_point_of_sale, $id_sale_method, $handle_price_period, $price_period_day, $price_period_hour, $down_fidelity_points, $up_fidelity_points, $base64)
+    public function getAsync($id_rubric = null, $archive = null, $id_point_of_sale = null, $id_sale_method = null, $handle_price_period = null, $price_period_day = null, $price_period_hour = null, $down_fidelity_points = null, $up_fidelity_points = null, $base64 = null)
     {
         return $this->getAsyncWithHttpInfo($id_rubric, $archive, $id_point_of_sale, $id_sale_method, $handle_price_period, $price_period_day, $price_period_hour, $down_fidelity_points, $up_fidelity_points, $base64)
             ->then(
@@ -296,154 +296,52 @@ class ProduitsApi
      */
     protected function getRequest($id_rubric, $archive, $id_point_of_sale, $id_sale_method, $handle_price_period, $price_period_day, $price_period_hour, $down_fidelity_points, $up_fidelity_points, $base64)
     {
-        // verify the required parameter 'id_rubric' is set
-        if ($id_rubric === null || (is_array($id_rubric) && count($id_rubric) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $id_rubric when calling get'
-            );
-        }
-        // verify the required parameter 'archive' is set
-        if ($archive === null || (is_array($archive) && count($archive) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $archive when calling get'
-            );
-        }
-        // verify the required parameter 'id_point_of_sale' is set
-        if ($id_point_of_sale === null || (is_array($id_point_of_sale) && count($id_point_of_sale) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $id_point_of_sale when calling get'
-            );
-        }
-        // verify the required parameter 'id_sale_method' is set
-        if ($id_sale_method === null || (is_array($id_sale_method) && count($id_sale_method) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $id_sale_method when calling get'
-            );
-        }
-        // verify the required parameter 'handle_price_period' is set
-        if ($handle_price_period === null || (is_array($handle_price_period) && count($handle_price_period) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $handle_price_period when calling get'
-            );
-        }
-        // verify the required parameter 'price_period_day' is set
-        if ($price_period_day === null || (is_array($price_period_day) && count($price_period_day) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $price_period_day when calling get'
-            );
-        }
-        // verify the required parameter 'price_period_hour' is set
-        if ($price_period_hour === null || (is_array($price_period_hour) && count($price_period_hour) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $price_period_hour when calling get'
-            );
-        }
-        // verify the required parameter 'down_fidelity_points' is set
-        if ($down_fidelity_points === null || (is_array($down_fidelity_points) && count($down_fidelity_points) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $down_fidelity_points when calling get'
-            );
-        }
-        // verify the required parameter 'up_fidelity_points' is set
-        if ($up_fidelity_points === null || (is_array($up_fidelity_points) && count($up_fidelity_points) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $up_fidelity_points when calling get'
-            );
-        }
-        // verify the required parameter 'base64' is set
-        if ($base64 === null || (is_array($base64) && count($base64) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $base64 when calling get'
-            );
-        }
-
         $resourcePath = '/products';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
         $httpBody = '';
         $multipart = false;
-
-
-        // path params
+       
+        // query params
         if ($id_rubric !== null) {
-            $resourcePath = str_replace(
-                '{' . 'id_rubric' . '}',
-                ObjectSerializer::toPathValue($id_rubric),
-                $resourcePath
-            );
+            $queryParams['id_rubric'] = ObjectSerializer::toQueryValue($id_rubric, null);
         }
-        // path params
+        // query params
         if ($archive !== null) {
-            $resourcePath = str_replace(
-                '{' . 'archive' . '}',
-                ObjectSerializer::toPathValue($archive),
-                $resourcePath
-            );
+            $queryParams['archive'] = ObjectSerializer::toQueryValue($archive, null);
         }
-        // path params
+        // query params
         if ($id_point_of_sale !== null) {
-            $resourcePath = str_replace(
-                '{' . 'id_point_of_sale' . '}',
-                ObjectSerializer::toPathValue($id_point_of_sale),
-                $resourcePath
-            );
+            $queryParams['id_point_of_sale'] = ObjectSerializer::toQueryValue($id_point_of_sale, null);
         }
-        // path params
+        // query params
         if ($id_sale_method !== null) {
-            $resourcePath = str_replace(
-                '{' . 'id_sale_method' . '}',
-                ObjectSerializer::toPathValue($id_sale_method),
-                $resourcePath
-            );
+            $queryParams['id_sale_method'] = ObjectSerializer::toQueryValue($id_sale_method, null);
         }
-        // path params
+        // query params
         if ($handle_price_period !== null) {
-            $resourcePath = str_replace(
-                '{' . 'handle_price_period' . '}',
-                ObjectSerializer::toPathValue($handle_price_period),
-                $resourcePath
-            );
+            $queryParams['handle_price_period'] = ObjectSerializer::toQueryValue($handle_price_period, null);
         }
-        // path params
+        // query params
         if ($price_period_day !== null) {
-            $resourcePath = str_replace(
-                '{' . 'price_period_day' . '}',
-                ObjectSerializer::toPathValue($price_period_day),
-                $resourcePath
-            );
+            $queryParams['price_period_day'] = ObjectSerializer::toQueryValue($price_period_day, null);
         }
-        // path params
+        // query params
         if ($price_period_hour !== null) {
-            $resourcePath = str_replace(
-                '{' . 'price_period_hour' . '}',
-                ObjectSerializer::toPathValue($price_period_hour),
-                $resourcePath
-            );
+            $queryParams['price_period_hour'] = ObjectSerializer::toQueryValue($price_period_hour, null);
         }
-        // path params
+        // query params
         if ($down_fidelity_points !== null) {
-            $resourcePath = str_replace(
-                '{' . 'down_fidelity_points' . '}',
-                ObjectSerializer::toPathValue($down_fidelity_points),
-                $resourcePath
-            );
+            $queryParams['down_fidelity_points'] = ObjectSerializer::toQueryValue($down_fidelity_points, null);
         }
-        // path params
+        // query params
         if ($up_fidelity_points !== null) {
-            $resourcePath = str_replace(
-                '{' . 'up_fidelity_points' . '}',
-                ObjectSerializer::toPathValue($up_fidelity_points),
-                $resourcePath
-            );
+            $queryParams['up_fidelity_points'] = ObjectSerializer::toQueryValue($up_fidelity_points, null);
         }
-        // path params
+        // query params
         if ($base64 !== null) {
-            $resourcePath = str_replace(
-                '{' . 'base64' . '}',
-                ObjectSerializer::toPathValue($base64),
-                $resourcePath
-            );
+            $queryParams['base64'] = ObjectSerializer::toQueryValue($base64, null);
         }
 
         // body params
