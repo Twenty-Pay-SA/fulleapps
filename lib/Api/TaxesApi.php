@@ -251,14 +251,7 @@ class TaxesApi
      */
     protected function getRequest($id)
     {
-        // verify the required parameter 'id' is set
-        if ($id === null || (is_array($id) && count($id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling get'
-            );
-        }
-
-        $resourcePath = '/taxes';
+        $resourcePath = '/taxes{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -267,13 +260,11 @@ class TaxesApi
 
 
         // path params
-        if ($id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'id' . '}',
-                ObjectSerializer::toPathValue($id),
-                $resourcePath
-            );
-        }
+        $resourcePath = str_replace(
+            '{' . 'id' . '}',
+            ($id !== null) ? '/' . ObjectSerializer::toPathValue($id) : '',
+            $resourcePath
+        );
 
         // body params
         $_tempBody = null;
@@ -1430,42 +1421,23 @@ class TaxesApi
      */
     protected function getTaxGroupingsRequest($id, $with_taxes)
     {
-        // verify the required parameter 'id' is set
-        if ($id === null || (is_array($id) && count($id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling getTaxGroupings'
-            );
-        }
-        // verify the required parameter 'with_taxes' is set
-        if ($with_taxes === null || (is_array($with_taxes) && count($with_taxes) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $with_taxes when calling getTaxGroupings'
-            );
-        }
-
-        $resourcePath = '/tax_groupings';
+        $resourcePath = '/tax_groupings{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
         $httpBody = '';
         $multipart = false;
 
+        // path params
+        $resourcePath = str_replace(
+            '{' . 'id' . '}',
+            ($id !== null) ? '/' . ObjectSerializer::toPathValue($id) : '',
+            $resourcePath
+        );
 
-        // path params
-        if ($id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'id' . '}',
-                ObjectSerializer::toPathValue($id),
-                $resourcePath
-            );
-        }
-        // path params
+        // query params
         if ($with_taxes !== null) {
-            $resourcePath = str_replace(
-                '{' . 'with_taxes' . '}',
-                ObjectSerializer::toPathValue($with_taxes),
-                $resourcePath
-            );
+            $queryParams['with_taxes'] = ObjectSerializer::toPathValue($with_taxes);
         }
 
         // body params
