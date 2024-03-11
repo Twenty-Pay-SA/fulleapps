@@ -327,7 +327,7 @@ class NotesEnAttenteApi
      * @throws \InvalidArgumentException
      * @return \Qwenta\Fulleapps\Model\InlineResponse20027
      */
-    public function getWaitingNotes($id_point_of_sale, $n_table)
+    public function getWaitingNotes($id_point_of_sale, $n_table = null)
     {
         list($response) = $this->getWaitingNotesWithHttpInfo($id_point_of_sale, $n_table);
         return $response;
@@ -411,7 +411,7 @@ class NotesEnAttenteApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getWaitingNotesAsync($id_point_of_sale, $n_table)
+    public function getWaitingNotesAsync($id_point_of_sale, $n_table = null)
     {
         return $this->getWaitingNotesAsyncWithHttpInfo($id_point_of_sale, $n_table)
             ->then(
@@ -491,12 +491,6 @@ class NotesEnAttenteApi
                 'Missing the required parameter $id_point_of_sale when calling getWaitingNotes'
             );
         }
-        // verify the required parameter 'n_table' is set
-        if ($n_table === null || (is_array($n_table) && count($n_table) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $n_table when calling getWaitingNotes'
-            );
-        }
 
         $resourcePath = '/notes';
         $formParams = [];
@@ -507,20 +501,11 @@ class NotesEnAttenteApi
 
 
         // path params
-        if ($id_point_of_sale !== null) {
-            $resourcePath = str_replace(
-                '{' . 'id_point_of_sale' . '}',
-                ObjectSerializer::toPathValue($id_point_of_sale),
-                $resourcePath
-            );
-        }
+        $queryParams['id_point_of_sale'] = ObjectSerializer::toQueryValue($id_point_of_sale);
+
         // path params
         if ($n_table !== null) {
-            $resourcePath = str_replace(
-                '{' . 'n_table' . '}',
-                ObjectSerializer::toPathValue($n_table),
-                $resourcePath
-            );
+            $queryParams['n_table'] = ObjectSerializer::toQueryValue($n_table);
         }
 
         // body params

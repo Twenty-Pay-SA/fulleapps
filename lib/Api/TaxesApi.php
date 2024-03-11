@@ -1437,7 +1437,7 @@ class TaxesApi
 
         // query params
         if ($with_taxes !== null) {
-            $queryParams['with_taxes'] = ObjectSerializer::toPathValue($with_taxes);
+            $queryParams['with_taxes'] = ObjectSerializer::toQueryValue($with_taxes);
         }
 
         // body params
